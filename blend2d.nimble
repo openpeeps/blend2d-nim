@@ -2,7 +2,7 @@
 
 version       = "0.1.0"
 author        = "George Lemon"
-description   = "Blend2D bindings for Nim language"
+description   = "Blend2D binding for Nim language"
 license       = "MIT"
 srcDir        = "src"
 
