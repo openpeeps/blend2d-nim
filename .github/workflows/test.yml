@@ -27,7 +27,7 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           wget https://blend2d.com/download/blend2d-0.11.4.tar.gz
-          tar –xf blend2d-0.11.4.tar.gz
+          tar –xvzf blend2d-0.11.4.tar.gz
           cmake blend2d -B blend2d/build -DCMAKE_BUILD_TYPE=Release -DBLEND2D_EMBED=TRUE
           cmake --build blend2d/build
       # - run: nimble install -Y
