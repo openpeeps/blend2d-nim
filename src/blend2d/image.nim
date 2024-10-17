@@ -28,21 +28,50 @@
 import std/[os, strutils]
 
 import ./bindings/[bl_globals, bl_image]
+import ./geometry
+
 from ./bindings import `!`
 
 type
   Image* = ptr BLimageCore
+  ImageData* = ptr BLImageData
 
-proc init*(width, height: int): Image =
+proc init*(width, height: int, pixelFormat: BLFormat = BL_FORMAT_PRGB32): Image =
   ## Create a new Image
   result = create(BLImageCore)
-  !blImageInitAs(result, width.cint, height.cint, BL_FORMAT_PRGB32)
+  !blImageInitAs(result, width.cint, height.cint, pixelFormat)
 
-proc open*(path: string): ptr BLImageCore = 
+proc open*(path: string): Image = 
   result = create(BLImageCore)
   !blImageInit(result)
   # assert blImageCodecInitByName(result.codecCore, ext, len(ext).uint, nil).code == BLSuccess
   !blImageReadFromFile(result, path.cstring, nil)
+
+proc getAspectRatio*(width, height, minWidth, minHeight: int): (int, int) =
+  let ratio: float = system.min((minWidth / width), (minHeight / height))
+  result = (toInt(width.toFloat * ratio), toInt(height.toFloat * ratio))
+
+proc getData*(img: Image): ImageData =
+  ## Returns a `BLImageData` from img
+  result = create(BLImageData)
+  !blImageGetData(img, result)
+
+proc resize*(img: Image, width, height: int32, scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest): Image {.discardable.} = 
+  ## Resize an image by maintaining the aspect ratio and returns a new Image
+  let data = img.getData
+  let (w, h) = getAspectRatio(data[].size.w, data[].size.h, width, height)
+  let s = size(w, h)
+  result = create(BLImageCore)
+  !blImageInit(result)
+  !blImageScale(result, img, s.addr, scaleFilter)
+
+proc resize*(img: var Image, width, height: int32, scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest) = 
+  ## Resize a mutable image, keeping the aspect ratio
+  var data = img.getData
+  let (w, h) = getAspectRatio(data[].size.w, data[].size.h, width, height)
+  let s = size(w, h)
+  !blImageMakeMutable(img, data)
+  !blImageScale(img, img, s.addr, scaleFilter)
 
 proc exportAs*(img: Image, path: string) =
   ## Exports an Image to given `path`.
@@ -51,3 +80,7 @@ proc exportAs*(img: Image, path: string) =
   var codec = create(BLImageCodecCore)
   !blImageCodecInitByName(codec, ext, len(ext).uint, nil)
   !blImageWriteToFile(img, path.cstring, codec)
+
+proc destroyImage*(img: Image) = 
+  !blImageDestroy(img)
+  dealloc(img)
