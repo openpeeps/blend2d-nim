@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/">API reference</a><br>
-  <img src="https://github.com/openpeeps/blend2d/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/blend2d/workflows/docs/badge.svg" alt="Github Actions">
+  <img src="https://github.com/openpeeps/blend2d-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/blend2d-nim/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
 ## Examples
