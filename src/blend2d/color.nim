@@ -27,6 +27,8 @@
 #     https://github.com/openpeeps/blend2d-nim
 import ./bindings/[bl_globals, bl_style]
 
+from ./bindings import `!`
+
 proc rgba*(r, g, b, a: float32): BLRgba =
   result = BLRgba(r: r, g: g, b: b, a: a)
 
@@ -333,22 +335,32 @@ const
   colYellow* = ColorHex(0xFFFFFF00)
   colYellowGreen* = ColorHex(0xFF9ACD32)
 
+type
+  Gradient* = ptr BLGradientCore
+
 #
 # Gradients
 #
-proc newLinearGradient*(x1, y1: cdouble; x0, y0: cdouble = 0): ptr BLGradientCore =
-  ## Create a new `BLGradientCore`
-  var gradient = create(BLGradientCore)
-  var values = BLLinearGradientValues(x0: x0, y0: y0, x1: x1, y1: y1)
-  assert blGradientInitAs(gradient,
-    BLGradientType.BL_GRADIENT_TYPE_LINEAR, values.addr,
-    BLExtendMode.BL_EXTEND_MODE_PAD, nil, 0, nil).code == BL_SUCCESS
-  gradient
+proc linearGradient*(x1, y1: cdouble; x0, y0: cdouble = 0): Gradient =
+  ## Create a new linear `Gradient` pointer of `BLGradientCore`
+  result = create(BLGradientCore)
+  var v = BLLinearGradientValues(x0: x0, y0: y0, x1: x1, y1: y1)
+  !blGradientInitAs(result,
+    BLGradientType.BL_GRADIENT_TYPE_LINEAR, v.addr,
+    BLExtendMode.BL_EXTEND_MODE_PAD, nil, 0, nil)
 
-proc add*(gradient: ptr BLGradientCore, offset: float32, color: uint32) =
-  ## Add a new stop color to `gradient` using `offset` and `color`
-  assert gradient.blGradientAddStopRgba32(offset, color).code == BL_SUCCESS
+proc radialGradient*(x1, y1, x0, y0, r0: float): Gradient =
+  ## Create a new radial `Gradient` pointer of `BLGradientCore`
+  result = create(BLGradientCore)
+  var v = BLRadialGradientValues(x0: x0, y0: y0, x1: x1, y1: y1, r0: r0)
+  !blGradientInitAs(result,
+    BLGradientType.BL_GRADIENT_TYPE_RADIAL, v.addr,
+    BLExtendMode.BL_EXTEND_MODE_PAD, nil, 0, nil)
 
-proc add*(gradient: ptr BLGradientCore, stop: BLGradientStop) =
-  ## Add a new `BLGradientStop` stop color to `gradient`
-  assert gradient.blGradientAssignStops(stop.addr, 0'u).code == BL_SUCCESS
+proc add*(gr: Gradient, offset: float32, color: uint32) =
+  ## Add a new stop color to `Gradient` using `offset` and `color`
+  !blGradientAddStopRgba32(gr, offset, color)
+
+proc add*(gr: Gradient, stop: BLGradientStop) =
+  ## Add a new `BLGradientStop` stop color to `Gradient`
+  !blGradientAssignStops(gr, stop.addr, 0'u)

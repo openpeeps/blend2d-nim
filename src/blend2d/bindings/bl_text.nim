@@ -592,10 +592,19 @@ proc blFontApplyKerning*(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore): BLRes
 proc blFontApplyGSub*(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore; lookups: ptr BLBitArrayCore): BLResult
 proc blFontApplyGPos*(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore; lookups: ptr BLBitArrayCore): BLResult
 proc blFontGetTextMetrics*(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore; `out`: ptr BLTextMetrics): BLResult
-proc blFontGetGlyphBounds*(self: ptr BLFontCore; glyphData: ptr uint32; glyphAdvance: ptr int; `out`: ptr BLBoxI; count: uint): BLResult
-proc blFontGetGlyphAdvances*(self: ptr BLFontCore; glyphData: ptr uint32; glyphAdvance: ptr int; `out`: ptr BLGlyphPlacement; count: uint): BLResult
-proc blFontGetGlyphOutlines*(self: ptr BLFontCore; glyphId: BLGlyphId; userTransform: ptr BLMatrix2D; `out`: ptr BLPathCore; sink: BLPathSinkFunc; userData: pointer): BLResult
-proc blFontGetGlyphRunOutlines*(self: ptr BLFontCore; glyphRun: ptr BLGlyphRun; userTransform: ptr BLMatrix2D; `out`: ptr BLPathCore; sink: BLPathSinkFunc; userData: pointer): BLResult
+proc blFontGetGlyphBounds*(self: ptr BLFontCore; glyphData: ptr uint32;
+    glyphAdvance: ptr int; `out`: ptr BLBoxI; count: uint): BLResult
+
+proc blFontGetGlyphAdvances*(self: ptr BLFontCore; glyphData: ptr uint32;
+    glyphAdvance: ptr int; `out`: ptr BLGlyphPlacement; count: uint): BLResult
+
+proc blFontGetGlyphOutlines*(self: ptr BLFontCore; glyphId: BLGlyphId;
+    userTransform: ptr BLMatrix2D; `out`: ptr BLPathCore;
+    sink: BLPathSinkFunc; userData: pointer): BLResult
+
+proc blFontGetGlyphRunOutlines*(self: ptr BLFontCore; glyphRun: ptr BLGlyphRun;
+    userTransform: ptr BLMatrix2D; `out`: ptr BLPathCore;
+    sink: BLPathSinkFunc; userData: pointer): BLResult
 
 #
 # BLFontFeatureSettings API

@@ -25,7 +25,7 @@
 # (c) 2024 George Lemon | ZLib License
 #     Made by Humans from OpenPeeps
 #     https://github.com/openpeeps/blend2d-nim
-import std/[os, strutils]
+import std/[macros, os, strutils]
 
 import ./bindings/[bl_globals, bl_image]
 import ./geometry
@@ -44,7 +44,6 @@ proc init*(width, height: int, pixelFormat: BLFormat = BL_FORMAT_PRGB32): Image 
 proc open*(path: string): Image = 
   result = create(BLImageCore)
   !blImageInit(result)
-  # assert blImageCodecInitByName(result.codecCore, ext, len(ext).uint, nil).code == BLSuccess
   !blImageReadFromFile(result, path.cstring, nil)
 
 proc getAspectRatio*(width, height, minWidth, minHeight: int): (int, int) =
@@ -56,7 +55,8 @@ proc getData*(img: Image): ImageData =
   result = create(BLImageData)
   !blImageGetData(img, result)
 
-proc resize*(img: Image, width, height: int32, scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest): Image {.discardable.} = 
+proc resize*(img: Image, width, height: int32,
+  scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest): Image {.discardable.} = 
   ## Resize an image by maintaining the aspect ratio and returns a new Image
   let data = img.getData
   let (w, h) = getAspectRatio(data[].size.w, data[].size.h, width, height)
@@ -65,7 +65,8 @@ proc resize*(img: Image, width, height: int32, scaleFilter: BLImageScaleFilter =
   !blImageInit(result)
   !blImageScale(result, img, s.addr, scaleFilter)
 
-proc resize*(img: var Image, width, height: int32, scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest) = 
+proc resize*(img: var Image, width, height: int32,
+  scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest) = 
   ## Resize a mutable image, keeping the aspect ratio
   var data = img.getData
   let (w, h) = getAspectRatio(data[].size.w, data[].size.h, width, height)
@@ -73,9 +74,25 @@ proc resize*(img: var Image, width, height: int32, scaleFilter: BLImageScaleFilt
   !blImageMakeMutable(img, data)
   !blImageScale(img, img, s.addr, scaleFilter)
 
+proc getWidth*(img: Image): int32 =
+  ## Retrieve the width of an Image
+  result = img.getData[].size.w
+
+proc getHeight*(img: Image): int32 =
+  ## Retrieve the height of an Image
+  result = img.getData[].size.h
+
+proc width*(img: Image): int32 {.inline.} =
+  ## An alias of `getWidth`
+  img.getWidth()
+
+proc height*(img: Image): int32 {.inline.} =
+  ## An alias of `getHeight`
+  img.getHeight()
+
 proc exportAs*(img: Image, path: string) =
   ## Exports an Image to given `path`.
-  ## The codec is automatically 
+  ## The codec is initialized from path extension
   let ext = path.splitFile.ext.replace(".").toUpperAscii
   var codec = create(BLImageCodecCore)
   !blImageCodecInitByName(codec, ext, len(ext).uint, nil)
@@ -84,3 +101,29 @@ proc exportAs*(img: Image, path: string) =
 proc destroyImage*(img: Image) = 
   !blImageDestroy(img)
   dealloc(img)
+
+#
+# Macro utils
+#
+macro group*(imgIdent: untyped, width, height, contextStmt: untyped): untyped =
+  ## A macro utility that help organize your
+  ## 2D computations in grouped-like layers.
+  ## 
+  ## This macro calls the `ctx` macro utility, which
+  ## expose the current Context as `this` identifier.
+  result = newStmtList()
+  add result,
+    nnkVarSection.newTree(
+      nnkIdentDefs.newTree(
+        imgIdent,
+        ident"Image",
+        newCall(
+          newDotExpr(
+            ident"image",
+            ident"init",
+          ),
+          width, height
+        )
+      )
+    ),
+    newCall(ident"ctx", imgIdent, contextStmt)

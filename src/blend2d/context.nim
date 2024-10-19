@@ -36,13 +36,19 @@ export BLPoint, BLPointI, context
 type 
   Context* = ptr BLContextCore
 
-proc newContext*(img: Image, compOp: BLCompOp = BL_COMP_OP_SRC_COPY): Context =
+proc setCompOp*(ctx: Context, compOp: BLCompOp) {.inline.} =
+  !blContextSetCompOp(ctx, compOp)
+
+proc clearAll*(ctx: Context) {.inline.} =
+  !blContextClearAll(ctx)
+
+proc newContext*(img: Image, compOp: BLCompOp = BL_COMP_OP_SRC_OVER): Context =
   ## Creates a new Context
   result = create(BLContextCore)
   var cci = create(BLContextCreateInfo)
   !blContextInitAs(result, img, cci)
-  !blContextClearAll(result)
-  !blContextSetCompOp(result, compOp)
+  result.clearAll()
+  result.setCompOp(compOp)
 
 proc opacity*(ctx: Context, alpha: range[0.0..1.0]): Context {.discardable.} =
   ## Applies `blContextSetGlobalAlpha` using `alpha`
@@ -56,10 +62,10 @@ template opacity*(alpha: range[0.0..1.0], stmts: untyped) {.dirty.} =
   stmts
   this.opacity(1)
 
-proc fillStyle*(ctx: Context): Context {.discardable.} =
-  ## Fill `ctx` Context with Color
+proc fillStyle*(ctx: Context, color: ColorHex = colWhite): Context {.discardable.} =
+  ## Fill Context with ColorHex
   !blContextSetCompOp(ctx, BLCompOp.BL_COMP_OP_SRC_COPY)
-  !blContextSetFillStyleRgba32(ctx, 0xFFFFFFFF'u32)
+  !blContextSetFillStyleRgba32(ctx, color)
   !blContextFillAll(ctx)
   ctx
 
@@ -68,20 +74,10 @@ proc fill*(ctx: Context, rgba: BLRgba): Context {.discardable.} =
   !blContextFillAllExt(ctx, rgba.addr)
   ctx
 
-# proc fillAllC*(impl: ptr BLContextImpl): BLResult {.cdecl.} =
-  # blContextFillAllExt(impl[], gradient)
-
 proc fill*(ctx: Context, gradient: ptr BLGradientCore): Context {.discardable.} =
   ## Fills the entire Context with the `gradient` color
   !blContextFillAllExt(ctx, gradient)
   ctx
-
-proc add*(ctx: Context, font: Font, content: string, x, y: int32 = 0,
-  color: ColorHex = colWhite): Context {.discardable.} =
-  ## Add a new text to Context
-  let origin = point(x, y)
-  !blContextFillUtf8TextIRgba32(ctx, origin.addr, font,
-      content.cstring, content.len.uint, color)
 
 #
 # Context Transformers
@@ -107,7 +103,7 @@ proc resetTransform*(ctx: Context) =
   !ctx.blContextApplyTransformOp(BlTransformOpReset, nil)
 
 #
-# Blendings
+# Blending Modes
 #
 proc blend*(ctx: Context, img: Image,
     p: ptr BLPointI, r: ptr BLRectI,
@@ -124,23 +120,24 @@ macro genBlendingModes(blendModes: static seq[string]) =
     let id = ident("blend" & blendMode)
     let mode = ident("BLCompOp" & blendMode)
     add result, quote do:
-      # Generate blending mode handles that calls `blContextSetCompOp`.
-      # A `blendClear` call is required to stop blending handle.
+      # Generate blend mode handles that calls `blContextSetCompOp`.
+      # A `blendSrcOver` call is required after this in order
+      # to clear the previously applied blending.
       proc `id`*(ctx: Context): Context {.discardable.} =
         !ctx.blContextSetCompOp(`mode`)
         ctx
     let handleId = "blend" & blendMode
     let macroHandleID = ident("apply" & id.strVal.capitalizeAscii)
     add result, quote do:
-      # Generate macro-based blending mode handles that injects
-      # a `blendClear` call at the end of the statement.
-      # These macros can be used only inside a `ctx` macro
+      # Generate macro-based blend mode handles that auto-injects
+      # a `blendSrcOver` call at the end of the statement to switch
+      # to default composition mode.
       macro `macroHandleID`*(stmts: untyped): untyped =
         result = newStmtList()
         result.add(
           newCall(ident(`handleId`), ident"this"),
           stmts,
-          newCall(ident"blendClear", ident"this")
+          newCall(ident"blendSrcOver", ident"this")
         )
 
 genBlendingModes @["Clear", "SrcOver", "SrcCopy", "SrcIn", "SrcOut", "SrcAtop",
@@ -149,9 +146,97 @@ genBlendingModes @["Clear", "SrcOver", "SrcCopy", "SrcIn", "SrcOut", "SrcAtop",
   "Darken", "Lighten", "ColorDodge", "ColorBurn", "LinearBurn", "LinearLight",
   "PinLight", "HardLight", "SoftLight", "Difference", "Exclusion"]
 
-proc add*(ctx: Context, img: Image, p: ptr BLPointI, r: ptr BLRectI): Context {.discardable.} =
-  !ctx.blContextBlitImageI(p, img, r)
+#
+# Context - Add font
+#
+proc add*(ctx: Context, font: Font, content: string, x, y: int32 = 0,
+  color: ColorHex = colWhite): Context {.discardable.} =
+  ## Add a new text to Context
+  let origin = point(x, y)
+  !blContextFillUtf8TextIRgba32(ctx, origin.addr, font,
+      content.cstring, content.len.uint, color)
+
+#
+# Context - Add Geometry
+#
+proc add*(ctx: Context, r: BLRectI) =
+  ## Add a `BLRectI` to Context
+  !blContextFillRectI(ctx, r.addr)
+
+proc add*(ctx: Context, circle: Circle) = 
+  ## Add a `Circle` pointer to current `Context`
+  !blContextFillGeometry(ctx, BL_GEOMETRY_TYPE_CIRCLE, circle)
+
+proc add*(ctx: Context, c: Circle, color: ColorHex) = 
+  ## Add a colored `Circle` pointer to current `Context`
+  !blContextFillGeometryRgba32(ctx, BL_GEOMETRY_TYPE_CIRCLE, c, color)
+
+proc add*(ctx: Context, rr: RoundRect, color: ColorHex) =
+  ## Add a colored `BLRoundRect` to current `Context`
+  !blContextFillGeometryRgba32(ctx, BL_GEOMETRY_TYPE_ROUND_RECT, rr, color)
+
+#
+# Context - Blit Image with BLPointI
+#
+proc add*(ctx: Context, img: Image): Context {.discardable.} =
+  ## Add an Image to current Context
+  var p = point(0, 0)
+  var r = rect(img.width, img.height)
+  !ctx.blContextBlitImageI(p.addr, img, r.addr)
   ctx
+
+proc add*(ctx: Context, img: Image,
+    p: sink BLPointI, r: sink BLRectI): Context {.discardable.} =
+  ## Add an Image to current Context using `BLPointI` as
+  ## position origin and `BLRectI` as image area
+  !ctx.blContextBlitImageI(p.addr, img, r.addr)
+  ctx
+
+proc add*(ctx: Context, img: Image,
+    p: sink BLPointI): Context {.discardable.} =
+  ## Add an Image to current Context using `BLPointI` position origin
+  var r = rect(img.width, img.height)
+  !ctx.blContextBlitImageI(p.addr, img, r.addr)
+  ctx
+
+#
+# Context - Blit Image with BLPoint
+#
+proc add*(ctx: Context, img: Image,
+    p: sink BLPoint, r: sink BLRectI): Context {.discardable.} =
+  ## Add an Image to current Context using `BLPointI` as
+  ## position origin and `BLRectI` as image area
+  !ctx.blContextBlitImageD(p.addr, img, r.addr)
+  ctx
+
+proc add*(ctx: Context, img: Image,
+    p: sink BLPoint): Context {.discardable.} =
+  ## Add an Image to current Context using `BLPointI` position origin
+  var r = rect(img.width, img.height)
+  !ctx.blContextBlitImageD(p.addr, img, r.addr)
+  ctx
+
+proc add*(ctx: Context, img: Image, r: sink BLRectI): Context {.discardable.} =
+  ## Add an Image to current Context using `BLRectI` image area
+  var p = point(0.0, 0.0)
+  !ctx.blContextBlitImageD(p.addr, img, r.addr)
+  ctx
+
+#
+# Context - Masks
+#
+proc mask*(ctx: Context, origin: PointI,
+    mask: Image, maskArea: RectI): Context {.discardable.} =
+  !blContextFillMaskI(ctx, origin, mask, maskArea)
+  ctx
+
+proc mask*(ctx: Context, text: tuple[f: BLFontCore, textContent: string, x: int32, y: int32], img: BLImageCore) =
+  !blContextSetCompOp(ctx, BLCompOp.BL_COMP_OP_SRC_COPY)
+  ctx.add(text[0].addr, text[1], 0, 0)
+  var p = point(0, 0)
+  var r = rect(300, 300)
+  !blContextSetCompOp(ctx, BLCompOp.BL_COMP_OP_SRC_IN)
+  !ctx.blContextBlitImageI(p.addr, img.addr, r.addr)
 
 proc endContext*(ctx: Context) =
   !blContextEnd(ctx)
@@ -159,7 +244,11 @@ proc endContext*(ctx: Context) =
 #
 # Macro Utils
 #
-macro ctx*(img: typed, contextStmt: untyped) =
+macro ctx*(img: typed, contextStmt: untyped): untyped =
+  ## Macro utility to create a new nestable context.
+  ## 
+  ## Use `this` identifier to access the Context pointer.
+  ## An `endContext` call is injected at the end of the statement.
   result = nnkBlockStmt.newTree()
   add result, newEmptyNode() # unamed block
   add result,

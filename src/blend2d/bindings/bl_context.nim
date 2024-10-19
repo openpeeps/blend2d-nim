@@ -91,22 +91,45 @@ type
     BL_CLIP_MODE_COUNT  ## Count of clip modes.
 
   BLCompOp* {.size:sizeof(uint32).} = enum
-    BL_COMP_OP_SRC_OVER ## Source-over [default].
+    BL_COMP_OP_SRC_OVER
+      ## Source-over [default]
+      ## The source is composited over the destination. this is the default
+      ## alpha blending compose method, when neither the compose setting is 
+      ## set, nor is set in the image meta-data.
     BL_COMP_OP_SRC_COPY ## Source-copy.
-    BL_COMP_OP_SRC_IN ## Source-in.
+    BL_COMP_OP_SRC_IN
+      ## Source-in.
+      ## The destination is composited over the source and the
+      ## result replaces the destination.
     BL_COMP_OP_SRC_OUT ## Source-out.
-    BL_COMP_OP_SRC_ATOP ## Source-atop.
+    BL_COMP_OP_SRC_ATOP
+      ## Source-atop.
+      ## The part of the source lying inside of the destination
+      ## is composited onto the destination
     BL_COMP_OP_DST_OVER ## Destination-over.
     BL_COMP_OP_DST_COPY ## Destination-copy [nop].
     BL_COMP_OP_DST_IN ## Destination-in.
     BL_COMP_OP_DST_OUT ## Destination-out.
-    BL_COMP_OP_DST_ATOP ## Destination-atop.
-    BL_COMP_OP_XOR ## Xor.
+    BL_COMP_OP_DST_ATOP
+      ## Destination-atop.
+      ## The part of the destination lying inside of the source is
+      ## composited over the source and replaces the destination.
+      ## Areas not overlaid are cleared
+    BL_COMP_OP_XOR
+      ## The part of the source that lies outside of the destination
+      ## is combined with the part of the destination that lies outside
+      ## of the source. Source or Destination, but not both
     BL_COMP_OP_CLEAR ## Clear.
     BL_COMP_OP_PLUS ## Plus.
     BL_COMP_OP_MINUS ## Minus.
     BL_COMP_OP_MODULATE ## Modulate.
-    BL_COMP_OP_MULTIPLY ## Multiply.
+    BL_COMP_OP_MULTIPLY
+      ## Multiply.
+      ## The source is multiplied by the destination and replaces the 
+      ## destination. The resultant color is always at least as dark
+      ## as either of the two constituent colors. Multiplying any
+      ## color with black produces black. Multiplying any color
+      ## with white leaves the original color unchanged.
     BL_COMP_OP_SCREEN ## Screen.
     BL_COMP_OP_OVERLAY ## Overlay.
     BL_COMP_OP_DARKEN ## Darken.

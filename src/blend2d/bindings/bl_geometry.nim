@@ -165,8 +165,7 @@ type
   
   BLSizeI* {.bycopy.} = object
     ## Size specified as [w, h] using int as a storage type.
-    w*: cint
-    h*: cint
+    w*, h*: cint
   
   BLBox* {.bycopy.} = object
     ## Box specified as [x0, y0, x1, y1] using double as a storage type.

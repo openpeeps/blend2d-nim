@@ -47,14 +47,21 @@ proc load*(f: FontFace, path: string, readFlags: BLFileReadFlags = BL_FILE_READ_
   !blFontFaceCreateFromFile(f, path, readFlags)
   f
 
-proc newTypeface*(path: string, readFlags: BLFileReadFlags = BL_FILE_READ_NO_FLAGS): FontFace =
-  ## Initialize a new `Font` reading a font from `path`
+proc loadTypeface*(path: string, readFlags: BLFileReadFlags = BL_FILE_READ_NO_FLAGS): FontFace =
+  ## Initialize a new `Font` by reading a font from `path`
   newTypeface().load(path, readFlags)
 
-proc font*(f: FontFace, size: float = 16.0): Font =
+proc initFont*(f: FontFace, fontSize: float = 16.0): Font =
+  ## Initialize a `BLFontCore` and returns the `Font` pointer
   result = create(BLFontCore)
   !blFontInit(result)
-  !blFontCreateFromFace(result, f, size)
+  !blFontCreateFromFace(result, f, fontSize)
+
+proc initFontCore*(f: FontFace, fontSize: float = 16.0): BLFontCore =
+  ## Initialize a `BLFontCore` and returns the `Font` pointer
+  result = BLFontCore()
+  !blFontInit(result.addr)
+  !blFontCreateFromFace(result.addr, f, fontSize)
 
 proc size*(f: Font): float =
   ## Returns the current font size
@@ -71,3 +78,25 @@ proc metrics*(f: Font, data: ptr string): ptr BLTextMetrics =
   !blGlyphBufferSetText(gb, data, len(data[]).uint, BL_TEXT_ENCODING_UTF8)
   !blFontShape(f, gb)
   !blFontGetTextMetrics(f, gb, result)
+
+#
+# Font Manager
+#
+type
+  FontManager* = ptr BLFontManagerCore
+
+proc initFontManager*(): FontManager = 
+  result = create(BLFontManagerCore)
+  !blFontManagerInit(result)
+
+proc loadTypeface*(fm: FontManager, path: string) =
+  var tf = path.loadTypeface()
+  !blFontManagerAddFace(fm, tf)
+
+proc getTypeface*(fm: FontManager, name: string): FontFace  =
+  result = create(BLFontFaceCore)
+  !blFontFaceInit(result)
+  !blFontManagerQueryFace(fm, name.cstring, len(name).uint, nil, result)
+
+proc destroyFontManager*(fm: FontManager) =
+  !blFontManagerDestroy(fm)
