@@ -357,6 +357,14 @@ proc radialGradient*(x1, y1, x0, y0, r0: float): Gradient =
     BLGradientType.BL_GRADIENT_TYPE_RADIAL, v.addr,
     BLExtendMode.BL_EXTEND_MODE_PAD, nil, 0, nil)
 
+proc conicGradient*(x0, y0, angle, repeat: float): Gradient =
+  ## Create a new conic `Gradient` pointer of `BLGradientCore`
+  result = create(BLGradientCore)
+  var v = BLConicGradientValues(x0: x0, y0: y0, angle: angle, repeat: repeat)
+  !blGradientInitAs(result,
+    BLGradientType.BL_GRADIENT_TYPE_RADIAL, v.addr,
+    BLExtendMode.BL_EXTEND_MODE_PAD, nil, 0, nil)
+
 proc add*(gr: Gradient, offset: float32, color: uint32) =
   ## Add a new stop color to `Gradient` using `offset` and `color`
   !blGradientAddStopRgba32(gr, offset, color)

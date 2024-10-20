@@ -230,14 +230,6 @@ proc mask*(ctx: Context, origin: PointI,
   !blContextFillMaskI(ctx, origin, mask, maskArea)
   ctx
 
-proc mask*(ctx: Context, text: tuple[f: BLFontCore, textContent: string, x: int32, y: int32], img: BLImageCore) =
-  !blContextSetCompOp(ctx, BLCompOp.BL_COMP_OP_SRC_COPY)
-  ctx.add(text[0].addr, text[1], 0, 0)
-  var p = point(0, 0)
-  var r = rect(300, 300)
-  !blContextSetCompOp(ctx, BLCompOp.BL_COMP_OP_SRC_IN)
-  !ctx.blContextBlitImageI(p.addr, img.addr, r.addr)
-
 proc endContext*(ctx: Context) =
   !blContextEnd(ctx)
 
