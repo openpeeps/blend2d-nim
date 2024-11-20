@@ -1,0 +1,3 @@
+[submodule "src/blend2d/bindings/blend2d_source"]
+	path = src/blend2d/bindings/blend2d_source
+	url = https://github.com/blend2d/blend2d.git

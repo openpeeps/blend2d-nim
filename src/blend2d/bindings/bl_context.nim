@@ -263,7 +263,7 @@ proc blContextFillAllExt*(self: ptr BLContextCore; style: pointer): BLResult
 proc blContextFillRectI*(self: ptr BLContextCore; rect: ptr BLRectI): BLResult
 proc blContextFillRectIRgba32*(self: ptr BLContextCore; rect: ptr BLRectI; rgba32: uint32): BLResult
 proc blContextFillRectIRgba64*(self: ptr BLContextCore; rect: ptr BLRectI; rgba64: uint64): BLResult
-proc blContextFillRectIExt*(self: ptr BLContextCore; rect: ptr BLRectI;  style: ptr BLUnknown): BLResult
+proc blContextFillRectIExt*(self: ptr BLContextCore; rect: ptr BLRectI;  style: pointer #[ptr BLUnknown]#): BLResult
 proc blContextFillRectD*(self: ptr BLContextCore; rect: ptr BLRect): BLResult
 proc blContextFillRectDRgba32*(self: ptr BLContextCore; rect: ptr BLRect; rgba32: uint32): BLResult
 proc blContextFillRectDRgba64*(self: ptr BLContextCore; rect: ptr BLRect; rgba64: uint64): BLResult
@@ -275,7 +275,7 @@ proc blContextFillPathDExt*(self: ptr BLContextCore; origin: ptr BLPoint;  path:
 proc blContextFillGeometry*(self: ptr BLContextCore; `type`: BLGeometryType; data: pointer): BLResult
 proc blContextFillGeometryRgba32*(self: ptr BLContextCore; `type`: BLGeometryType; data: pointer; rgba32: uint32): BLResult
 proc blContextFillGeometryRgba64*(self: ptr BLContextCore; `type`: BLGeometryType; data: pointer; rgba64: uint64): BLResult
-proc blContextFillGeometryExt*(self: ptr BLContextCore; `type`: BLGeometryType; data: pointer; style: ptr BLUnknown): BLResult
+proc blContextFillGeometryExt*(self: ptr BLContextCore; `type`: BLGeometryType; data: pointer; style: pointer #[ptr BLUnknown]#): BLResult
 proc blContextFillUtf8TextI*(self: ptr BLContextCore; origin: ptr BLPointI; font: ptr BLFontCore; text: cstring; size: uint): BLResult
 proc blContextFillUtf8TextIRgba32*(self: ptr BLContextCore; origin: ptr BLPointI; font: ptr BLFontCore; text: cstring; size: uint; rgba32: uint32): BLResult
 proc blContextFillUtf8TextIRgba64*(self: ptr BLContextCore; origin: ptr BLPointI; font: ptr BLFontCore; text: cstring; size: uint; rgba64: uint64): BLResult
@@ -331,7 +331,7 @@ proc blContextStrokePathDExt*(self: ptr BLContextCore; origin: ptr BLPoint; path
 proc blContextStrokeGeometry*(self: ptr BLContextCore; `type`: BLGeometryType; data: pointer): BLResult
 proc blContextStrokeGeometryRgba32*(self: ptr BLContextCore;  `type`: BLGeometryType; data: pointer;  rgba32: uint32): BLResult
 proc blContextStrokeGeometryRgba64*(self: ptr BLContextCore;  `type`: BLGeometryType; data: pointer;  rgba64: uint64): BLResult
-proc blContextStrokeGeometryExt*(self: ptr BLContextCore;  `type`: BLGeometryType; data: pointer;  style: ptr BLUnknown): BLResult
+proc blContextStrokeGeometryExt*(self: ptr BLContextCore;  `type`: BLGeometryType; data: pointer;  style: pointer #[ptr BLUnknown]#): BLResult
 proc blContextStrokeUtf8TextI*(self: ptr BLContextCore; origin: ptr BLPointI; font: ptr BLFontCore; text: cstring; size: uint): BLResult
 proc blContextStrokeUtf8TextIRgba32*(self: ptr BLContextCore; origin: ptr BLPointI; font: ptr BLFontCore; text: cstring; size: uint; rgba32: uint32): BLResult
 proc blContextStrokeUtf8TextIRgba64*(self: ptr BLContextCore; origin: ptr BLPointI; font: ptr BLFontCore; text: cstring; size: uint; rgba64: uint64): BLResult

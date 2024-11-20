@@ -163,6 +163,10 @@ proc add*(ctx: Context, r: BLRectI) =
   ## Add a `BLRectI` to Context
   !blContextFillRectI(ctx, r.addr)
 
+proc add*(ctx: Context, r: BLRectI, color: BLRgba) =
+  ## Add a `BLRectI` to Context
+  !blContextFillRectIExt(ctx, r.addr, color.addr)
+
 proc add*(ctx: Context, circle: Circle) = 
   ## Add a `Circle` pointer to current `Context`
   !blContextFillGeometry(ctx, BL_GEOMETRY_TYPE_CIRCLE, circle)
@@ -170,6 +174,10 @@ proc add*(ctx: Context, circle: Circle) =
 proc add*(ctx: Context, c: Circle, color: ColorHex) = 
   ## Add a colored `Circle` pointer to current `Context`
   !blContextFillGeometryRgba32(ctx, BL_GEOMETRY_TYPE_CIRCLE, c, color)
+
+proc add*(ctx: Context, c: Circle, color: BLRgba) = 
+  ## Add a colored `Circle` pointer to current `Context`
+  !blContextFillGeometryExt(ctx, BL_GEOMETRY_TYPE_CIRCLE, c, color.addr)
 
 proc add*(ctx: Context, rr: RoundRect, color: ColorHex) =
   ## Add a colored `BLRoundRect` to current `Context`
@@ -231,7 +239,22 @@ proc mask*(ctx: Context, origin: PointI,
   ctx
 
 proc endContext*(ctx: Context) =
+  ## Ends the `ctx` Context
   !blContextEnd(ctx)
+
+#
+# Context - Stroke
+#
+
+proc stroke*(ctx: Context, c: BLCircle, width: float, color: BLRgba = White): Context {.discardable.} =
+  ## Add a stroke to `BLCircle` using `ctx` Context
+  !blContextSetStrokeWidth(ctx, width)
+  !blContextStrokeGeometryExt(ctx, BLGeometryType.BlGeometryTypeCircle, c.addr, color.addr)
+  result = ctx
+
+template stroke*(c: BLCircle, width: float, color: BLRgba = White) =
+  ## Add a stroke to `BLCircle` while in a `ctx` Context
+  this.stroke(c, width, color)
 
 #
 # Macro Utils

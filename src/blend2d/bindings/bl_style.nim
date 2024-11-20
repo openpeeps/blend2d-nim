@@ -110,6 +110,7 @@ type
 
   BLPatternCore* {.bycopy.} = object
     d*: BLObjectDetail
+    
   BLPatternImpl* {.bycopy.} = object
     image*: BLImageCore
       ## Image used by the pattern.
