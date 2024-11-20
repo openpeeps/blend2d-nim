@@ -8,7 +8,7 @@ on:
 env:
   mainModule: 'blend2d'
   nim-version: 'stable'
-  nim-src: src/${{ env.mainModule }}.nim
+  nim-src: src/blend2d.nim
   deploy-dir: .gh-pages
 jobs:
   docs:
