@@ -1,0 +1,20 @@
+nimTitle	bl_filesystem	blend2d/bindings/bl_filesystem.html	module blend2d/bindings/bl_filesystem		0
+nim	BLFileInfoFlags	blend2d/bindings/bl_filesystem.html#BLFileInfoFlags	enum BLFileInfoFlags		34
+nim	BLFileOpenFlags	blend2d/bindings/bl_filesystem.html#BLFileOpenFlags	enum BLFileOpenFlags		63
+nim	BLFileSeekType	blend2d/bindings/bl_filesystem.html#BLFileSeekType	enum BLFileSeekType		92
+nim	BLFileReadFlags	blend2d/bindings/bl_filesystem.html#BLFileReadFlags	enum BLFileReadFlags		98
+nim	BLFileCore	blend2d/bindings/bl_filesystem.html#BLFileCore	object BLFileCore		112
+nim	BLFileInfo	blend2d/bindings/bl_filesystem.html#BLFileInfo	object BLFileInfo		120
+nim	blFileInit	blend2d/bindings/bl_filesystem.html#blFileInit,ptr.BLFileCore	proc blFileInit(self: ptr BLFileCore): BLResult		131
+nim	blFileReset	blend2d/bindings/bl_filesystem.html#blFileReset,ptr.BLFileCore	proc blFileReset(self: ptr BLFileCore): BLResult		132
+nim	blFileOpen	blend2d/bindings/bl_filesystem.html#blFileOpen,ptr.BLFileCore,cstring,BLFileOpenFlags	proc blFileOpen(self: ptr BLFileCore; fileName: cstring; openFlags: BLFileOpenFlags): BLResult		133
+nim	blFileClose	blend2d/bindings/bl_filesystem.html#blFileClose,ptr.BLFileCore	proc blFileClose(self: ptr BLFileCore): BLResult		134
+nim	blFileSeek	blend2d/bindings/bl_filesystem.html#blFileSeek,ptr.BLFileCore,int64,BLFileSeekType,ptr.int64	proc blFileSeek(self: ptr BLFileCore; offset: int64; seekType: BLFileSeekType;\n           positionOut: ptr int64): BLResult		135
+nim	blFileRead	blend2d/bindings/bl_filesystem.html#blFileRead,ptr.BLFileCore,pointer,uint,ptr.uint	proc blFileRead(self: ptr BLFileCore; buffer: pointer; n: uint;\n           bytesReadOut: ptr uint): BLResult		136
+nim	blFileWrite	blend2d/bindings/bl_filesystem.html#blFileWrite,ptr.BLFileCore,pointer,uint,ptr.uint	proc blFileWrite(self: ptr BLFileCore; buffer: pointer; n: uint;\n            bytesWrittenOut: ptr uint): BLResult		137
+nim	blFileTruncate	blend2d/bindings/bl_filesystem.html#blFileTruncate,ptr.BLFileCore,int64	proc blFileTruncate(self: ptr BLFileCore; maxSize: int64): BLResult		138
+nim	blFileGetInfo	blend2d/bindings/bl_filesystem.html#blFileGetInfo,ptr.BLFileCore,ptr.BLFileInfo	proc blFileGetInfo(self: ptr BLFileCore; infoOut: ptr BLFileInfo): BLResult		139
+nim	blFileGetSize	blend2d/bindings/bl_filesystem.html#blFileGetSize,ptr.BLFileCore,ptr.uint64	proc blFileGetSize(self: ptr BLFileCore; fileSizeOut: ptr uint64): BLResult		140
+nim	blFileSystemGetInfo	blend2d/bindings/bl_filesystem.html#blFileSystemGetInfo,cstring,ptr.BLFileInfo	proc blFileSystemGetInfo(fileName: cstring; infoOut: ptr BLFileInfo): BLResult		141
+nim	blFileSystemReadFile	blend2d/bindings/bl_filesystem.html#blFileSystemReadFile,cstring,ptr.BLArrayCore,uint,BLFileReadFlags	proc blFileSystemReadFile(fileName: cstring; dst: ptr BLArrayCore; maxSize: uint;\n                     readFlags: BLFileReadFlags): BLResult		142
+nim	blFileSystemWriteFile	blend2d/bindings/bl_filesystem.html#blFileSystemWriteFile,cstring,pointer,uint,ptr.uint	proc blFileSystemWriteFile(fileName: cstring; data: pointer; size: uint;\n                      bytesWrittenOut: ptr uint): BLResult		143

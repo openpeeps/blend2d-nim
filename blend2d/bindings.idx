@@ -1,0 +1,2 @@
+nimTitle	bindings	blend2d/bindings.html	module blend2d/bindings		0
+nim	`!`	blend2d/bindings.html#!.m,untyped	macro `!`(fn: untyped): untyped		34

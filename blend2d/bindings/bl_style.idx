@@ -1,0 +1,72 @@
+nimTitle	bl_style	blend2d/bindings/bl_style.html	module blend2d/bindings/bl_style		0
+nim	BLExtendMode	blend2d/bindings/bl_style.html#BLExtendMode	enum BLExtendMode		36
+nim	BLGradientType	blend2d/bindings/bl_style.html#BLGradientType	enum BLGradientType		53
+nim	BLGradientValue	blend2d/bindings/bl_style.html#BLGradientValue	enum BLGradientValue		59
+nim	BLGradientQuality	blend2d/bindings/bl_style.html#BLGradientQuality	enum BLGradientQuality		70
+nim	BLPatternQuality	blend2d/bindings/bl_style.html#BLPatternQuality	enum BLPatternQuality		76
+nim	BLGradientCore	blend2d/bindings/bl_style.html#BLGradientCore	object BLGradientCore		81
+nim	BLGradientImpl	blend2d/bindings/bl_style.html#BLGradientImpl	object BLGradientImpl		84
+nim	BLGradientStop	blend2d/bindings/bl_style.html#BLGradientStop	object BLGradientStop		98
+nim	BLLinearGradientValues	blend2d/bindings/bl_style.html#BLLinearGradientValues	object BLLinearGradientValues		102
+nim	BLRadialGradientValues	blend2d/bindings/bl_style.html#BLRadialGradientValues	object BLRadialGradientValues		105
+nim	BLConicGradientValues	blend2d/bindings/bl_style.html#BLConicGradientValues	object BLConicGradientValues		108
+nim	BLPatternCore	blend2d/bindings/bl_style.html#BLPatternCore	object BLPatternCore		111
+nim	BLPatternImpl	blend2d/bindings/bl_style.html#BLPatternImpl	object BLPatternImpl		114
+nim	blGradientInit	blend2d/bindings/bl_style.html#blGradientInit,ptr.BLGradientCore	proc blGradientInit(self: ptr BLGradientCore): BLResult		127
+nim	blGradientInitMove	blend2d/bindings/bl_style.html#blGradientInitMove,ptr.BLGradientCore,ptr.BLGradientCore	proc blGradientInitMove(self: ptr BLGradientCore; other: ptr BLGradientCore): BLResult		128
+nim	blGradientInitWeak	blend2d/bindings/bl_style.html#blGradientInitWeak,ptr.BLGradientCore,ptr.BLGradientCore	proc blGradientInitWeak(self: ptr BLGradientCore; other: ptr BLGradientCore): BLResult		129
+nim	blGradientInitAs	blend2d/bindings/bl_style.html#blGradientInitAs,ptr.BLGradientCore,BLGradientType,pointer,BLExtendMode,ptr.BLGradientStop,uint,ptr.BLMatrix2D	proc blGradientInitAs(self: ptr BLGradientCore; type: BLGradientType;\n                 values: pointer; extendMode: BLExtendMode;\n                 stops: ptr BLGradientStop; n: uint; transform: ptr BLMatrix2D): BLResult		130
+nim	blGradientDestroy	blend2d/bindings/bl_style.html#blGradientDestroy,ptr.BLGradientCore	proc blGradientDestroy(self: ptr BLGradientCore): BLResult		134
+nim	blGradientReset	blend2d/bindings/bl_style.html#blGradientReset,ptr.BLGradientCore	proc blGradientReset(self: ptr BLGradientCore): BLResult		135
+nim	blGradientAssignMove	blend2d/bindings/bl_style.html#blGradientAssignMove,ptr.BLGradientCore,ptr.BLGradientCore	proc blGradientAssignMove(self: ptr BLGradientCore; other: ptr BLGradientCore): BLResult		136
+nim	blGradientAssignWeak	blend2d/bindings/bl_style.html#blGradientAssignWeak,ptr.BLGradientCore,ptr.BLGradientCore	proc blGradientAssignWeak(self: ptr BLGradientCore; other: ptr BLGradientCore): BLResult		137
+nim	blGradientCreate	blend2d/bindings/bl_style.html#blGradientCreate,ptr.BLGradientCore,BLGradientType,pointer,BLExtendMode,ptr.BLGradientStop,uint,ptr.BLMatrix2D	proc blGradientCreate(self: ptr BLGradientCore; type: BLGradientType;\n                 values: pointer; extendMode: BLExtendMode;\n                 stops: ptr BLGradientStop; n: uint; transform: ptr BLMatrix2D): BLResult		138
+nim	blGradientShrink	blend2d/bindings/bl_style.html#blGradientShrink,ptr.BLGradientCore	proc blGradientShrink(self: ptr BLGradientCore): BLResult		142
+nim	blGradientReserve	blend2d/bindings/bl_style.html#blGradientReserve,ptr.BLGradientCore,uint	proc blGradientReserve(self: ptr BLGradientCore; n: uint): BLResult		143
+nim	blGradientGetType	blend2d/bindings/bl_style.html#blGradientGetType,ptr.BLGradientCore	proc blGradientGetType(self: ptr BLGradientCore): BLGradientType		144
+nim	blGradientSetType	blend2d/bindings/bl_style.html#blGradientSetType,ptr.BLGradientCore,BLGradientType	proc blGradientSetType(self: ptr BLGradientCore; type: BLGradientType): BLResult		145
+nim	blGradientGetExtendMode	blend2d/bindings/bl_style.html#blGradientGetExtendMode,ptr.BLGradientCore	proc blGradientGetExtendMode(self: ptr BLGradientCore): BLExtendMode		146
+nim	blGradientSetExtendMode	blend2d/bindings/bl_style.html#blGradientSetExtendMode,ptr.BLGradientCore,BLExtendMode	proc blGradientSetExtendMode(self: ptr BLGradientCore; extendMode: BLExtendMode): BLResult		147
+nim	blGradientGetValue	blend2d/bindings/bl_style.html#blGradientGetValue,ptr.BLGradientCore,uint	proc blGradientGetValue(self: ptr BLGradientCore; index: uint): cdouble		148
+nim	blGradientSetValue	blend2d/bindings/bl_style.html#blGradientSetValue,ptr.BLGradientCore,uint,cdouble	proc blGradientSetValue(self: ptr BLGradientCore; index: uint; value: cdouble): BLResult		149
+nim	blGradientSetValues	blend2d/bindings/bl_style.html#blGradientSetValues,ptr.BLGradientCore,uint,ptr.cdouble,uint	proc blGradientSetValues(self: ptr BLGradientCore; index: uint; values: ptr cdouble;\n                    n: uint): BLResult		150
+nim	blGradientGetSize	blend2d/bindings/bl_style.html#blGradientGetSize,ptr.BLGradientCore	proc blGradientGetSize(self: ptr BLGradientCore): uint		152
+nim	blGradientGetCapacity	blend2d/bindings/bl_style.html#blGradientGetCapacity,ptr.BLGradientCore	proc blGradientGetCapacity(self: ptr BLGradientCore): uint		153
+nim	blGradientGetStops	blend2d/bindings/bl_style.html#blGradientGetStops,ptr.BLGradientCore	proc blGradientGetStops(self: ptr BLGradientCore): ptr BLGradientStop		154
+nim	blGradientResetStops	blend2d/bindings/bl_style.html#blGradientResetStops,ptr.BLGradientCore	proc blGradientResetStops(self: ptr BLGradientCore): BLResult		155
+nim	blGradientAssignStops	blend2d/bindings/bl_style.html#blGradientAssignStops,ptr.BLGradientCore,ptr.BLGradientStop,uint	proc blGradientAssignStops(self: ptr BLGradientCore; stops: ptr BLGradientStop;\n                      n: uint): BLResult		156
+nim	blGradientAddStopRgba32	blend2d/bindings/bl_style.html#blGradientAddStopRgba32,ptr.BLGradientCore,cdouble,uint32	proc blGradientAddStopRgba32(self: ptr BLGradientCore; offset: cdouble;\n                        argb32: uint32): BLResult		158
+nim	blGradientAddStopRgba64	blend2d/bindings/bl_style.html#blGradientAddStopRgba64,ptr.BLGradientCore,cdouble,uint64	proc blGradientAddStopRgba64(self: ptr BLGradientCore; offset: cdouble;\n                        argb64: uint64): BLResult		160
+nim	blGradientRemoveStop	blend2d/bindings/bl_style.html#blGradientRemoveStop,ptr.BLGradientCore,uint	proc blGradientRemoveStop(self: ptr BLGradientCore; index: uint): BLResult		162
+nim	blGradientRemoveStopByOffset	blend2d/bindings/bl_style.html#blGradientRemoveStopByOffset,ptr.BLGradientCore,cdouble,uint32	proc blGradientRemoveStopByOffset(self: ptr BLGradientCore; offset: cdouble;\n                             all: uint32): BLResult		163
+nim	blGradientRemoveStopsByIndex	blend2d/bindings/bl_style.html#blGradientRemoveStopsByIndex,ptr.BLGradientCore,uint,uint	proc blGradientRemoveStopsByIndex(self: ptr BLGradientCore; rStart: uint; rEnd: uint): BLResult		165
+nim	blGradientRemoveStopsByOffset	blend2d/bindings/bl_style.html#blGradientRemoveStopsByOffset,ptr.BLGradientCore,cdouble,cdouble	proc blGradientRemoveStopsByOffset(self: ptr BLGradientCore; offsetMin: cdouble;\n                              offsetMax: cdouble): BLResult		167
+nim	blGradientReplaceStopRgba32	blend2d/bindings/bl_style.html#blGradientReplaceStopRgba32,ptr.BLGradientCore,uint,cdouble,uint32	proc blGradientReplaceStopRgba32(self: ptr BLGradientCore; index: uint;\n                            offset: cdouble; rgba32: uint32): BLResult		169
+nim	blGradientReplaceStopRgba64	blend2d/bindings/bl_style.html#blGradientReplaceStopRgba64,ptr.BLGradientCore,uint,cdouble,uint64	proc blGradientReplaceStopRgba64(self: ptr BLGradientCore; index: uint;\n                            offset: cdouble; rgba64: uint64): BLResult		171
+nim	blGradientIndexOfStop	blend2d/bindings/bl_style.html#blGradientIndexOfStop,ptr.BLGradientCore,cdouble	proc blGradientIndexOfStop(self: ptr BLGradientCore; offset: cdouble): uint		173
+nim	blGradientGetTransform	blend2d/bindings/bl_style.html#blGradientGetTransform,ptr.BLGradientCore,ptr.BLMatrix2D	proc blGradientGetTransform(self: ptr BLGradientCore; transformOut: ptr BLMatrix2D): BLResult		174
+nim	blGradientGetTransformType	blend2d/bindings/bl_style.html#blGradientGetTransformType,ptr.BLGradientCore	proc blGradientGetTransformType(self: ptr BLGradientCore): BLTransformType		176
+nim	blGradientApplyTransformOp	blend2d/bindings/bl_style.html#blGradientApplyTransformOp,ptr.BLGradientCore,BLTransformOp,pointer	proc blGradientApplyTransformOp(self: ptr BLGradientCore; opType: BLTransformOp;\n                           opData: pointer): BLResult		177
+nim	blGradientEquals	blend2d/bindings/bl_style.html#blGradientEquals,ptr.BLGradientCore,ptr.BLGradientCore	proc blGradientEquals(a: ptr BLGradientCore; b: ptr BLGradientCore): bool		179
+nim	blPatternInit	blend2d/bindings/bl_style.html#blPatternInit,ptr.BLPatternCore	proc blPatternInit(self: ptr BLPatternCore): BLResult		185
+nim	blPatternInitMove	blend2d/bindings/bl_style.html#blPatternInitMove,ptr.BLPatternCore,ptr.BLPatternCore	proc blPatternInitMove(self: ptr BLPatternCore; other: ptr BLPatternCore): BLResult		186
+nim	blPatternInitWeak	blend2d/bindings/bl_style.html#blPatternInitWeak,ptr.BLPatternCore,ptr.BLPatternCore	proc blPatternInitWeak(self: ptr BLPatternCore; other: ptr BLPatternCore): BLResult		187
+nim	blPatternInitAs	blend2d/bindings/bl_style.html#blPatternInitAs,ptr.BLPatternCore,ptr.BLImageCore,ptr.BLRectI,BLExtendMode,ptr.BLMatrix2D	proc blPatternInitAs(self: ptr BLPatternCore; image: ptr BLImageCore;\n                area: ptr BLRectI; extendMode: BLExtendMode;\n                transform: ptr BLMatrix2D): BLResult		188
+nim	blPatternDestroy	blend2d/bindings/bl_style.html#blPatternDestroy,ptr.BLPatternCore	proc blPatternDestroy(self: ptr BLPatternCore): BLResult		191
+nim	blPatternReset	blend2d/bindings/bl_style.html#blPatternReset,ptr.BLPatternCore	proc blPatternReset(self: ptr BLPatternCore): BLResult		192
+nim	blPatternAssignMove	blend2d/bindings/bl_style.html#blPatternAssignMove,ptr.BLPatternCore,ptr.BLPatternCore	proc blPatternAssignMove(self: ptr BLPatternCore; other: ptr BLPatternCore): BLResult		193
+nim	blPatternAssignWeak	blend2d/bindings/bl_style.html#blPatternAssignWeak,ptr.BLPatternCore,ptr.BLPatternCore	proc blPatternAssignWeak(self: ptr BLPatternCore; other: ptr BLPatternCore): BLResult		194
+nim	blPatternAssignDeep	blend2d/bindings/bl_style.html#blPatternAssignDeep,ptr.BLPatternCore,ptr.BLPatternCore	proc blPatternAssignDeep(self: ptr BLPatternCore; other: ptr BLPatternCore): BLResult		195
+nim	blPatternCreate	blend2d/bindings/bl_style.html#blPatternCreate,ptr.BLPatternCore,ptr.BLImageCore,ptr.BLRectI,BLExtendMode,ptr.BLMatrix2D	proc blPatternCreate(self: ptr BLPatternCore; image: ptr BLImageCore;\n                area: ptr BLRectI; extendMode: BLExtendMode;\n                transform: ptr BLMatrix2D): BLResult		196
+nim	blPatternGetImage	blend2d/bindings/bl_style.html#blPatternGetImage,ptr.BLPatternCore,ptr.BLImageCore	proc blPatternGetImage(self: ptr BLPatternCore; image: ptr BLImageCore): BLResult		199
+nim	blPatternSetImage	blend2d/bindings/bl_style.html#blPatternSetImage,ptr.BLPatternCore,ptr.BLImageCore,ptr.BLRectI	proc blPatternSetImage(self: ptr BLPatternCore; image: ptr BLImageCore;\n                  area: ptr BLRectI): BLResult		200
+nim	blPatternResetImage	blend2d/bindings/bl_style.html#blPatternResetImage,ptr.BLPatternCore	proc blPatternResetImage(self: ptr BLPatternCore): BLResult		202
+nim	blPatternGetArea	blend2d/bindings/bl_style.html#blPatternGetArea,ptr.BLPatternCore,ptr.BLRectI	proc blPatternGetArea(self: ptr BLPatternCore; areaOut: ptr BLRectI): BLResult		203
+nim	blPatternSetArea	blend2d/bindings/bl_style.html#blPatternSetArea,ptr.BLPatternCore,ptr.BLRectI	proc blPatternSetArea(self: ptr BLPatternCore; area: ptr BLRectI): BLResult		204
+nim	blPatternResetArea	blend2d/bindings/bl_style.html#blPatternResetArea,ptr.BLPatternCore	proc blPatternResetArea(self: ptr BLPatternCore): BLResult		205
+nim	blPatternGetExtendMode	blend2d/bindings/bl_style.html#blPatternGetExtendMode,ptr.BLPatternCore	proc blPatternGetExtendMode(self: ptr BLPatternCore): BLExtendMode		206
+nim	blPatternSetExtendMode	blend2d/bindings/bl_style.html#blPatternSetExtendMode,ptr.BLPatternCore,BLExtendMode	proc blPatternSetExtendMode(self: ptr BLPatternCore; extendMode: BLExtendMode): BLResult		207
+nim	blPatternGetTransform	blend2d/bindings/bl_style.html#blPatternGetTransform,ptr.BLPatternCore,ptr.BLMatrix2D	proc blPatternGetTransform(self: ptr BLPatternCore; transformOut: ptr BLMatrix2D): BLResult		208
+nim	blPatternGetTransformType	blend2d/bindings/bl_style.html#blPatternGetTransformType,ptr.BLPatternCore	proc blPatternGetTransformType(self: ptr BLPatternCore): BLTransformType		210
+nim	blPatternApplyTransformOp	blend2d/bindings/bl_style.html#blPatternApplyTransformOp,ptr.BLPatternCore,BLTransformOp,pointer	proc blPatternApplyTransformOp(self: ptr BLPatternCore; opType: BLTransformOp;\n                          opData: pointer): BLResult		211
+nim	blPatternEquals	blend2d/bindings/bl_style.html#blPatternEquals,ptr.BLPatternCore,ptr.BLPatternCore	proc blPatternEquals(a: ptr BLPatternCore; b: ptr BLPatternCore): bool		213

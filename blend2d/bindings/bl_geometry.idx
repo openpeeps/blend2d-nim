@@ -1,0 +1,103 @@
+nimTitle	bl_geometry	blend2d/bindings/bl_geometry.html	module blend2d/bindings/bl_geometry		0
+nim	BLGeometryDirection	blend2d/bindings/bl_geometry.html#BLGeometryDirection	enum BLGeometryDirection		33
+nim	BLGeometryType	blend2d/bindings/bl_geometry.html#BLGeometryType	enum BLGeometryType		38
+nim	BLFillRule	blend2d/bindings/bl_geometry.html#BLFillRule	enum BLFillRule		63
+nim	BLHitTest	blend2d/bindings/bl_geometry.html#BLHitTest	enum BLHitTest		68
+nim	BLTransformType	blend2d/bindings/bl_geometry.html#BLTransformType	enum BLTransformType		74
+nim	BLTransformOp	blend2d/bindings/bl_geometry.html#BLTransformOp	enum BLTransformOp		84
+nim	BLPathCmd	blend2d/bindings/bl_geometry.html#BLPathCmd	enum BLPathCmd		102
+nim	BLPathReverseMode	blend2d/bindings/bl_geometry.html#BLPathReverseMode	enum BLPathReverseMode		113
+nim	BLStrokeJoin	blend2d/bindings/bl_geometry.html#BLStrokeJoin	enum BLStrokeJoin		118
+nim	BLStrokeCapPosition	blend2d/bindings/bl_geometry.html#BLStrokeCapPosition	enum BLStrokeCapPosition		126
+nim	BLStrokeCap	blend2d/bindings/bl_geometry.html#BLStrokeCap	enum BLStrokeCap		131
+nim	BLStrokeTransformOrder	blend2d/bindings/bl_geometry.html#BLStrokeTransformOrder	enum BLStrokeTransformOrder		140
+nim	BLFlattenMode	blend2d/bindings/bl_geometry.html#BLFlattenMode	enum BLFlattenMode		145
+nim	BLPoint	blend2d/bindings/bl_geometry.html#BLPoint	object BLPoint		155
+nim	BLPointI	blend2d/bindings/bl_geometry.html#BLPointI	object BLPointI		158
+nim	BLSize	blend2d/bindings/bl_geometry.html#BLSize	object BLSize		162
+nim	BLSizeI	blend2d/bindings/bl_geometry.html#BLSizeI	object BLSizeI		166
+nim	BLBox	blend2d/bindings/bl_geometry.html#BLBox	object BLBox		170
+nim	BLBoxI	blend2d/bindings/bl_geometry.html#BLBoxI	object BLBoxI		174
+nim	BLRect	blend2d/bindings/bl_geometry.html#BLRect	object BLRect		178
+nim	BLRectI	blend2d/bindings/bl_geometry.html#BLRectI	object BLRectI		182
+nim	BLLine	blend2d/bindings/bl_geometry.html#BLLine	object BLLine		186
+nim	BLTriangle	blend2d/bindings/bl_geometry.html#BLTriangle	object BLTriangle		190
+nim	BLRoundRect	blend2d/bindings/bl_geometry.html#BLRoundRect	object BLRoundRect		194
+nim	BLCircle	blend2d/bindings/bl_geometry.html#BLCircle	object BLCircle		198
+nim	BLEllipse	blend2d/bindings/bl_geometry.html#BLEllipse	object BLEllipse		202
+nim	BLArc	blend2d/bindings/bl_geometry.html#BLArc	object BLArc		206
+nim	BLMatrix2D	blend2d/bindings/bl_geometry.html#BLMatrix2D	object BLMatrix2D		210
+nim	BLApproximationOptions	blend2d/bindings/bl_geometry.html#BLApproximationOptions	object BLApproximationOptions		215
+nim	BLStrokeOptionsCore	blend2d/bindings/bl_geometry.html#BLStrokeOptionsCore	object BLStrokeOptionsCore		229
+nim	BLPathCore	blend2d/bindings/bl_geometry.html#BLPathCore	object BLPathCore		242
+nim	BLPathSinkFunc	blend2d/bindings/bl_geometry.html#BLPathSinkFunc	type BLPathSinkFunc		245
+nim	BLPathStrokeSinkFunc	blend2d/bindings/bl_geometry.html#BLPathStrokeSinkFunc	type BLPathStrokeSinkFunc		247
+nim	blPathInit	blend2d/bindings/bl_geometry.html#blPathInit,ptr.BLPathCore	proc blPathInit(self: ptr BLPathCore): BLResult		255
+nim	blPathInitMove	blend2d/bindings/bl_geometry.html#blPathInitMove,ptr.BLPathCore,ptr.BLPathCore	proc blPathInitMove(self: ptr BLPathCore; other: ptr BLPathCore): BLResult		256
+nim	blPathInitWeak	blend2d/bindings/bl_geometry.html#blPathInitWeak,ptr.BLPathCore,ptr.BLPathCore	proc blPathInitWeak(self: ptr BLPathCore; other: ptr BLPathCore): BLResult		257
+nim	blPathDestroy	blend2d/bindings/bl_geometry.html#blPathDestroy,ptr.BLPathCore	proc blPathDestroy(self: ptr BLPathCore): BLResult		258
+nim	blPathReset	blend2d/bindings/bl_geometry.html#blPathReset,ptr.BLPathCore	proc blPathReset(self: ptr BLPathCore): BLResult		259
+nim	blPathGetSize	blend2d/bindings/bl_geometry.html#blPathGetSize,ptr.BLPathCore	proc blPathGetSize(self: ptr BLPathCore): uint		260
+nim	blPathGetCapacity	blend2d/bindings/bl_geometry.html#blPathGetCapacity,ptr.BLPathCore	proc blPathGetCapacity(self: ptr BLPathCore): uint		261
+nim	blPathGetCommandData	blend2d/bindings/bl_geometry.html#blPathGetCommandData,ptr.BLPathCore	proc blPathGetCommandData(self: ptr BLPathCore): ptr uint8		262
+nim	blPathGetVertexData	blend2d/bindings/bl_geometry.html#blPathGetVertexData,ptr.BLPathCore	proc blPathGetVertexData(self: ptr BLPathCore): ptr BLPoint		263
+nim	blPathClear	blend2d/bindings/bl_geometry.html#blPathClear,ptr.BLPathCore	proc blPathClear(self: ptr BLPathCore): BLResult		264
+nim	blPathShrink	blend2d/bindings/bl_geometry.html#blPathShrink,ptr.BLPathCore	proc blPathShrink(self: ptr BLPathCore): BLResult		265
+nim	blPathReserve	blend2d/bindings/bl_geometry.html#blPathReserve,ptr.BLPathCore,uint	proc blPathReserve(self: ptr BLPathCore; n: uint): BLResult		266
+nim	blPathModifyOp	blend2d/bindings/bl_geometry.html#blPathModifyOp,ptr.BLPathCore,BLModifyOP,uint,ptr.ptr.uint8,ptr.ptr.BLPoint	proc blPathModifyOp(self: ptr BLPathCore; op: BLModifyOP; n: uint;\n               cmdDataOut: ptr ptr uint8; vtxDataOut: ptr ptr BLPoint): BLResult		267
+nim	blPathAssignMove	blend2d/bindings/bl_geometry.html#blPathAssignMove,ptr.BLPathCore,ptr.BLPathCore	proc blPathAssignMove(self: ptr BLPathCore; other: ptr BLPathCore): BLResult		268
+nim	blPathAssignWeak	blend2d/bindings/bl_geometry.html#blPathAssignWeak,ptr.BLPathCore,ptr.BLPathCore	proc blPathAssignWeak(self: ptr BLPathCore; other: ptr BLPathCore): BLResult		269
+nim	blPathAssignDeep	blend2d/bindings/bl_geometry.html#blPathAssignDeep,ptr.BLPathCore,ptr.BLPathCore	proc blPathAssignDeep(self: ptr BLPathCore; other: ptr BLPathCore): BLResult		270
+nim	blPathSetVertexAt	blend2d/bindings/bl_geometry.html#blPathSetVertexAt,ptr.BLPathCore,uint,uint32,cdouble,cdouble	proc blPathSetVertexAt(self: ptr BLPathCore; index: uint; cmd: uint32; x: cdouble;\n                  y: cdouble): BLResult		271
+nim	blPathMoveTo	blend2d/bindings/bl_geometry.html#blPathMoveTo,ptr.BLPathCore,cdouble,cdouble	proc blPathMoveTo(self: ptr BLPathCore; x0: cdouble; y0: cdouble): BLResult		272
+nim	blPathLineTo	blend2d/bindings/bl_geometry.html#blPathLineTo,ptr.BLPathCore,cdouble,cdouble	proc blPathLineTo(self: ptr BLPathCore; x1: cdouble; y1: cdouble): BLResult		273
+nim	blPathPolyTo	blend2d/bindings/bl_geometry.html#blPathPolyTo,ptr.BLPathCore,ptr.BLPoint,uint	proc blPathPolyTo(self: ptr BLPathCore; poly: ptr BLPoint; count: uint): BLResult		274
+nim	blPathQuadTo	blend2d/bindings/bl_geometry.html#blPathQuadTo,ptr.BLPathCore,cdouble,cdouble,cdouble,cdouble	proc blPathQuadTo(self: ptr BLPathCore; x1: cdouble; y1: cdouble; x2: cdouble;\n             y2: cdouble): BLResult		275
+nim	blPathConicTo	blend2d/bindings/bl_geometry.html#blPathConicTo,ptr.BLPathCore,cdouble,cdouble,cdouble,cdouble,cdouble	proc blPathConicTo(self: ptr BLPathCore; x1, y1, x2, y2, w: cdouble): BLResult		276
+nim	blPathCubicTo	blend2d/bindings/bl_geometry.html#blPathCubicTo,ptr.BLPathCore,cdouble,cdouble,cdouble,cdouble,cdouble,cdouble	proc blPathCubicTo(self: ptr BLPathCore; x1, y1, x2, y2, x3, y3: cdouble): BLResult		277
+nim	blPathSmoothQuadTo	blend2d/bindings/bl_geometry.html#blPathSmoothQuadTo,ptr.BLPathCore,cdouble,cdouble	proc blPathSmoothQuadTo(self: ptr BLPathCore; x2, y2: cdouble): BLResult		278
+nim	blPathSmoothCubicTo	blend2d/bindings/bl_geometry.html#blPathSmoothCubicTo,ptr.BLPathCore,cdouble,cdouble,cdouble,cdouble	proc blPathSmoothCubicTo(self: ptr BLPathCore; x2, y2, x3, y3: cdouble): BLResult		279
+nim	blPathArcTo	blend2d/bindings/bl_geometry.html#blPathArcTo,ptr.BLPathCore,cdouble,cdouble,cdouble,cdouble,cdouble,cdouble,bool	proc blPathArcTo(self: ptr BLPathCore; x, y, rx, ry, start, sweep: cdouble;\n            forceMoveTo: bool): BLResult		280
+nim	blPathArcQuadrantTo	blend2d/bindings/bl_geometry.html#blPathArcQuadrantTo,ptr.BLPathCore,cdouble,cdouble,cdouble,cdouble	proc blPathArcQuadrantTo(self: ptr BLPathCore; x1, y1, x2, y2: cdouble): BLResult		281
+nim	blPathEllipticArcTo	blend2d/bindings/bl_geometry.html#blPathEllipticArcTo,ptr.BLPathCore,cdouble,cdouble,cdouble,bool,bool,cdouble,cdouble	proc blPathEllipticArcTo(self: ptr BLPathCore; rx, ry, xAxisRotation: cdouble;\n                    largeArcFlag: bool; sweepFlag: bool; x1, y1: cdouble): BLResult		282
+nim	blPathClose	blend2d/bindings/bl_geometry.html#blPathClose,ptr.BLPathCore	proc blPathClose(self: ptr BLPathCore): BLResult		283
+nim	blPathAddGeometry	blend2d/bindings/bl_geometry.html#blPathAddGeometry,ptr.BLPathCore,BLGeometryType,pointer,ptr.BLMatrix2D,BLGeometryDirection	proc blPathAddGeometry(self: ptr BLPathCore; geometryType: BLGeometryType;\n                  geometryData: pointer; m: ptr BLMatrix2D;\n                  dir: BLGeometryDirection): BLResult		284
+nim	blPathAddBoxI	blend2d/bindings/bl_geometry.html#blPathAddBoxI,ptr.BLPathCore,ptr.BLBoxI,BLGeometryDirection	proc blPathAddBoxI(self: ptr BLPathCore; box: ptr BLBoxI; dir: BLGeometryDirection): BLResult		285
+nim	blPathAddBoxD	blend2d/bindings/bl_geometry.html#blPathAddBoxD,ptr.BLPathCore,ptr.BLBox,BLGeometryDirection	proc blPathAddBoxD(self: ptr BLPathCore; box: ptr BLBox; dir: BLGeometryDirection): BLResult		286
+nim	blPathAddRectI	blend2d/bindings/bl_geometry.html#blPathAddRectI,ptr.BLPathCore,ptr.BLRectI,BLGeometryDirection	proc blPathAddRectI(self: ptr BLPathCore; rect: ptr BLRectI; dir: BLGeometryDirection): BLResult		287
+nim	blPathAddRectD	blend2d/bindings/bl_geometry.html#blPathAddRectD,ptr.BLPathCore,ptr.BLRect,BLGeometryDirection	proc blPathAddRectD(self: ptr BLPathCore; rect: ptr BLRect; dir: BLGeometryDirection): BLResult		288
+nim	blPathAddPath	blend2d/bindings/bl_geometry.html#blPathAddPath,ptr.BLPathCore,ptr.BLPathCore,ptr.BLRange	proc blPathAddPath(self: ptr BLPathCore; other: ptr BLPathCore; range: ptr BLRange): BLResult		289
+nim	blPathAddTranslatedPath	blend2d/bindings/bl_geometry.html#blPathAddTranslatedPath,ptr.BLPathCore,ptr.BLPathCore,ptr.BLRange,ptr.BLPoint	proc blPathAddTranslatedPath(self: ptr BLPathCore; other: ptr BLPathCore;\n                        range: ptr BLRange; p: ptr BLPoint): BLResult		290
+nim	blPathAddTransformedPath	blend2d/bindings/bl_geometry.html#blPathAddTransformedPath,ptr.BLPathCore,ptr.BLPathCore,ptr.BLRange,ptr.BLMatrix2D	proc blPathAddTransformedPath(self: ptr BLPathCore; other: ptr BLPathCore;\n                         range: ptr BLRange; m: ptr BLMatrix2D): BLResult		291
+nim	blPathAddReversedPath	blend2d/bindings/bl_geometry.html#blPathAddReversedPath,ptr.BLPathCore,ptr.BLPathCore,ptr.BLRange,BLPathReverseMode	proc blPathAddReversedPath(self: ptr BLPathCore; other: ptr BLPathCore;\n                      range: ptr BLRange; reverseMode: BLPathReverseMode): BLResult		292
+nim	blPathAddStrokedPath	blend2d/bindings/bl_geometry.html#blPathAddStrokedPath,ptr.BLPathCore,ptr.BLPathCore,ptr.BLRange,ptr.BLStrokeOptionsCore,ptr.BLApproximationOptions	proc blPathAddStrokedPath(self: ptr BLPathCore; other: ptr BLPathCore;\n                     range: ptr BLRange; options: ptr BLStrokeOptionsCore;\n                     approx: ptr BLApproximationOptions): BLResult		293
+nim	blPathRemoveRange	blend2d/bindings/bl_geometry.html#blPathRemoveRange,ptr.BLPathCore,ptr.BLRange	proc blPathRemoveRange(self: ptr BLPathCore; range: ptr BLRange): BLResult		294
+nim	blPathTranslate	blend2d/bindings/bl_geometry.html#blPathTranslate,ptr.BLPathCore,ptr.BLRange,ptr.BLPoint	proc blPathTranslate(self: ptr BLPathCore; range: ptr BLRange; p: ptr BLPoint): BLResult		295
+nim	blPathTransform	blend2d/bindings/bl_geometry.html#blPathTransform,ptr.BLPathCore,ptr.BLRange,ptr.BLMatrix2D	proc blPathTransform(self: ptr BLPathCore; range: ptr BLRange; m: ptr BLMatrix2D): BLResult		296
+nim	blPathFitTo	blend2d/bindings/bl_geometry.html#blPathFitTo,ptr.BLPathCore,ptr.BLRange,ptr.BLRect,uint32	proc blPathFitTo(self: ptr BLPathCore; range: ptr BLRange; rect: ptr BLRect;\n            fitFlags: uint32): BLResult		297
+nim	blPathEquals	blend2d/bindings/bl_geometry.html#blPathEquals,ptr.BLPathCore,ptr.BLPathCore	proc blPathEquals(a: ptr BLPathCore; b: ptr BLPathCore): bool		298
+nim	blPathGetInfoFlags	blend2d/bindings/bl_geometry.html#blPathGetInfoFlags,ptr.BLPathCore,ptr.uint32	proc blPathGetInfoFlags(self: ptr BLPathCore; flagsOut: ptr uint32): BLResult		299
+nim	blPathGetControlBox	blend2d/bindings/bl_geometry.html#blPathGetControlBox,ptr.BLPathCore,ptr.BLBox	proc blPathGetControlBox(self: ptr BLPathCore; boxOut: ptr BLBox): BLResult		300
+nim	blPathGetBoundingBox	blend2d/bindings/bl_geometry.html#blPathGetBoundingBox,ptr.BLPathCore,ptr.BLBox	proc blPathGetBoundingBox(self: ptr BLPathCore; boxOut: ptr BLBox): BLResult		301
+nim	blPathGetFigureRange	blend2d/bindings/bl_geometry.html#blPathGetFigureRange,ptr.BLPathCore,uint,ptr.BLRange	proc blPathGetFigureRange(self: ptr BLPathCore; index: uint; rangeOut: ptr BLRange): BLResult		302
+nim	blPathGetLastVertex	blend2d/bindings/bl_geometry.html#blPathGetLastVertex,ptr.BLPathCore,ptr.BLPoint	proc blPathGetLastVertex(self: ptr BLPathCore; vtxOut: ptr BLPoint): BLResult		303
+nim	blPathGetClosestVertex	blend2d/bindings/bl_geometry.html#blPathGetClosestVertex,ptr.BLPathCore,ptr.BLPoint,cdouble,ptr.uint,ptr.cdouble	proc blPathGetClosestVertex(self: ptr BLPathCore; p: ptr BLPoint;\n                       maxDistance: cdouble; indexOut: ptr uint;\n                       distanceOut: ptr cdouble): BLResult		304
+nim	blPathHitTest	blend2d/bindings/bl_geometry.html#blPathHitTest,ptr.BLPathCore,ptr.BLPoint,BLFillRule	proc blPathHitTest(self: ptr BLPathCore; p: ptr BLPoint; fillRule: BLFillRule): BLHitTest		305
+nim	blStrokeOptionsInit	blend2d/bindings/bl_geometry.html#blStrokeOptionsInit,ptr.BLStrokeOptionsCore	proc blStrokeOptionsInit(self: ptr BLStrokeOptionsCore): BLResult		306
+nim	blStrokeOptionsInitMove	blend2d/bindings/bl_geometry.html#blStrokeOptionsInitMove,ptr.BLStrokeOptionsCore,ptr.BLStrokeOptionsCore	proc blStrokeOptionsInitMove(self: ptr BLStrokeOptionsCore;\n                        other: ptr BLStrokeOptionsCore): BLResult		307
+nim	blStrokeOptionsInitWeak	blend2d/bindings/bl_geometry.html#blStrokeOptionsInitWeak,ptr.BLStrokeOptionsCore,ptr.BLStrokeOptionsCore	proc blStrokeOptionsInitWeak(self: ptr BLStrokeOptionsCore;\n                        other: ptr BLStrokeOptionsCore): BLResult		308
+nim	blStrokeOptionsDestroy	blend2d/bindings/bl_geometry.html#blStrokeOptionsDestroy,ptr.BLStrokeOptionsCore	proc blStrokeOptionsDestroy(self: ptr BLStrokeOptionsCore): BLResult		309
+nim	blStrokeOptionsReset	blend2d/bindings/bl_geometry.html#blStrokeOptionsReset,ptr.BLStrokeOptionsCore	proc blStrokeOptionsReset(self: ptr BLStrokeOptionsCore): BLResult		310
+nim	blStrokeOptionsEquals	blend2d/bindings/bl_geometry.html#blStrokeOptionsEquals,ptr.BLStrokeOptionsCore,ptr.BLStrokeOptionsCore	proc blStrokeOptionsEquals(a: ptr BLStrokeOptionsCore; b: ptr BLStrokeOptionsCore): bool		311
+nim	blStrokeOptionsAssignMove	blend2d/bindings/bl_geometry.html#blStrokeOptionsAssignMove,ptr.BLStrokeOptionsCore,ptr.BLStrokeOptionsCore	proc blStrokeOptionsAssignMove(self: ptr BLStrokeOptionsCore;\n                          other: ptr BLStrokeOptionsCore): BLResult		312
+nim	blStrokeOptionsAssignWeak	blend2d/bindings/bl_geometry.html#blStrokeOptionsAssignWeak,ptr.BLStrokeOptionsCore,ptr.BLStrokeOptionsCore	proc blStrokeOptionsAssignWeak(self: ptr BLStrokeOptionsCore;\n                          other: ptr BLStrokeOptionsCore): BLResult		313
+nim	blPathStrokeToSink	blend2d/bindings/bl_geometry.html#blPathStrokeToSink,ptr.BLPathCore,ptr.BLRange,ptr.BLStrokeOptionsCore,ptr.BLApproximationOptions,ptr.BLPathCore,ptr.BLPathCore,ptr.BLPathCore,BLPathStrokeSinkFunc,pointer	proc blPathStrokeToSink(self: ptr BLPathCore; range: ptr BLRange;\n                   strokeOptions: ptr BLStrokeOptionsCore;\n                   approximationOptions: ptr BLApproximationOptions;\n                   a, b, c: ptr BLPathCore; sink: BLPathStrokeSinkFunc;\n                   userData: pointer): BLResult		314
+nim	blMatrix2DSetIdentity	blend2d/bindings/bl_geometry.html#blMatrix2DSetIdentity,ptr.BLMatrix2D	proc blMatrix2DSetIdentity(self: ptr BLMatrix2D): BLResult		321
+nim	blMatrix2DSetTranslation	blend2d/bindings/bl_geometry.html#blMatrix2DSetTranslation,ptr.BLMatrix2D,cdouble,cdouble	proc blMatrix2DSetTranslation(self: ptr BLMatrix2D; x: cdouble; y: cdouble): BLResult		322
+nim	blMatrix2DSetScaling	blend2d/bindings/bl_geometry.html#blMatrix2DSetScaling,ptr.BLMatrix2D,cdouble,cdouble	proc blMatrix2DSetScaling(self: ptr BLMatrix2D; x: cdouble; y: cdouble): BLResult		323
+nim	blMatrix2DSetSkewing	blend2d/bindings/bl_geometry.html#blMatrix2DSetSkewing,ptr.BLMatrix2D,cdouble,cdouble	proc blMatrix2DSetSkewing(self: ptr BLMatrix2D; x: cdouble; y: cdouble): BLResult		324
+nim	blMatrix2DSetRotation	blend2d/bindings/bl_geometry.html#blMatrix2DSetRotation,ptr.BLMatrix2D,cdouble,cdouble,cdouble	proc blMatrix2DSetRotation(self: ptr BLMatrix2D; angle: cdouble; cx: cdouble;\n                      cy: cdouble): BLResult		325
+nim	blMatrix2DApplyOp	blend2d/bindings/bl_geometry.html#blMatrix2DApplyOp,ptr.BLMatrix2D,BLTransformOp,pointer	proc blMatrix2DApplyOp(self: ptr BLMatrix2D; opType: BLTransformOp; opData: pointer): BLResult		326
+nim	blMatrix2DInvert	blend2d/bindings/bl_geometry.html#blMatrix2DInvert,ptr.BLMatrix2D,ptr.BLMatrix2D	proc blMatrix2DInvert(dst: ptr BLMatrix2D; src: ptr BLMatrix2D): BLResult		327
+nim	blMatrix2DGetType	blend2d/bindings/bl_geometry.html#blMatrix2DGetType,ptr.BLMatrix2D	proc blMatrix2DGetType(self: ptr BLMatrix2D): BLTransformType		328
+nim	blMatrix2DMapPointDArray	blend2d/bindings/bl_geometry.html#blMatrix2DMapPointDArray,ptr.BLMatrix2D,ptr.BLPoint,ptr.BLPoint,uint	proc blMatrix2DMapPointDArray(self: ptr BLMatrix2D; dst: ptr BLPoint;\n                         src: ptr BLPoint; count: uint): BLResult		329

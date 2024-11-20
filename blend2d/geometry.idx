@@ -1,0 +1,23 @@
+nimTitle	geometry	blend2d/geometry.html	module blend2d/geometry		0
+nim	RectI	blend2d/geometry.html#RectI	type RectI		30
+nim	PointI	blend2d/geometry.html#PointI	type PointI		31
+nim	Point	blend2d/geometry.html#Point	type Point		32
+nim	Circle	blend2d/geometry.html#Circle	type Circle		33
+nim	RoundRect	blend2d/geometry.html#RoundRect	type RoundRect		34
+nim	point	blend2d/geometry.html#point,float,float	proc point(x, y: float): BLPoint		36
+nim	point	blend2d/geometry.html#point,int32,int32	proc point(x, y: int32 = 0): BLPointI		39
+nim	rect	blend2d/geometry.html#rect,int32,int32,int32,int32	proc rect(x, y, w, h: int32): BLRectI		42
+nim	rect	blend2d/geometry.html#rect,int32,int32	proc rect(w, h: int32): BLRectI		45
+nim	square	blend2d/geometry.html#square,int32,int32,int32	proc square(size: int32; x, y: int32 = 0): BLRectI		48
+nim	rect	blend2d/geometry.html#rect,float,float,float,float,float,float	proc rect(x, y, w, h, rx, ry: float): BLRoundRect		51
+nim	roundRect	blend2d/geometry.html#roundRect,float,float,float,float,float,float	proc roundRect(x, y, w, h: float; rx, ry = 10.0): BLRoundRect		54
+nim	roundSquare	blend2d/geometry.html#roundSquare,float,float,float,float,float	proc roundSquare(x, y, size: float; rx, ry = 10.0): BLRoundRect		57
+nim	roundSquare	blend2d/geometry.html#roundSquare,float,float,float,float	proc roundSquare(x, y, size, radius: float): BLRoundRect		60
+nim	size	blend2d/geometry.html#size,float,float	proc size(w, h: float): BLSize		63
+nim	size	blend2d/geometry.html#size,int32,int32	proc size(w, h: int32): BLSizeI		66
+nim	size	blend2d/geometry.html#size,int,int	proc size(w, h: int): BLSizeI		69
+nim	circle	blend2d/geometry.html#circle,float,float,float	proc circle(cx, cy, r: float): BLCircle		72
+nimgrp	roundsquare	blend2d/geometry.html#roundSquare-procs-all	proc		57
+nimgrp	size	blend2d/geometry.html#size-procs-all	proc		63
+nimgrp	rect	blend2d/geometry.html#rect-procs-all	proc		42
+nimgrp	point	blend2d/geometry.html#point-procs-all	proc		36

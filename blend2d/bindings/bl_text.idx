@@ -1,0 +1,192 @@
+nimTitle	bl_text	blend2d/bindings/bl_text.html	module blend2d/bindings/bl_text		0
+nim	Type_blend2dh2	blend2d/bindings/bl_text.html#Type_blend2dh2	object Type_blend2dh2		36
+nim	Type_blend2dh3	blend2d/bindings/bl_text.html#Type_blend2dh3	object Type_blend2dh3		40
+nim	Type_blend2dh4	blend2d/bindings/bl_text.html#Type_blend2dh4	object Type_blend2dh4		44
+nim	Type_blend2dh5	blend2d/bindings/bl_text.html#Type_blend2dh5	object Type_blend2dh5		48
+nim	BLTextEncoding	blend2d/bindings/bl_text.html#BLTextEncoding	enum BLTextEncoding		56
+nim	BLFontDataFlags	blend2d/bindings/bl_text.html#BLFontDataFlags	enum BLFontDataFlags		64
+nim	BLOrientation	blend2d/bindings/bl_text.html#BLOrientation	enum BLOrientation		67
+nim	BLFontFaceType	blend2d/bindings/bl_text.html#BLFontFaceType	enum BLFontFaceType		71
+nim	BLFontStretch	blend2d/bindings/bl_text.html#BLFontStretch	enum BLFontStretch		75
+nim	BLFontStyle	blend2d/bindings/bl_text.html#BLFontStyle	enum BLFontStyle		87
+nim	BLFontWeight	blend2d/bindings/bl_text.html#BLFontWeight	enum BLFontWeight		91
+nim	BLFontStringId	blend2d/bindings/bl_text.html#BLFontStringId	enum BLFontStringId		104
+nim	BLFontUnicodeCoverageIndex	blend2d/bindings/bl_text.html#BLFontUnicodeCoverageIndex	enum BLFontUnicodeCoverageIndex		134
+nim	BLTextDirection	blend2d/bindings/bl_text.html#BLTextDirection	enum BLTextDirection		265
+nim	BLFontFaceFlags	blend2d/bindings/bl_text.html#BLFontFaceFlags	enum BLFontFaceFlags		270
+nim	BLFontFaceDiagFlags	blend2d/bindings/bl_text.html#BLFontFaceDiagFlags	enum BLFontFaceDiagFlags		289
+nim	BLFontOutlineType	blend2d/bindings/bl_text.html#BLFontOutlineType	enum BLFontOutlineType		298
+nim	BLGlyphRunFlags	blend2d/bindings/bl_text.html#BLGlyphRunFlags	enum BLGlyphRunFlags		305
+nim	BLGlyphPlacementType	blend2d/bindings/bl_text.html#BLGlyphPlacementType	enum BLGlyphPlacementType		312
+nim	BLFontCore	blend2d/bindings/bl_text.html#BLFontCore	object BLFontCore		320
+nim	BLFontImpl	blend2d/bindings/bl_text.html#BLFontImpl	object BLFontImpl		323
+nim	BLFontDataCore	blend2d/bindings/bl_text.html#BLFontDataCore	object BLFontDataCore		334
+nim	BLFontDataImpl	blend2d/bindings/bl_text.html#BLFontDataImpl	object BLFontDataImpl		337
+nim	BLFontDataVirt	blend2d/bindings/bl_text.html#BLFontDataVirt	object BLFontDataVirt		343
+nim	BLFontFaceCore	blend2d/bindings/bl_text.html#BLFontFaceCore	object BLFontFaceCore		351
+nim	BLFontManagerCore	blend2d/bindings/bl_text.html#BLFontManagerCore	object BLFontManagerCore		354
+nim	BLFontManagerVirt	blend2d/bindings/bl_text.html#BLFontManagerVirt	object BLFontManagerVirt		357
+nim	BLGlyphId	blend2d/bindings/bl_text.html#BLGlyphId	type BLGlyphId		360
+nim	BLGlyphBufferCore	blend2d/bindings/bl_text.html#BLGlyphBufferCore	object BLGlyphBufferCore		362
+nim	BLGlyphBufferImpl	blend2d/bindings/bl_text.html#BLGlyphBufferImpl	object BLGlyphBufferImpl		366
+nim	BLGlyphInfo	blend2d/bindings/bl_text.html#BLGlyphInfo	object BLGlyphInfo		375
+nim	BLGlyphMappingState	blend2d/bindings/bl_text.html#BLGlyphMappingState	object BLGlyphMappingState		379
+nim	BLGlyphOutlineSinkInfo	blend2d/bindings/bl_text.html#BLGlyphOutlineSinkInfo	object BLGlyphOutlineSinkInfo		384
+nim	BLGlyphPlacement	blend2d/bindings/bl_text.html#BLGlyphPlacement	object BLGlyphPlacement		389
+nim	BLGlyphRun	blend2d/bindings/bl_text.html#BLGlyphRun	object BLGlyphRun		394
+nim	BLFontUnicodeCoverage	blend2d/bindings/bl_text.html#BLFontUnicodeCoverage	object BLFontUnicodeCoverage		408
+nim	BLFontFaceInfo	blend2d/bindings/bl_text.html#BLFontFaceInfo	object BLFontFaceInfo		411
+nim	BLFontQueryProperties	blend2d/bindings/bl_text.html#BLFontQueryProperties	object BLFontQueryProperties		429
+nim	BLFontFeatureItem	blend2d/bindings/bl_text.html#BLFontFeatureItem	object BLFontFeatureItem		432
+nim	BLFontFeatureSettingsCore	blend2d/bindings/bl_text.html#BLFontFeatureSettingsCore	object BLFontFeatureSettingsCore		436
+nim	BLFontFeatureSettingsView	blend2d/bindings/bl_text.html#BLFontFeatureSettingsView	object BLFontFeatureSettingsView		439
+nim	BLFontDesignMetrics	blend2d/bindings/bl_text.html#BLFontDesignMetrics	object BLFontDesignMetrics		444
+nim	BLFontMatrix	blend2d/bindings/bl_text.html#BLFontMatrix	object BLFontMatrix		457
+nim	BLFontMetrics	blend2d/bindings/bl_text.html#BLFontMetrics	object BLFontMetrics		461
+nim	BLFontPanose	blend2d/bindings/bl_text.html#BLFontPanose	object BLFontPanose		514
+nim	BLFontTable	blend2d/bindings/bl_text.html#BLFontTable	object BLFontTable		524
+nim	BLFontVariationItem	blend2d/bindings/bl_text.html#BLFontVariationItem	object BLFontVariationItem		528
+nim	BLFontVariationSettingsCore	blend2d/bindings/bl_text.html#BLFontVariationSettingsCore	object BLFontVariationSettingsCore		534
+nim	BLFontVariationSettingsImpl	blend2d/bindings/bl_text.html#BLFontVariationSettingsImpl	object BLFontVariationSettingsImpl		537
+nim	BLFontVariationSettingsView	blend2d/bindings/bl_text.html#BLFontVariationSettingsView	object BLFontVariationSettingsView		541
+nim	BLTextMetrics	blend2d/bindings/bl_text.html#BLTextMetrics	object BLTextMetrics		546
+nim	BL_FONT_FEATURE_INVALID_VALUE	blend2d/bindings/bl_text.html#BL_FONT_FEATURE_INVALID_VALUE	var BL_FONT_FEATURE_INVALID_VALUE		551
+nim	blFontInit	blend2d/bindings/bl_text.html#blFontInit,ptr.BLFontCore	proc blFontInit(self: ptr BLFontCore): BLResult		558
+nim	blFontInitMove	blend2d/bindings/bl_text.html#blFontInitMove,ptr.BLFontCore,ptr.BLFontCore	proc blFontInitMove(self: ptr BLFontCore; other: ptr BLFontCore): BLResult		559
+nim	blFontInitWeak	blend2d/bindings/bl_text.html#blFontInitWeak,ptr.BLFontCore,ptr.BLFontCore	proc blFontInitWeak(self: ptr BLFontCore; other: ptr BLFontCore): BLResult		560
+nim	blFontDestroy	blend2d/bindings/bl_text.html#blFontDestroy,ptr.BLFontCore	proc blFontDestroy(self: ptr BLFontCore): BLResult		561
+nim	blFontReset	blend2d/bindings/bl_text.html#blFontReset,ptr.BLFontCore	proc blFontReset(self: ptr BLFontCore): BLResult		562
+nim	blFontAssignMove	blend2d/bindings/bl_text.html#blFontAssignMove,ptr.BLFontCore,ptr.BLFontCore	proc blFontAssignMove(self: ptr BLFontCore; other: ptr BLFontCore): BLResult		563
+nim	blFontAssignWeak	blend2d/bindings/bl_text.html#blFontAssignWeak,ptr.BLFontCore,ptr.BLFontCore	proc blFontAssignWeak(self: ptr BLFontCore; other: ptr BLFontCore): BLResult		564
+nim	blFontEquals	blend2d/bindings/bl_text.html#blFontEquals,ptr.BLFontCore,ptr.BLFontCore	proc blFontEquals(a: ptr BLFontCore; b: ptr BLFontCore): bool		565
+nim	blFontCreateFromFace	blend2d/bindings/bl_text.html#blFontCreateFromFace,ptr.BLFontCore,ptr.BLFontFaceCore,cfloat	proc blFontCreateFromFace(self: ptr BLFontCore; face: ptr BLFontFaceCore;\n                     size: cfloat): BLResult		566
+nim	blFontCreateFromFaceWithSettings	blend2d/bindings/bl_text.html#blFontCreateFromFaceWithSettings,ptr.BLFontCore,ptr.BLFontFaceCore,cfloat,ptr.BLFontFeatureSettingsCore,ptr.BLFontVariationSettingsCore	proc blFontCreateFromFaceWithSettings(self: ptr BLFontCore; face: ptr BLFontFaceCore;\n                                 size: cfloat; featureSettings: ptr BLFontFeatureSettingsCore;\n    variationSettings: ptr BLFontVariationSettingsCore): BLResult		568
+nim	blFontGetFace	blend2d/bindings/bl_text.html#blFontGetFace,ptr.BLFontCore,ptr.BLFontFaceCore	proc blFontGetFace(self: ptr BLFontCore; out: ptr BLFontFaceCore): BLResult		571
+nim	blFontGetSize	blend2d/bindings/bl_text.html#blFontGetSize,ptr.BLFontCore	proc blFontGetSize(self: ptr BLFontCore): cfloat		572
+nim	blFontSetSize	blend2d/bindings/bl_text.html#blFontSetSize,ptr.BLFontCore,cfloat	proc blFontSetSize(self: ptr BLFontCore; size: cfloat): BLResult		573
+nim	blFontGetMetrics	blend2d/bindings/bl_text.html#blFontGetMetrics,ptr.BLFontCore,ptr.BLFontMetrics	proc blFontGetMetrics(self: ptr BLFontCore; out: ptr BLFontMetrics): BLResult		574
+nim	blFontGetMatrix	blend2d/bindings/bl_text.html#blFontGetMatrix,ptr.BLFontCore,ptr.BLFontMatrix	proc blFontGetMatrix(self: ptr BLFontCore; out: ptr BLFontMatrix): BLResult		575
+nim	blFontGetDesignMetrics	blend2d/bindings/bl_text.html#blFontGetDesignMetrics,ptr.BLFontCore,ptr.BLFontDesignMetrics	proc blFontGetDesignMetrics(self: ptr BLFontCore; out: ptr BLFontDesignMetrics): BLResult		576
+nim	blFontGetFeatureSettings	blend2d/bindings/bl_text.html#blFontGetFeatureSettings,ptr.BLFontCore,ptr.BLFontFeatureSettingsCore	proc blFontGetFeatureSettings(self: ptr BLFontCore;\n                         out: ptr BLFontFeatureSettingsCore): BLResult		578
+nim	blFontSetFeatureSettings	blend2d/bindings/bl_text.html#blFontSetFeatureSettings,ptr.BLFontCore,ptr.BLFontFeatureSettingsCore	proc blFontSetFeatureSettings(self: ptr BLFontCore;\n                         featureSettings: ptr BLFontFeatureSettingsCore): BLResult		580
+nim	blFontResetFeatureSettings	blend2d/bindings/bl_text.html#blFontResetFeatureSettings,ptr.BLFontCore	proc blFontResetFeatureSettings(self: ptr BLFontCore): BLResult		582
+nim	blFontGetVariationSettings	blend2d/bindings/bl_text.html#blFontGetVariationSettings,ptr.BLFontCore,ptr.BLFontVariationSettingsCore	proc blFontGetVariationSettings(self: ptr BLFontCore;\n                           out: ptr BLFontVariationSettingsCore): BLResult		583
+nim	blFontSetVariationSettings	blend2d/bindings/bl_text.html#blFontSetVariationSettings,ptr.BLFontCore,ptr.BLFontVariationSettingsCore	proc blFontSetVariationSettings(self: ptr BLFontCore;\n                           variationSettings: ptr BLFontVariationSettingsCore): BLResult		585
+nim	blFontResetVariationSettings	blend2d/bindings/bl_text.html#blFontResetVariationSettings,ptr.BLFontCore	proc blFontResetVariationSettings(self: ptr BLFontCore): BLResult		586
+nim	blFontShape	blend2d/bindings/bl_text.html#blFontShape,ptr.BLFontCore,ptr.BLGlyphBufferCore	proc blFontShape(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore): BLResult		587
+nim	blFontMapTextToGlyphs	blend2d/bindings/bl_text.html#blFontMapTextToGlyphs,ptr.BLFontCore,ptr.BLGlyphBufferCore,ptr.BLGlyphMappingState	proc blFontMapTextToGlyphs(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore;\n                      stateOut: ptr BLGlyphMappingState): BLResult		588
+nim	blFontPositionGlyphs	blend2d/bindings/bl_text.html#blFontPositionGlyphs,ptr.BLFontCore,ptr.BLGlyphBufferCore	proc blFontPositionGlyphs(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore): BLResult		590
+nim	blFontApplyKerning	blend2d/bindings/bl_text.html#blFontApplyKerning,ptr.BLFontCore,ptr.BLGlyphBufferCore	proc blFontApplyKerning(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore): BLResult		591
+nim	blFontApplyGSub	blend2d/bindings/bl_text.html#blFontApplyGSub,ptr.BLFontCore,ptr.BLGlyphBufferCore,ptr.BLBitArrayCore	proc blFontApplyGSub(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore;\n                lookups: ptr BLBitArrayCore): BLResult		592
+nim	blFontApplyGPos	blend2d/bindings/bl_text.html#blFontApplyGPos,ptr.BLFontCore,ptr.BLGlyphBufferCore,ptr.BLBitArrayCore	proc blFontApplyGPos(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore;\n                lookups: ptr BLBitArrayCore): BLResult		593
+nim	blFontGetTextMetrics	blend2d/bindings/bl_text.html#blFontGetTextMetrics,ptr.BLFontCore,ptr.BLGlyphBufferCore,ptr.BLTextMetrics	proc blFontGetTextMetrics(self: ptr BLFontCore; gb: ptr BLGlyphBufferCore;\n                     out: ptr BLTextMetrics): BLResult		594
+nim	blFontGetGlyphBounds	blend2d/bindings/bl_text.html#blFontGetGlyphBounds,ptr.BLFontCore,ptr.uint32,ptr.int,ptr.BLBoxI,uint	proc blFontGetGlyphBounds(self: ptr BLFontCore; glyphData: ptr uint32;\n                     glyphAdvance: ptr int; out: ptr BLBoxI; count: uint): BLResult		595
+nim	blFontGetGlyphAdvances	blend2d/bindings/bl_text.html#blFontGetGlyphAdvances,ptr.BLFontCore,ptr.uint32,ptr.int,ptr.BLGlyphPlacement,uint	proc blFontGetGlyphAdvances(self: ptr BLFontCore; glyphData: ptr uint32;\n                       glyphAdvance: ptr int; out: ptr BLGlyphPlacement;\n                       count: uint): BLResult		598
+nim	blFontGetGlyphOutlines	blend2d/bindings/bl_text.html#blFontGetGlyphOutlines,ptr.BLFontCore,BLGlyphId,ptr.BLMatrix2D,ptr.BLPathCore,BLPathSinkFunc,pointer	proc blFontGetGlyphOutlines(self: ptr BLFontCore; glyphId: BLGlyphId;\n                       userTransform: ptr BLMatrix2D; out: ptr BLPathCore;\n                       sink: BLPathSinkFunc; userData: pointer): BLResult		601
+nim	blFontGetGlyphRunOutlines	blend2d/bindings/bl_text.html#blFontGetGlyphRunOutlines,ptr.BLFontCore,ptr.BLGlyphRun,ptr.BLMatrix2D,ptr.BLPathCore,BLPathSinkFunc,pointer	proc blFontGetGlyphRunOutlines(self: ptr BLFontCore; glyphRun: ptr BLGlyphRun;\n                          userTransform: ptr BLMatrix2D; out: ptr BLPathCore;\n                          sink: BLPathSinkFunc; userData: pointer): BLResult		605
+nim	blFontFeatureSettingsInit	blend2d/bindings/bl_text.html#blFontFeatureSettingsInit,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsInit(self: ptr BLFontFeatureSettingsCore): BLResult		612
+nim	blFontFeatureSettingsInitMove	blend2d/bindings/bl_text.html#blFontFeatureSettingsInitMove,ptr.BLFontFeatureSettingsCore,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsInitMove(self: ptr BLFontFeatureSettingsCore;\n                              other: ptr BLFontFeatureSettingsCore): BLResult		613
+nim	blFontFeatureSettingsInitWeak	blend2d/bindings/bl_text.html#blFontFeatureSettingsInitWeak,ptr.BLFontFeatureSettingsCore,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsInitWeak(self: ptr BLFontFeatureSettingsCore;\n                              other: ptr BLFontFeatureSettingsCore): BLResult		615
+nim	blFontFeatureSettingsDestroy	blend2d/bindings/bl_text.html#blFontFeatureSettingsDestroy,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsDestroy(self: ptr BLFontFeatureSettingsCore): BLResult		617
+nim	blFontFeatureSettingsReset	blend2d/bindings/bl_text.html#blFontFeatureSettingsReset,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsReset(self: ptr BLFontFeatureSettingsCore): BLResult		618
+nim	blFontFeatureSettingsClear	blend2d/bindings/bl_text.html#blFontFeatureSettingsClear,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsClear(self: ptr BLFontFeatureSettingsCore): BLResult		619
+nim	blFontFeatureSettingsShrink	blend2d/bindings/bl_text.html#blFontFeatureSettingsShrink,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsShrink(self: ptr BLFontFeatureSettingsCore): BLResult		620
+nim	blFontFeatureSettingsAssignMove	blend2d/bindings/bl_text.html#blFontFeatureSettingsAssignMove,ptr.BLFontFeatureSettingsCore,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsAssignMove(self: ptr BLFontFeatureSettingsCore;\n                                other: ptr BLFontFeatureSettingsCore): BLResult		621
+nim	blFontFeatureSettingsAssignWeak	blend2d/bindings/bl_text.html#blFontFeatureSettingsAssignWeak,ptr.BLFontFeatureSettingsCore,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsAssignWeak(self: ptr BLFontFeatureSettingsCore;\n                                other: ptr BLFontFeatureSettingsCore): BLResult		623
+nim	blFontFeatureSettingsGetSize	blend2d/bindings/bl_text.html#blFontFeatureSettingsGetSize,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsGetSize(self: ptr BLFontFeatureSettingsCore): uint		625
+nim	blFontFeatureSettingsGetCapacity	blend2d/bindings/bl_text.html#blFontFeatureSettingsGetCapacity,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsGetCapacity(self: ptr BLFontFeatureSettingsCore): uint		626
+nim	blFontFeatureSettingsGetView	blend2d/bindings/bl_text.html#blFontFeatureSettingsGetView,ptr.BLFontFeatureSettingsCore,ptr.BLFontFeatureSettingsView	proc blFontFeatureSettingsGetView(self: ptr BLFontFeatureSettingsCore;\n                             out: ptr BLFontFeatureSettingsView): BLResult		627
+nim	blFontFeatureSettingsHasValue	blend2d/bindings/bl_text.html#blFontFeatureSettingsHasValue,ptr.BLFontFeatureSettingsCore,BLTag	proc blFontFeatureSettingsHasValue(self: ptr BLFontFeatureSettingsCore;\n                              featureTag: BLTag): bool		629
+nim	blFontFeatureSettingsGetValue	blend2d/bindings/bl_text.html#blFontFeatureSettingsGetValue,ptr.BLFontFeatureSettingsCore,BLTag	proc blFontFeatureSettingsGetValue(self: ptr BLFontFeatureSettingsCore;\n                              featureTag: BLTag): uint32		631
+nim	blFontFeatureSettingsSetValue	blend2d/bindings/bl_text.html#blFontFeatureSettingsSetValue,ptr.BLFontFeatureSettingsCore,BLTag,uint32	proc blFontFeatureSettingsSetValue(self: ptr BLFontFeatureSettingsCore;\n                              featureTag: BLTag; value: uint32): BLResult		633
+nim	blFontFeatureSettingsRemoveValue	blend2d/bindings/bl_text.html#blFontFeatureSettingsRemoveValue,ptr.BLFontFeatureSettingsCore,BLTag	proc blFontFeatureSettingsRemoveValue(self: ptr BLFontFeatureSettingsCore;\n                                 featureTag: BLTag): BLResult		635
+nim	blFontFeatureSettingsEquals	blend2d/bindings/bl_text.html#blFontFeatureSettingsEquals,ptr.BLFontFeatureSettingsCore,ptr.BLFontFeatureSettingsCore	proc blFontFeatureSettingsEquals(a: ptr BLFontFeatureSettingsCore;\n                            b: ptr BLFontFeatureSettingsCore): bool		637
+nim	blFontManagerInit	blend2d/bindings/bl_text.html#blFontManagerInit,ptr.BLFontManagerCore	proc blFontManagerInit(self: ptr BLFontManagerCore): BLResult		643
+nim	blFontManagerInitMove	blend2d/bindings/bl_text.html#blFontManagerInitMove,ptr.BLFontManagerCore,ptr.BLFontManagerCore	proc blFontManagerInitMove(self: ptr BLFontManagerCore; other: ptr BLFontManagerCore): BLResult		644
+nim	blFontManagerInitWeak	blend2d/bindings/bl_text.html#blFontManagerInitWeak,ptr.BLFontManagerCore,ptr.BLFontManagerCore	proc blFontManagerInitWeak(self: ptr BLFontManagerCore; other: ptr BLFontManagerCore): BLResult		645
+nim	blFontManagerInitNew	blend2d/bindings/bl_text.html#blFontManagerInitNew,ptr.BLFontManagerCore	proc blFontManagerInitNew(self: ptr BLFontManagerCore): BLResult		646
+nim	blFontManagerDestroy	blend2d/bindings/bl_text.html#blFontManagerDestroy,ptr.BLFontManagerCore	proc blFontManagerDestroy(self: ptr BLFontManagerCore): BLResult		647
+nim	blFontManagerReset	blend2d/bindings/bl_text.html#blFontManagerReset,ptr.BLFontManagerCore	proc blFontManagerReset(self: ptr BLFontManagerCore): BLResult		648
+nim	blFontManagerAssignMove	blend2d/bindings/bl_text.html#blFontManagerAssignMove,ptr.BLFontManagerCore,ptr.BLFontManagerCore	proc blFontManagerAssignMove(self: ptr BLFontManagerCore;\n                        other: ptr BLFontManagerCore): BLResult		649
+nim	blFontManagerAssignWeak	blend2d/bindings/bl_text.html#blFontManagerAssignWeak,ptr.BLFontManagerCore,ptr.BLFontManagerCore	proc blFontManagerAssignWeak(self: ptr BLFontManagerCore;\n                        other: ptr BLFontManagerCore): BLResult		650
+nim	blFontManagerCreate	blend2d/bindings/bl_text.html#blFontManagerCreate,ptr.BLFontManagerCore	proc blFontManagerCreate(self: ptr BLFontManagerCore): BLResult		652
+nim	blFontManagerGetFaceCount	blend2d/bindings/bl_text.html#blFontManagerGetFaceCount,ptr.BLFontManagerCore	proc blFontManagerGetFaceCount(self: ptr BLFontManagerCore): uint		653
+nim	blFontManagerGetFamilyCount	blend2d/bindings/bl_text.html#blFontManagerGetFamilyCount,ptr.BLFontManagerCore	proc blFontManagerGetFamilyCount(self: ptr BLFontManagerCore): uint		654
+nim	blFontManagerHasFace	blend2d/bindings/bl_text.html#blFontManagerHasFace,ptr.BLFontManagerCore,ptr.BLFontFaceCore	proc blFontManagerHasFace(self: ptr BLFontManagerCore; face: ptr BLFontFaceCore): bool		655
+nim	blFontManagerAddFace	blend2d/bindings/bl_text.html#blFontManagerAddFace,ptr.BLFontManagerCore,ptr.BLFontFaceCore	proc blFontManagerAddFace(self: ptr BLFontManagerCore; face: ptr BLFontFaceCore): BLResult		656
+nim	blFontManagerQueryFace	blend2d/bindings/bl_text.html#blFontManagerQueryFace,ptr.BLFontManagerCore,cstring,uint,ptr.BLFontQueryProperties,ptr.BLFontFaceCore	proc blFontManagerQueryFace(self: ptr BLFontManagerCore; name: cstring;\n                       nameSize: uint; properties: ptr BLFontQueryProperties;\n                       out: ptr BLFontFaceCore): BLResult		657
+nim	blFontManagerQueryFacesByFamilyName	blend2d/bindings/bl_text.html#blFontManagerQueryFacesByFamilyName,ptr.BLFontManagerCore,cstring,uint,ptr.BLArrayCore	proc blFontManagerQueryFacesByFamilyName(self: ptr BLFontManagerCore; name: cstring;\n                                    nameSize: uint; out: ptr BLArrayCore): BLResult		661
+nim	blFontManagerEquals	blend2d/bindings/bl_text.html#blFontManagerEquals,ptr.BLFontManagerCore,ptr.BLFontManagerCore	proc blFontManagerEquals(a: ptr BLFontManagerCore; b: ptr BLFontManagerCore): bool		663
+nim	blFontVariationSettingsInit	blend2d/bindings/bl_text.html#blFontVariationSettingsInit,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsInit(self: ptr BLFontVariationSettingsCore): BLResult		668
+nim	blFontVariationSettingsInitMove	blend2d/bindings/bl_text.html#blFontVariationSettingsInitMove,ptr.BLFontVariationSettingsCore,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsInitMove(self: ptr BLFontVariationSettingsCore;\n                                other: ptr BLFontVariationSettingsCore): BLResult		669
+nim	blFontVariationSettingsInitWeak	blend2d/bindings/bl_text.html#blFontVariationSettingsInitWeak,ptr.BLFontVariationSettingsCore,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsInitWeak(self: ptr BLFontVariationSettingsCore;\n                                other: ptr BLFontVariationSettingsCore): BLResult		670
+nim	blFontVariationSettingsDestroy	blend2d/bindings/bl_text.html#blFontVariationSettingsDestroy,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsDestroy(self: ptr BLFontVariationSettingsCore): BLResult		671
+nim	blFontVariationSettingsReset	blend2d/bindings/bl_text.html#blFontVariationSettingsReset,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsReset(self: ptr BLFontVariationSettingsCore): BLResult		672
+nim	blFontVariationSettingsClear	blend2d/bindings/bl_text.html#blFontVariationSettingsClear,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsClear(self: ptr BLFontVariationSettingsCore): BLResult		673
+nim	blFontVariationSettingsShrink	blend2d/bindings/bl_text.html#blFontVariationSettingsShrink,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsShrink(self: ptr BLFontVariationSettingsCore): BLResult		674
+nim	blFontVariationSettingsAssignMove	blend2d/bindings/bl_text.html#blFontVariationSettingsAssignMove,ptr.BLFontVariationSettingsCore,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsAssignMove(self: ptr BLFontVariationSettingsCore;\n                                  other: ptr BLFontVariationSettingsCore): BLResult		675
+nim	blFontVariationSettingsAssignWeak	blend2d/bindings/bl_text.html#blFontVariationSettingsAssignWeak,ptr.BLFontVariationSettingsCore,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsAssignWeak(self: ptr BLFontVariationSettingsCore;\n                                  other: ptr BLFontVariationSettingsCore): BLResult		676
+nim	blFontVariationSettingsGetSize	blend2d/bindings/bl_text.html#blFontVariationSettingsGetSize,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsGetSize(self: ptr BLFontVariationSettingsCore): uint		677
+nim	blFontVariationSettingsGetCapacity	blend2d/bindings/bl_text.html#blFontVariationSettingsGetCapacity,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsGetCapacity(self: ptr BLFontVariationSettingsCore): uint		678
+nim	blFontVariationSettingsGetView	blend2d/bindings/bl_text.html#blFontVariationSettingsGetView,ptr.BLFontVariationSettingsCore,ptr.BLFontVariationSettingsView	proc blFontVariationSettingsGetView(self: ptr BLFontVariationSettingsCore;\n                               out: ptr BLFontVariationSettingsView): BLResult		679
+nim	blFontVariationSettingsHasValue	blend2d/bindings/bl_text.html#blFontVariationSettingsHasValue,ptr.BLFontVariationSettingsCore,BLTag	proc blFontVariationSettingsHasValue(self: ptr BLFontVariationSettingsCore;\n                                variationTag: BLTag): bool		680
+nim	blFontVariationSettingsGetValue	blend2d/bindings/bl_text.html#blFontVariationSettingsGetValue,ptr.BLFontVariationSettingsCore,BLTag	proc blFontVariationSettingsGetValue(self: ptr BLFontVariationSettingsCore;\n                                variationTag: BLTag): cfloat		681
+nim	blFontVariationSettingsSetValue	blend2d/bindings/bl_text.html#blFontVariationSettingsSetValue,ptr.BLFontVariationSettingsCore,BLTag,cfloat	proc blFontVariationSettingsSetValue(self: ptr BLFontVariationSettingsCore;\n                                variationTag: BLTag; value: cfloat): BLResult		682
+nim	blFontVariationSettingsRemoveValue	blend2d/bindings/bl_text.html#blFontVariationSettingsRemoveValue,ptr.BLFontVariationSettingsCore,BLTag	proc blFontVariationSettingsRemoveValue(self: ptr BLFontVariationSettingsCore;\n                                   variationTag: BLTag): BLResult		683
+nim	blFontVariationSettingsEquals	blend2d/bindings/bl_text.html#blFontVariationSettingsEquals,ptr.BLFontVariationSettingsCore,ptr.BLFontVariationSettingsCore	proc blFontVariationSettingsEquals(a: ptr BLFontVariationSettingsCore;\n                              b: ptr BLFontVariationSettingsCore): bool		684
+nim	blFontDataInit	blend2d/bindings/bl_text.html#blFontDataInit,ptr.BLFontDataCore	proc blFontDataInit(self: ptr BLFontDataCore): BLResult		689
+nim	blFontDataInitMove	blend2d/bindings/bl_text.html#blFontDataInitMove,ptr.BLFontDataCore,ptr.BLFontDataCore	proc blFontDataInitMove(self: ptr BLFontDataCore; other: ptr BLFontDataCore): BLResult		690
+nim	blFontDataInitWeak	blend2d/bindings/bl_text.html#blFontDataInitWeak,ptr.BLFontDataCore,ptr.BLFontDataCore	proc blFontDataInitWeak(self: ptr BLFontDataCore; other: ptr BLFontDataCore): BLResult		691
+nim	blFontDataDestroy	blend2d/bindings/bl_text.html#blFontDataDestroy,ptr.BLFontDataCore	proc blFontDataDestroy(self: ptr BLFontDataCore): BLResult		692
+nim	blFontDataReset	blend2d/bindings/bl_text.html#blFontDataReset,ptr.BLFontDataCore	proc blFontDataReset(self: ptr BLFontDataCore): BLResult		693
+nim	blFontDataAssignMove	blend2d/bindings/bl_text.html#blFontDataAssignMove,ptr.BLFontDataCore,ptr.BLFontDataCore	proc blFontDataAssignMove(self: ptr BLFontDataCore; other: ptr BLFontDataCore): BLResult		694
+nim	blFontDataAssignWeak	blend2d/bindings/bl_text.html#blFontDataAssignWeak,ptr.BLFontDataCore,ptr.BLFontDataCore	proc blFontDataAssignWeak(self: ptr BLFontDataCore; other: ptr BLFontDataCore): BLResult		695
+nim	blFontDataCreateFromFile	blend2d/bindings/bl_text.html#blFontDataCreateFromFile,ptr.BLFontDataCore,cstring,BLFileReadFlags	proc blFontDataCreateFromFile(self: ptr BLFontDataCore; fileName: cstring;\n                         readFlags: BLFileReadFlags): BLResult		696
+nim	blFontDataCreateFromDataArray	blend2d/bindings/bl_text.html#blFontDataCreateFromDataArray,ptr.BLFontDataCore,ptr.BLArrayCore	proc blFontDataCreateFromDataArray(self: ptr BLFontDataCore;\n                              dataArray: ptr BLArrayCore): BLResult		697
+nim	blFontDataCreateFromData	blend2d/bindings/bl_text.html#blFontDataCreateFromData,ptr.BLFontDataCore,pointer,uint,BLDestroyExternalDataFunc,pointer	proc blFontDataCreateFromData(self: ptr BLFontDataCore; data: pointer;\n                         dataSize: uint; destroyFunc: BLDestroyExternalDataFunc;\n                         userData: pointer): BLResult		698
+nim	blFontDataEquals	blend2d/bindings/bl_text.html#blFontDataEquals,ptr.BLFontDataCore,ptr.BLFontDataCore	proc blFontDataEquals(a: ptr BLFontDataCore; b: ptr BLFontDataCore): bool		699
+nim	blFontDataGetFaceCount	blend2d/bindings/bl_text.html#blFontDataGetFaceCount,ptr.BLFontDataCore	proc blFontDataGetFaceCount(self: ptr BLFontDataCore): uint32		700
+nim	blFontDataGetFaceType	blend2d/bindings/bl_text.html#blFontDataGetFaceType,ptr.BLFontDataCore	proc blFontDataGetFaceType(self: ptr BLFontDataCore): BLFontFaceType		701
+nim	blFontDataGetFlags	blend2d/bindings/bl_text.html#blFontDataGetFlags,ptr.BLFontDataCore	proc blFontDataGetFlags(self: ptr BLFontDataCore): BLFontDataFlags		702
+nim	blFontDataGetTableTags	blend2d/bindings/bl_text.html#blFontDataGetTableTags,ptr.BLFontDataCore,uint32,ptr.BLArrayCore	proc blFontDataGetTableTags(self: ptr BLFontDataCore; faceIndex: uint32;\n                       dst: ptr BLArrayCore): BLResult		703
+nim	blFontDataGetTables	blend2d/bindings/bl_text.html#blFontDataGetTables,ptr.BLFontDataCore,uint32,ptr.BLFontTable,ptr.BLTag,uint	proc blFontDataGetTables(self: ptr BLFontDataCore; faceIndex: uint32;\n                    dst: ptr BLFontTable; tags: ptr BLTag; count: uint): uint		704
+nim	blFontFaceInit	blend2d/bindings/bl_text.html#blFontFaceInit,ptr.BLFontFaceCore	proc blFontFaceInit(self: ptr BLFontFaceCore): BLResult		709
+nim	blFontFaceInitMove	blend2d/bindings/bl_text.html#blFontFaceInitMove,ptr.BLFontFaceCore,ptr.BLFontFaceCore	proc blFontFaceInitMove(self: ptr BLFontFaceCore; other: ptr BLFontFaceCore): BLResult		710
+nim	blFontFaceInitWeak	blend2d/bindings/bl_text.html#blFontFaceInitWeak,ptr.BLFontFaceCore,ptr.BLFontFaceCore	proc blFontFaceInitWeak(self: ptr BLFontFaceCore; other: ptr BLFontFaceCore): BLResult		711
+nim	blFontFaceDestroy	blend2d/bindings/bl_text.html#blFontFaceDestroy,ptr.BLFontFaceCore	proc blFontFaceDestroy(self: ptr BLFontFaceCore): BLResult		712
+nim	blFontFaceReset	blend2d/bindings/bl_text.html#blFontFaceReset,ptr.BLFontFaceCore	proc blFontFaceReset(self: ptr BLFontFaceCore): BLResult		713
+nim	blFontFaceAssignMove	blend2d/bindings/bl_text.html#blFontFaceAssignMove,ptr.BLFontFaceCore,ptr.BLFontFaceCore	proc blFontFaceAssignMove(self: ptr BLFontFaceCore; other: ptr BLFontFaceCore): BLResult		714
+nim	blFontFaceAssignWeak	blend2d/bindings/bl_text.html#blFontFaceAssignWeak,ptr.BLFontFaceCore,ptr.BLFontFaceCore	proc blFontFaceAssignWeak(self: ptr BLFontFaceCore; other: ptr BLFontFaceCore): BLResult		715
+nim	blFontFaceEquals	blend2d/bindings/bl_text.html#blFontFaceEquals,ptr.BLFontFaceCore,ptr.BLFontFaceCore	proc blFontFaceEquals(a: ptr BLFontFaceCore; b: ptr BLFontFaceCore): bool		716
+nim	blFontFaceCreateFromFile	blend2d/bindings/bl_text.html#blFontFaceCreateFromFile,ptr.BLFontFaceCore,cstring,BLFileReadFlags	proc blFontFaceCreateFromFile(self: ptr BLFontFaceCore; fileName: cstring;\n                         readFlags: BLFileReadFlags): BLResult		717
+nim	blFontFaceCreateFromData	blend2d/bindings/bl_text.html#blFontFaceCreateFromData,ptr.BLFontFaceCore,ptr.BLFontDataCore,uint32	proc blFontFaceCreateFromData(self: ptr BLFontFaceCore; fontData: ptr BLFontDataCore;\n                         faceIndex: uint32): BLResult		718
+nim	blFontFaceGetFullName	blend2d/bindings/bl_text.html#blFontFaceGetFullName,ptr.BLFontFaceCore,ptr.BLStringCore	proc blFontFaceGetFullName(self: ptr BLFontFaceCore; out: ptr BLStringCore): BLResult		719
+nim	blFontFaceGetFamilyName	blend2d/bindings/bl_text.html#blFontFaceGetFamilyName,ptr.BLFontFaceCore,ptr.BLStringCore	proc blFontFaceGetFamilyName(self: ptr BLFontFaceCore; out: ptr BLStringCore): BLResult		720
+nim	blFontFaceGetSubfamilyName	blend2d/bindings/bl_text.html#blFontFaceGetSubfamilyName,ptr.BLFontFaceCore,ptr.BLStringCore	proc blFontFaceGetSubfamilyName(self: ptr BLFontFaceCore; out: ptr BLStringCore): BLResult		721
+nim	blFontFaceGetPostScriptName	blend2d/bindings/bl_text.html#blFontFaceGetPostScriptName,ptr.BLFontFaceCore,ptr.BLStringCore	proc blFontFaceGetPostScriptName(self: ptr BLFontFaceCore; out: ptr BLStringCore): BLResult		722
+nim	blFontFaceGetFaceInfo	blend2d/bindings/bl_text.html#blFontFaceGetFaceInfo,ptr.BLFontFaceCore,ptr.BLFontFaceInfo	proc blFontFaceGetFaceInfo(self: ptr BLFontFaceCore; out: ptr BLFontFaceInfo): BLResult		723
+nim	blFontFaceGetDesignMetrics	blend2d/bindings/bl_text.html#blFontFaceGetDesignMetrics,ptr.BLFontFaceCore,ptr.BLFontDesignMetrics	proc blFontFaceGetDesignMetrics(self: ptr BLFontFaceCore;\n                           out: ptr BLFontDesignMetrics): BLResult		724
+nim	blFontFaceGetUnicodeCoverage	blend2d/bindings/bl_text.html#blFontFaceGetUnicodeCoverage,ptr.BLFontFaceCore,ptr.BLFontUnicodeCoverage	proc blFontFaceGetUnicodeCoverage(self: ptr BLFontFaceCore;\n                             out: ptr BLFontUnicodeCoverage): BLResult		725
+nim	blFontFaceGetCharacterCoverage	blend2d/bindings/bl_text.html#blFontFaceGetCharacterCoverage,ptr.BLFontFaceCore,ptr.BLBitSetCore	proc blFontFaceGetCharacterCoverage(self: ptr BLFontFaceCore; out: ptr BLBitSetCore): BLResult		726
+nim	blFontFaceHasScriptTag	blend2d/bindings/bl_text.html#blFontFaceHasScriptTag,ptr.BLFontFaceCore,BLTag	proc blFontFaceHasScriptTag(self: ptr BLFontFaceCore; scriptTag: BLTag): bool		727
+nim	blFontFaceHasFeatureTag	blend2d/bindings/bl_text.html#blFontFaceHasFeatureTag,ptr.BLFontFaceCore,BLTag	proc blFontFaceHasFeatureTag(self: ptr BLFontFaceCore; featureTag: BLTag): bool		728
+nim	blFontFaceHasVariationTag	blend2d/bindings/bl_text.html#blFontFaceHasVariationTag,ptr.BLFontFaceCore,BLTag	proc blFontFaceHasVariationTag(self: ptr BLFontFaceCore; variationTag: BLTag): bool		729
+nim	blFontFaceGetScriptTags	blend2d/bindings/bl_text.html#blFontFaceGetScriptTags,ptr.BLFontFaceCore,ptr.BLArrayCore	proc blFontFaceGetScriptTags(self: ptr BLFontFaceCore; out: ptr BLArrayCore): BLResult		730
+nim	blFontFaceGetFeatureTags	blend2d/bindings/bl_text.html#blFontFaceGetFeatureTags,ptr.BLFontFaceCore,ptr.BLArrayCore	proc blFontFaceGetFeatureTags(self: ptr BLFontFaceCore; out: ptr BLArrayCore): BLResult		731
+nim	blFontFaceGetVariationTags	blend2d/bindings/bl_text.html#blFontFaceGetVariationTags,ptr.BLFontFaceCore,ptr.BLArrayCore	proc blFontFaceGetVariationTags(self: ptr BLFontFaceCore; out: ptr BLArrayCore): BLResult		732
+nim	blGlyphBufferInit	blend2d/bindings/bl_text.html#blGlyphBufferInit,ptr.BLGlyphBufferCore	proc blGlyphBufferInit(self: ptr BLGlyphBufferCore): BLResult		737
+nim	blGlyphBufferInitMove	blend2d/bindings/bl_text.html#blGlyphBufferInitMove,ptr.BLGlyphBufferCore,ptr.BLGlyphBufferCore	proc blGlyphBufferInitMove(self: ptr BLGlyphBufferCore; other: ptr BLGlyphBufferCore): BLResult		738
+nim	blGlyphBufferDestroy	blend2d/bindings/bl_text.html#blGlyphBufferDestroy,ptr.BLGlyphBufferCore	proc blGlyphBufferDestroy(self: ptr BLGlyphBufferCore): BLResult		739
+nim	blGlyphBufferReset	blend2d/bindings/bl_text.html#blGlyphBufferReset,ptr.BLGlyphBufferCore	proc blGlyphBufferReset(self: ptr BLGlyphBufferCore): BLResult		740
+nim	blGlyphBufferClear	blend2d/bindings/bl_text.html#blGlyphBufferClear,ptr.BLGlyphBufferCore	proc blGlyphBufferClear(self: ptr BLGlyphBufferCore): BLResult		741
+nim	blGlyphBufferGetSize	blend2d/bindings/bl_text.html#blGlyphBufferGetSize,ptr.BLGlyphBufferCore	proc blGlyphBufferGetSize(self: ptr BLGlyphBufferCore): uint		742
+nim	blGlyphBufferGetFlags	blend2d/bindings/bl_text.html#blGlyphBufferGetFlags,ptr.BLGlyphBufferCore	proc blGlyphBufferGetFlags(self: ptr BLGlyphBufferCore): uint32		743
+nim	blGlyphBufferGetGlyphRun	blend2d/bindings/bl_text.html#blGlyphBufferGetGlyphRun,ptr.BLGlyphBufferCore	proc blGlyphBufferGetGlyphRun(self: ptr BLGlyphBufferCore): ptr BLGlyphRun		744
+nim	blGlyphBufferGetContent	blend2d/bindings/bl_text.html#blGlyphBufferGetContent,ptr.BLGlyphBufferCore	proc blGlyphBufferGetContent(self: ptr BLGlyphBufferCore): ptr uint32		745
+nim	blGlyphBufferGetInfoData	blend2d/bindings/bl_text.html#blGlyphBufferGetInfoData,ptr.BLGlyphBufferCore	proc blGlyphBufferGetInfoData(self: ptr BLGlyphBufferCore): ptr BLGlyphInfo		746
+nim	blGlyphBufferGetPlacementData	blend2d/bindings/bl_text.html#blGlyphBufferGetPlacementData,ptr.BLGlyphBufferCore	proc blGlyphBufferGetPlacementData(self: ptr BLGlyphBufferCore): ptr BLGlyphPlacement		747
+nim	blGlyphBufferSetText	blend2d/bindings/bl_text.html#blGlyphBufferSetText,ptr.BLGlyphBufferCore,pointer,uint,BLTextEncoding	proc blGlyphBufferSetText(self: ptr BLGlyphBufferCore; textData: pointer; size: uint;\n                     encoding: BLTextEncoding): BLResult		748
+nim	blGlyphBufferSetGlyphs	blend2d/bindings/bl_text.html#blGlyphBufferSetGlyphs,ptr.BLGlyphBufferCore,ptr.uint32,uint	proc blGlyphBufferSetGlyphs(self: ptr BLGlyphBufferCore; glyphData: ptr uint32;\n                       size: uint): BLResult		749
+nim	blGlyphBufferSetGlyphsFromStruct	blend2d/bindings/bl_text.html#blGlyphBufferSetGlyphsFromStruct,ptr.BLGlyphBufferCore,pointer,uint,uint,ptr.int	proc blGlyphBufferSetGlyphsFromStruct(self: ptr BLGlyphBufferCore;\n                                 glyphData: pointer; size: uint;\n                                 glyphIdSize: uint; glyphIdAdvance: ptr int): BLResult		750
+nim	blGlyphBufferSetDebugSink	blend2d/bindings/bl_text.html#blGlyphBufferSetDebugSink,ptr.BLGlyphBufferCore,BLDebugMessageSinkFunc,pointer	proc blGlyphBufferSetDebugSink(self: ptr BLGlyphBufferCore;\n                          sink: BLDebugMessageSinkFunc; userData: pointer): BLResult		751
+nim	blGlyphBufferResetDebugSink	blend2d/bindings/bl_text.html#blGlyphBufferResetDebugSink,ptr.BLGlyphBufferCore	proc blGlyphBufferResetDebugSink(self: ptr BLGlyphBufferCore): BLResult		752

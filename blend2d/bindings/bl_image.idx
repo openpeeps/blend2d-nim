@@ -1,0 +1,88 @@
+nimTitle	bl_image	blend2d/bindings/bl_image.html	module blend2d/bindings/bl_image		0
+nim	BLFormat	blend2d/bindings/bl_image.html#BLFormat	enum BLFormat		34
+nim	BLFormatFlags	blend2d/bindings/bl_image.html#BLFormatFlags	enum BLFormatFlags		40
+nim	BLImageInfoFlags	blend2d/bindings/bl_image.html#BLImageInfoFlags	enum BLImageInfoFlags		71
+nim	BLImageScaleFilter	blend2d/bindings/bl_image.html#BLImageScaleFilter	enum BLImageScaleFilter		76
+nim	BLImageCodecFeatures	blend2d/bindings/bl_image.html#BLImageCodecFeatures	enum BLImageCodecFeatures		84
+nim	BL_PIXEL_CONVERTER_CREATE_NO_FLAGS	blend2d/bindings/bl_image.html#BL_PIXEL_CONVERTER_CREATE_NO_FLAGS	BLPixelConverterCreateFlags.BL_PIXEL_CONVERTER_CREATE_NO_FLAGS		95
+nim	BL_PIXEL_CONVERTER_CREATE_FLAG_DONT_COPY_PALETTE	blend2d/bindings/bl_image.html#BL_PIXEL_CONVERTER_CREATE_FLAG_DONT_COPY_PALETTE	BLPixelConverterCreateFlags.BL_PIXEL_CONVERTER_CREATE_FLAG_DONT_COPY_PALETTE		95
+nim	BL_PIXEL_CONVERTER_CREATE_FLAG_ALTERABLE_PALETTE	blend2d/bindings/bl_image.html#BL_PIXEL_CONVERTER_CREATE_FLAG_ALTERABLE_PALETTE	BLPixelConverterCreateFlags.BL_PIXEL_CONVERTER_CREATE_FLAG_ALTERABLE_PALETTE		95
+nim	BL_PIXEL_CONVERTER_CREATE_FLAG_NO_MULTI_STEP	blend2d/bindings/bl_image.html#BL_PIXEL_CONVERTER_CREATE_FLAG_NO_MULTI_STEP	BLPixelConverterCreateFlags.BL_PIXEL_CONVERTER_CREATE_FLAG_NO_MULTI_STEP		95
+nim	BLPixelConverterCreateFlags	blend2d/bindings/bl_image.html#BLPixelConverterCreateFlags	enum BLPixelConverterCreateFlags		95
+nim	BLFormatInfo	blend2d/bindings/bl_image.html#BLFormatInfo	object BLFormatInfo		117
+nim	BLImageData	blend2d/bindings/bl_image.html#BLImageData	object BLImageData		125
+nim	BLImageInfo	blend2d/bindings/bl_image.html#BLImageInfo	object BLImageInfo		131
+nim	BLImageCore	blend2d/bindings/bl_image.html#BLImageCore	object BLImageCore		140
+nim	BLImageCodecCore	blend2d/bindings/bl_image.html#BLImageCodecCore	object BLImageCodecCore		143
+nim	BLImageDecoderCore	blend2d/bindings/bl_image.html#BLImageDecoderCore	object BLImageDecoderCore		147
+nim	BLImageEncoderCore	blend2d/bindings/bl_image.html#BLImageEncoderCore	object BLImageEncoderCore		150
+nim	BLPixelConverterCore	blend2d/bindings/bl_image.html#BLPixelConverterCore	object BLPixelConverterCore		153
+nim	BLPixelConverterOptions	blend2d/bindings/bl_image.html#BLPixelConverterOptions	object BLPixelConverterOptions		158
+nim	BLPixelConverterFunc	blend2d/bindings/bl_image.html#BLPixelConverterFunc	type BLPixelConverterFunc		162
+nim	blFormatInfoQuery	blend2d/bindings/bl_image.html#blFormatInfoQuery,ptr.BLFormatInfo,BLFormat	proc blFormatInfoQuery(self: ptr BLFormatInfo; format: BLFormat): BLResult		178
+nim	blFormatInfoSanitize	blend2d/bindings/bl_image.html#blFormatInfoSanitize,ptr.BLFormatInfo	proc blFormatInfoSanitize(self: ptr BLFormatInfo): BLResult		179
+nim	blImageCodecInit	blend2d/bindings/bl_image.html#blImageCodecInit,ptr.BLImageCodecCore	proc blImageCodecInit(self: ptr BLImageCodecCore): BLResult		184
+nim	blImageCodecInitMove	blend2d/bindings/bl_image.html#blImageCodecInitMove,ptr.BLImageCodecCore,ptr.BLImageCodecCore	proc blImageCodecInitMove(self: ptr BLImageCodecCore; other: ptr BLImageCodecCore): BLResult		185
+nim	blImageCodecInitWeak	blend2d/bindings/bl_image.html#blImageCodecInitWeak,ptr.BLImageCodecCore,ptr.BLImageCodecCore	proc blImageCodecInitWeak(self: ptr BLImageCodecCore; other: ptr BLImageCodecCore): BLResult		186
+nim	blImageCodecInitByName	blend2d/bindings/bl_image.html#blImageCodecInitByName,ptr.BLImageCodecCore,cstring,uint,ptr.BLArrayCore	proc blImageCodecInitByName(self: ptr BLImageCodecCore; name: cstring; size: uint;\n                       codecs: ptr BLArrayCore): BLResult		187
+nim	blImageCodecDestroy	blend2d/bindings/bl_image.html#blImageCodecDestroy,ptr.BLImageCodecCore	proc blImageCodecDestroy(self: ptr BLImageCodecCore): BLResult		188
+nim	blImageCodecReset	blend2d/bindings/bl_image.html#blImageCodecReset,ptr.BLImageCodecCore	proc blImageCodecReset(self: ptr BLImageCodecCore): BLResult		189
+nim	blImageCodecAssignMove	blend2d/bindings/bl_image.html#blImageCodecAssignMove,ptr.BLImageCodecCore,ptr.BLImageCodecCore	proc blImageCodecAssignMove(self: ptr BLImageCodecCore; other: ptr BLImageCodecCore): BLResult		190
+nim	blImageCodecAssignWeak	blend2d/bindings/bl_image.html#blImageCodecAssignWeak,ptr.BLImageCodecCore,ptr.BLImageCodecCore	proc blImageCodecAssignWeak(self: ptr BLImageCodecCore; other: ptr BLImageCodecCore): BLResult		191
+nim	blImageCodecFindByName	blend2d/bindings/bl_image.html#blImageCodecFindByName,ptr.BLImageCodecCore,cstring,uint,ptr.BLArrayCore	proc blImageCodecFindByName(self: ptr BLImageCodecCore; name: cstring; size: uint;\n                       codecs: ptr BLArrayCore): BLResult		192
+nim	blImageCodecFindByExtension	blend2d/bindings/bl_image.html#blImageCodecFindByExtension,ptr.BLImageCodecCore,cstring,uint,ptr.BLArrayCore	proc blImageCodecFindByExtension(self: ptr BLImageCodecCore; name: cstring;\n                            size: uint; codecs: ptr BLArrayCore): BLResult		193
+nim	blImageCodecFindByData	blend2d/bindings/bl_image.html#blImageCodecFindByData,ptr.BLImageCodecCore,pointer,uint,ptr.BLArrayCore	proc blImageCodecFindByData(self: ptr BLImageCodecCore; data: pointer; size: uint;\n                       codecs: ptr BLArrayCore): BLResult		194
+nim	blImageCodecInspectData	blend2d/bindings/bl_image.html#blImageCodecInspectData,ptr.BLImageCodecCore,pointer,uint	proc blImageCodecInspectData(self: ptr BLImageCodecCore; data: pointer; size: uint): uint32		195
+nim	blImageCodecCreateDecoder	blend2d/bindings/bl_image.html#blImageCodecCreateDecoder,ptr.BLImageCodecCore,ptr.BLImageDecoderCore	proc blImageCodecCreateDecoder(self: ptr BLImageCodecCore;\n                          dst: ptr BLImageDecoderCore): BLResult		196
+nim	blImageCodecCreateEncoder	blend2d/bindings/bl_image.html#blImageCodecCreateEncoder,ptr.BLImageCodecCore,ptr.BLImageEncoderCore	proc blImageCodecCreateEncoder(self: ptr BLImageCodecCore;\n                          dst: ptr BLImageEncoderCore): BLResult		197
+nim	blImageCodecArrayInitBuiltInCodecs	blend2d/bindings/bl_image.html#blImageCodecArrayInitBuiltInCodecs,ptr.BLArrayCore	proc blImageCodecArrayInitBuiltInCodecs(self: ptr BLArrayCore): BLResult		198
+nim	blImageCodecArrayAssignBuiltInCodecs	blend2d/bindings/bl_image.html#blImageCodecArrayAssignBuiltInCodecs,ptr.BLArrayCore	proc blImageCodecArrayAssignBuiltInCodecs(self: ptr BLArrayCore): BLResult		199
+nim	blImageCodecAddToBuiltIn	blend2d/bindings/bl_image.html#blImageCodecAddToBuiltIn,ptr.BLImageCodecCore	proc blImageCodecAddToBuiltIn(codec: ptr BLImageCodecCore): BLResult		200
+nim	blImageCodecRemoveFromBuiltIn	blend2d/bindings/bl_image.html#blImageCodecRemoveFromBuiltIn,ptr.BLImageCodecCore	proc blImageCodecRemoveFromBuiltIn(codec: ptr BLImageCodecCore): BLResult		201
+nim	blImageInit	blend2d/bindings/bl_image.html#blImageInit,ptr.BLImageCore	proc blImageInit(self: ptr BLImageCore): BLResult		206
+nim	blImageInitMove	blend2d/bindings/bl_image.html#blImageInitMove,ptr.BLImageCore,ptr.BLImageCore	proc blImageInitMove(self: ptr BLImageCore; other: ptr BLImageCore): BLResult		207
+nim	blImageInitWeak	blend2d/bindings/bl_image.html#blImageInitWeak,ptr.BLImageCore,ptr.BLImageCore	proc blImageInitWeak(self: ptr BLImageCore; other: ptr BLImageCore): BLResult		208
+nim	blImageInitAs	blend2d/bindings/bl_image.html#blImageInitAs,ptr.BLImageCore,cint,cint,BLFormat	proc blImageInitAs(self: ptr BLImageCore; w: cint; h: cint; format: BLFormat): BLResult		209
+nim	blImageInitAsFromData	blend2d/bindings/bl_image.html#blImageInitAsFromData,ptr.BLImageCore,cint,cint,BLFormat,pointer,ptr.int,BLDataAccessFlags,BLDestroyExternalDataFunc,pointer	proc blImageInitAsFromData(self: ptr BLImageCore; w, h: cint; format: BLFormat;\n                      pixelData: pointer; stride: ptr int;\n                      accessFlags: BLDataAccessFlags;\n                      destroyFunc: BLDestroyExternalDataFunc; userData: pointer): BLResult		210
+nim	blImageDestroy	blend2d/bindings/bl_image.html#blImageDestroy,ptr.BLImageCore	proc blImageDestroy(self: ptr BLImageCore): BLResult		211
+nim	blImageReset	blend2d/bindings/bl_image.html#blImageReset,ptr.BLImageCore	proc blImageReset(self: ptr BLImageCore): BLResult		212
+nim	blImageAssignMove	blend2d/bindings/bl_image.html#blImageAssignMove,ptr.BLImageCore,ptr.BLImageCore	proc blImageAssignMove(self: ptr BLImageCore; other: ptr BLImageCore): BLResult		213
+nim	blImageAssignWeak	blend2d/bindings/bl_image.html#blImageAssignWeak,ptr.BLImageCore,ptr.BLImageCore	proc blImageAssignWeak(self: ptr BLImageCore; other: ptr BLImageCore): BLResult		214
+nim	blImageAssignDeep	blend2d/bindings/bl_image.html#blImageAssignDeep,ptr.BLImageCore,ptr.BLImageCore	proc blImageAssignDeep(self: ptr BLImageCore; other: ptr BLImageCore): BLResult		215
+nim	blImageCreate	blend2d/bindings/bl_image.html#blImageCreate,ptr.BLImageCore,cint,cint,BLFormat	proc blImageCreate(self: ptr BLImageCore; w: cint; h: cint; format: BLFormat): BLResult		216
+nim	blImageCreateFromData	blend2d/bindings/bl_image.html#blImageCreateFromData,ptr.BLImageCore,cint,cint,BLFormat,pointer,ptr.int,BLDataAccessFlags,BLDestroyExternalDataFunc,pointer	proc blImageCreateFromData(self: ptr BLImageCore; w, h: cint; format: BLFormat;\n                      pixelData: pointer; stride: ptr int;\n                      accessFlags: BLDataAccessFlags;\n                      destroyFunc: BLDestroyExternalDataFunc; userData: pointer): BLResult		217
+nim	blImageGetData	blend2d/bindings/bl_image.html#blImageGetData,ptr.BLImageCore,ptr.BLImageData	proc blImageGetData(self: ptr BLImageCore; dataOut: ptr BLImageData): BLResult		222
+nim	blImageMakeMutable	blend2d/bindings/bl_image.html#blImageMakeMutable,ptr.BLImageCore,ptr.BLImageData	proc blImageMakeMutable(self: ptr BLImageCore; dataOut: ptr BLImageData): BLResult		223
+nim	blImageConvert	blend2d/bindings/bl_image.html#blImageConvert,ptr.BLImageCore,BLFormat	proc blImageConvert(self: ptr BLImageCore; format: BLFormat): BLResult		224
+nim	blImageEquals	blend2d/bindings/bl_image.html#blImageEquals,ptr.BLImageCore,ptr.BLImageCore	proc blImageEquals(a: ptr BLImageCore; b: ptr BLImageCore): bool		225
+nim	blImageScale	blend2d/bindings/bl_image.html#blImageScale,ptr.BLImageCore,ptr.BLImageCore,ptr.BLSizeI,BLImageScaleFilter	proc blImageScale(dst: ptr BLImageCore; src: ptr BLImageCore; size: ptr BLSizeI;\n             filter: BLImageScaleFilter): BLResult		226
+nim	blImageReadFromFile	blend2d/bindings/bl_image.html#blImageReadFromFile,ptr.BLImageCore,cstring,ptr.BLArrayCore	proc blImageReadFromFile(self: ptr BLImageCore; fileName: cstring;\n                    codecs: ptr BLArrayCore): BLResult		227
+nim	blImageReadFromData	blend2d/bindings/bl_image.html#blImageReadFromData,ptr.BLImageCore,pointer,uint,ptr.BLArrayCore	proc blImageReadFromData(self: ptr BLImageCore; data: pointer; size: uint;\n                    codecs: ptr BLArrayCore): BLResult		228
+nim	blImageWriteToFile	blend2d/bindings/bl_image.html#blImageWriteToFile,ptr.BLImageCore,cstring,ptr.BLImageCodecCore	proc blImageWriteToFile(self: ptr BLImageCore; fileName: cstring;\n                   codec: ptr BLImageCodecCore): BLResult		229
+nim	blImageWriteToData	blend2d/bindings/bl_image.html#blImageWriteToData,ptr.BLImageCore,ptr.BLArrayCore,ptr.BLImageCodecCore	proc blImageWriteToData(self: ptr BLImageCore; dst: ptr BLArrayCore;\n                   codec: ptr BLImageCodecCore): BLResult		230
+nim	blImageDecoderInit	blend2d/bindings/bl_image.html#blImageDecoderInit,ptr.BLImageDecoderCore	proc blImageDecoderInit(self: ptr BLImageDecoderCore): BLResult		235
+nim	blImageDecoderInitMove	blend2d/bindings/bl_image.html#blImageDecoderInitMove,ptr.BLImageDecoderCore,ptr.BLImageDecoderCore	proc blImageDecoderInitMove(self: ptr BLImageDecoderCore;\n                       other: ptr BLImageDecoderCore): BLResult		236
+nim	blImageDecoderInitWeak	blend2d/bindings/bl_image.html#blImageDecoderInitWeak,ptr.BLImageDecoderCore,ptr.BLImageDecoderCore	proc blImageDecoderInitWeak(self: ptr BLImageDecoderCore;\n                       other: ptr BLImageDecoderCore): BLResult		237
+nim	blImageDecoderDestroy	blend2d/bindings/bl_image.html#blImageDecoderDestroy,ptr.BLImageDecoderCore	proc blImageDecoderDestroy(self: ptr BLImageDecoderCore): BLResult		238
+nim	blImageDecoderReset	blend2d/bindings/bl_image.html#blImageDecoderReset,ptr.BLImageDecoderCore	proc blImageDecoderReset(self: ptr BLImageDecoderCore): BLResult		239
+nim	blImageDecoderAssignMove	blend2d/bindings/bl_image.html#blImageDecoderAssignMove,ptr.BLImageDecoderCore,ptr.BLImageDecoderCore	proc blImageDecoderAssignMove(self: ptr BLImageDecoderCore;\n                         other: ptr BLImageDecoderCore): BLResult		240
+nim	blImageDecoderAssignWeak	blend2d/bindings/bl_image.html#blImageDecoderAssignWeak,ptr.BLImageDecoderCore,ptr.BLImageDecoderCore	proc blImageDecoderAssignWeak(self: ptr BLImageDecoderCore;\n                         other: ptr BLImageDecoderCore): BLResult		241
+nim	blImageDecoderRestart	blend2d/bindings/bl_image.html#blImageDecoderRestart,ptr.BLImageDecoderCore	proc blImageDecoderRestart(self: ptr BLImageDecoderCore): BLResult		242
+nim	blImageDecoderReadInfo	blend2d/bindings/bl_image.html#blImageDecoderReadInfo,ptr.BLImageDecoderCore,ptr.BLImageInfo,ptr.uint8,uint	proc blImageDecoderReadInfo(self: ptr BLImageDecoderCore; infoOut: ptr BLImageInfo;\n                       data: ptr uint8; size: uint): BLResult		243
+nim	blImageDecoderReadFrame	blend2d/bindings/bl_image.html#blImageDecoderReadFrame,ptr.BLImageDecoderCore,ptr.BLImageCore,ptr.uint8,uint	proc blImageDecoderReadFrame(self: ptr BLImageDecoderCore; imageOut: ptr BLImageCore;\n                        data: ptr uint8; size: uint): BLResult		244
+nim	blImageEncoderInit	blend2d/bindings/bl_image.html#blImageEncoderInit,ptr.BLImageEncoderCore	proc blImageEncoderInit(self: ptr BLImageEncoderCore): BLResult		249
+nim	blImageEncoderInitMove	blend2d/bindings/bl_image.html#blImageEncoderInitMove,ptr.BLImageEncoderCore,ptr.BLImageEncoderCore	proc blImageEncoderInitMove(self: ptr BLImageEncoderCore;\n                       other: ptr BLImageEncoderCore): BLResult		250
+nim	blImageEncoderInitWeak	blend2d/bindings/bl_image.html#blImageEncoderInitWeak,ptr.BLImageEncoderCore,ptr.BLImageEncoderCore	proc blImageEncoderInitWeak(self: ptr BLImageEncoderCore;\n                       other: ptr BLImageEncoderCore): BLResult		251
+nim	blImageEncoderDestroy	blend2d/bindings/bl_image.html#blImageEncoderDestroy,ptr.BLImageEncoderCore	proc blImageEncoderDestroy(self: ptr BLImageEncoderCore): BLResult		252
+nim	blImageEncoderReset	blend2d/bindings/bl_image.html#blImageEncoderReset,ptr.BLImageEncoderCore	proc blImageEncoderReset(self: ptr BLImageEncoderCore): BLResult		253
+nim	blImageEncoderAssignMove	blend2d/bindings/bl_image.html#blImageEncoderAssignMove,ptr.BLImageEncoderCore,ptr.BLImageEncoderCore	proc blImageEncoderAssignMove(self: ptr BLImageEncoderCore;\n                         other: ptr BLImageEncoderCore): BLResult		254
+nim	blImageEncoderAssignWeak	blend2d/bindings/bl_image.html#blImageEncoderAssignWeak,ptr.BLImageEncoderCore,ptr.BLImageEncoderCore	proc blImageEncoderAssignWeak(self: ptr BLImageEncoderCore;\n                         other: ptr BLImageEncoderCore): BLResult		255
+nim	blImageEncoderRestart	blend2d/bindings/bl_image.html#blImageEncoderRestart,ptr.BLImageEncoderCore	proc blImageEncoderRestart(self: ptr BLImageEncoderCore): BLResult		256
+nim	blImageEncoderWriteFrame	blend2d/bindings/bl_image.html#blImageEncoderWriteFrame,ptr.BLImageEncoderCore,ptr.BLArrayCore,ptr.BLImageCore	proc blImageEncoderWriteFrame(self: ptr BLImageEncoderCore; dst: ptr BLArrayCore;\n                         image: ptr BLImageCore): BLResult		257
+nim	blPixelConverterInit	blend2d/bindings/bl_image.html#blPixelConverterInit,ptr.BLPixelConverterCore	proc blPixelConverterInit(self: ptr BLPixelConverterCore): BLResult		262
+nim	blPixelConverterInitWeak	blend2d/bindings/bl_image.html#blPixelConverterInitWeak,ptr.BLPixelConverterCore,ptr.BLPixelConverterCore	proc blPixelConverterInitWeak(self: ptr BLPixelConverterCore;\n                         other: ptr BLPixelConverterCore): BLResult		263
+nim	blPixelConverterDestroy	blend2d/bindings/bl_image.html#blPixelConverterDestroy,ptr.BLPixelConverterCore	proc blPixelConverterDestroy(self: ptr BLPixelConverterCore): BLResult		264
+nim	blPixelConverterReset	blend2d/bindings/bl_image.html#blPixelConverterReset,ptr.BLPixelConverterCore	proc blPixelConverterReset(self: ptr BLPixelConverterCore): BLResult		265
+nim	blPixelConverterAssign	blend2d/bindings/bl_image.html#blPixelConverterAssign,ptr.BLPixelConverterCore,ptr.BLPixelConverterCore	proc blPixelConverterAssign(self: ptr BLPixelConverterCore;\n                       other: ptr BLPixelConverterCore): BLResult		266
+nim	blPixelConverterCreate	blend2d/bindings/bl_image.html#blPixelConverterCreate,ptr.BLPixelConverterCore,ptr.BLFormatInfo,ptr.BLFormatInfo,BLPixelConverterCreateFlags	proc blPixelConverterCreate(self: ptr BLPixelConverterCore;\n                       dstInfo, srcInfo: ptr BLFormatInfo;\n                       createFlags: BLPixelConverterCreateFlags): BLResult		267
+nim	blPixelConverterConvert	blend2d/bindings/bl_image.html#blPixelConverterConvert,ptr.BLPixelConverterCore,pointer,ptr.int,pointer,ptr.int,uint32,uint32,ptr.BLPixelConverterOptions	proc blPixelConverterConvert(self: ptr BLPixelConverterCore; dstData: pointer;\n                        dstStride: ptr int; srcData: pointer;\n                        srcStride: ptr int; w, h: uint32;\n                        options: ptr BLPixelConverterOptions): BLResult		268

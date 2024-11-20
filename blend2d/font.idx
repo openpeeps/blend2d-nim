@@ -1,0 +1,18 @@
+nimTitle	font	blend2d/font.html	module blend2d/font		0
+nim	Font	blend2d/font.html#Font	type Font		37
+nim	FontFace	blend2d/font.html#FontFace	type FontFace		38
+nim	newTypeface	blend2d/font.html#newTypeface	proc newTypeface(): FontFace		40
+nim	load	blend2d/font.html#load,FontFace,string,BLFileReadFlags	proc load(f: FontFace; path: string;\n     readFlags: BLFileReadFlags = BL_FILE_READ_NO_FLAGS): FontFace		45
+nim	loadTypeface	blend2d/font.html#loadTypeface,string,BLFileReadFlags	proc loadTypeface(path: string; readFlags: BLFileReadFlags = BL_FILE_READ_NO_FLAGS): FontFace		50
+nim	initFont	blend2d/font.html#initFont,FontFace,float	proc initFont(f: FontFace; fontSize: float = 16.0): Font		54
+nim	initFontCore	blend2d/font.html#initFontCore,FontFace,float	proc initFontCore(f: FontFace; fontSize: float = 16.0): BLFontCore		60
+nim	size	blend2d/font.html#size,Font	proc size(f: Font): float		66
+nim	size	blend2d/font.html#size,Font,float	proc size(f: Font; x: float)		70
+nim	metrics	blend2d/font.html#metrics,Font,ptr.string	proc metrics(f: Font; data: ptr string): ptr BLTextMetrics		74
+nim	FontManager	blend2d/font.html#FontManager	type FontManager		86
+nim	initFontManager	blend2d/font.html#initFontManager	proc initFontManager(): FontManager		88
+nim	loadTypeface	blend2d/font.html#loadTypeface,FontManager,string	proc loadTypeface(fm: FontManager; path: string)		92
+nim	getTypeface	blend2d/font.html#getTypeface,FontManager,string	proc getTypeface(fm: FontManager; name: string): FontFace		96
+nim	destroyFontManager	blend2d/font.html#destroyFontManager,FontManager	proc destroyFontManager(fm: FontManager)		101
+nimgrp	loadtypeface	blend2d/font.html#loadTypeface-procs-all	proc		50
+nimgrp	size	blend2d/font.html#size-procs-all	proc		66

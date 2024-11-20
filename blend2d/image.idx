@@ -1,0 +1,17 @@
+nimTitle	image	blend2d/image.html	module blend2d/image		0
+nim	Image	blend2d/image.html#Image	type Image		36
+nim	ImageData	blend2d/image.html#ImageData	type ImageData		37
+nim	init	blend2d/image.html#init,int,int,BLFormat	proc init(width, height: int; pixelFormat: BLFormat = BL_FORMAT_PRGB32): Image		39
+nim	open	blend2d/image.html#open,string	proc open(path: string): Image		44
+nim	getAspectRatio	blend2d/image.html#getAspectRatio,int,int,int,int	proc getAspectRatio(width, height, minWidth, minHeight: int): (int, int)		49
+nim	getData	blend2d/image.html#getData,Image	proc getData(img: Image): ImageData		53
+nim	resize	blend2d/image.html#resize,Image,int32,int32,BLImageScaleFilter	proc resize(img: Image; width, height: int32;\n       scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest): Image		58
+nim	resize	blend2d/image.html#resize,Image,int32,int32,BLImageScaleFilter_2	proc resize(img: var Image; width, height: int32;\n       scaleFilter: BLImageScaleFilter = BLImageScaleFilterNearest)		68
+nim	getWidth	blend2d/image.html#getWidth,Image	proc getWidth(img: Image): int32		77
+nim	getHeight	blend2d/image.html#getHeight,Image	proc getHeight(img: Image): int32		81
+nim	width	blend2d/image.html#width,Image	proc width(img: Image): int32		85
+nim	height	blend2d/image.html#height,Image	proc height(img: Image): int32		89
+nim	exportAs	blend2d/image.html#exportAs,Image,string	proc exportAs(img: Image; path: string)		93
+nim	destroyImage	blend2d/image.html#destroyImage,Image	proc destroyImage(img: Image)		101
+nim	group	blend2d/image.html#group.m,untyped,untyped,untyped,untyped	macro group(imgIdent: untyped; width, height, contextStmt: untyped): untyped		108
+nimgrp	resize	blend2d/image.html#resize-procs-all	proc		58
