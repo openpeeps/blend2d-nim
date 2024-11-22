@@ -38,7 +38,6 @@ jobs:
           cd ../../..
       - run: |
           LD_LIBRARY_PATH=/usr/local/lib
-          sudo apt install ldconfig
           sudo ldconfig
       - run: |
           ls /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/
