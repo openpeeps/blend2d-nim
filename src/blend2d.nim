@@ -27,3 +27,6 @@
 #     https://github.com/openpeeps/blend2d-nim
 import ./blend2d/[image, geometry, context, font, color]
 export image, geometry, context, font, color
+
+from ./blend2d/bindings import `!`
+export `!`

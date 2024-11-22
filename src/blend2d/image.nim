@@ -118,10 +118,7 @@ macro group*(imgIdent: untyped, width, height, contextStmt: untyped): untyped =
         imgIdent,
         ident"Image",
         newCall(
-          newDotExpr(
-            ident"image",
-            ident"init",
-          ),
+          newDotExpr(ident"image", ident"init"),
           width, height
         )
       )

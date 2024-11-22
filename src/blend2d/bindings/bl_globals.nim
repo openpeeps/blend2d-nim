@@ -26,13 +26,19 @@
 #     Made by Humans from OpenPeeps
 #     https://github.com/openpeeps/blend2d-nim
 
-const
-  blend2dHeader* = "blend2d.h"
+import std/os
 
-{.push importc, header: blend2dHeader.}
+const
+  blend2DsourceDir = currentSourcePath().parentDir / "blend2d_source"
+  blend2Dheader* = blend2DsourceDir / "src" / "blend2d.h"
+  blend2Dlib* = blend2DsourceDir / "build"
+
+{.passL:"-L" & blend2Dlib & " -lblend2d".}
+{.push importc, header: blend2Dheader.}
 type
   BLResultCode* {.size: sizeof(uint32).} = enum
     BL_SUCCESS ## Successful result code.
+    BL_ERROR_START_INDEX
     BL_ERROR_OUT_OF_MEMORY  ## Out of memory [ENOMEM].
     BL_ERROR_INVALID_VALUE  ## Invalid value/argument [EINVAL].
     BL_ERROR_INVALID_STATE  ## Invalid state [EFAULT].
@@ -234,27 +240,37 @@ type
     setProperty*: proc (impl: ptr BLObjectImpl; name: cstring; nameSize: uint;
                         value: ptr BLVarCore): BLResult {.cdecl.}
 
-
   BLObjectType* {.size: sizeof(uint32).} = enum
-    BL_OBJECT_TYPE_RGBA ## Object represents a RGBA value stored as four 32-bit floating point components (can be used as Style).
-    BL_OBJECT_TYPE_RGBA32 ## Object represents a RGBA32 value stored as 32-bit integer in 0xAARRGGBB form.
-    BL_OBJECT_TYPE_RGBA64 ## Object represents a RGBA64 value stored as 64-bit integer in 0xAAAARRRRGGGGBBBB form.
-    BL_OBJECT_TYPE_NULL ## Object is Null (can be used as style).
-    BL_OBJECT_TYPE_PATTERN ## Object is BLPattern (can be used as style).
-    BL_OBJECT_TYPE_GRADIENT ## Object is BLGradient (can be used as style).
-    BL_OBJECT_TYPE_IMAGE ## Object is BLImage.
-    BL_OBJECT_TYPE_PATH ## Object is BLPath.
-    BL_OBJECT_TYPE_FONT ## Object is BLFont.
-    BL_OBJECT_TYPE_FONT_FEATURE_SETTINGS ## Object is BLFontFeatureSettings.
-    BL_OBJECT_TYPE_FONT_VARIATION_SETTINGS ## Object is BLFontVariationSettings.
-    BL_OBJECT_TYPE_BIT_ARRAY ## Object is BLBitArray.
-    BL_OBJECT_TYPE_BIT_SET ## Object is BLBitSet.
-    BL_OBJECT_TYPE_BOOL ## Object represents a boolean value.
-    BL_OBJECT_TYPE_INT64 ## Object represents a 64-bit signed integer value.
-    BL_OBJECT_TYPE_UINT64 ## Object represents a 64-bit unsigned integer value.
-    BL_OBJECT_TYPE_DOUBLE ## Object represents a 64-bit floating point value.
-    BL_OBJECT_TYPE_STRING ## Object is BLString.
-    BL_OBJECT_TYPE_ARRAY_OBJECT ## Object is BLArray<T> where T is a BLObject compatible type.
+    # https://stackoverflow.com/questions/72715226/enums-in-nim-for-wrapper-of-c-library
+    BL_OBJECT_TYPE_RGBA = 0 ## Object represents a RGBA value stored as four 32-bit floating point components (can be used as Style).
+    BL_OBJECT_TYPE_RGBA32 = 1  ## Object represents a RGBA32 value stored as 32-bit integer in 0xAARRGGBB form.
+    BL_OBJECT_TYPE_RGBA64 = 2 ## Object represents a RGBA64 value stored as 64-bit integer in 0xAAAARRRRGGGGBBBB form.
+    BL_OBJECT_TYPE_NULL = 3 ## Object is Null (can be used as style).
+    BL_OBJECT_TYPE_PATTERN = 4 ## Object is BLPattern (can be used as style).
+    BL_OBJECT_TYPE_GRADIENT = 5 ## Object is BLGradient (can be used as style).
+    BL_OBJECT_TYPE_IMAGE = 9
+      ## Object is BLImage.
+    BL_OBJECT_TYPE_PATH = 10
+      ## Object is BLPath.
+    BL_OBJECT_TYPE_FONT = 16
+      ## Object is BLFont.
+    BL_OBJECT_TYPE_FONT_FEATURE_SETTINGS = 17 ## Object is BLFontFeatureSettings.
+    BL_OBJECT_TYPE_FONT_VARIATION_SETTINGS = 18
+      ## Object is BLFontVariationSettings.
+    BL_OBJECT_TYPE_BIT_ARRAY = 25
+      ## Object is BLBitArray.
+    BL_OBJECT_TYPE_BIT_SET = 26
+      ## Object is BLBitSet.
+    BL_OBJECT_TYPE_BOOL = 28
+      ## Object represents a boolean value.
+    BL_OBJECT_TYPE_INT64 = 29
+      ## Object represents a 64-bit signed integer value.
+    BL_OBJECT_TYPE_UINT64 = 30## Object represents a 64-bit unsigned integer value.
+    BL_OBJECT_TYPE_DOUBLE = 31
+      ## Object represents a 64-bit floating point value.
+    BL_OBJECT_TYPE_STRING = 32
+      ## Object is BLString.
+    BL_OBJECT_TYPE_ARRAY_OBJECT = 33 ## Object is BLArray<T> where T is a BLObject compatible type.
     BL_OBJECT_TYPE_ARRAY_INT8 ## Object is BLArray<T> where T matches 8-bit signed integral type.
     BL_OBJECT_TYPE_ARRAY_UINT8 ## Object is BLArray<T> where T matches 8-bit unsigned integral type.
     BL_OBJECT_TYPE_ARRAY_INT16 ## Object is BLArray<T> where T matches 16-bit signed integral type.
@@ -311,39 +327,28 @@ type
   #
   BLBitArrayCore* {.bycopy.} = object
     d*: BLObjectDetail
+  
   BLBitArrayImpl* {.bycopy.} = object
-    size*: uint32 ## Size in bit units.
-    capacity*: uint32 ## Capacity in bit-word units.
+    size*: uint32
+      ## Size in bit units.
+    capacity*: uint32
+      ## Capacity in bit-word units.
   
   #
   # BLBitSet
   #
-  BLBitSetCore* {.bycopy.} = object ## ```
-                                                             ##   ! BitSet container [C API].
-                                                             ## ```
+  BLBitSetCore* {.bycopy.} = object
     d*: BLObjectDetail
-  BLBitSetData* {.bycopy.} = object ## ```
-                                                             ##   ! BitSet data view.
-                                                             ## ```
+
+  BLBitSetData* {.bycopy.} = object
     segmentData*: ptr BLBitSetSegment
     segmentCount*: uint32
     ssoSegments*: array[3, BLBitSetSegment]
-  BLBitSetImpl* {.bycopy.} = object ## ```
-                                                             ##   ! \}
-                                                             ##     ! \cond INTERNAL
-                                                             ##     ! \name BLBitSet - Internals
-                                                             ##     ! \{
-                                                             ##     ! BitSet container [Impl].
-                                                             ## ```
-    segmentCount*: uint32    ## ```
-                             ##   ! Count of used segments in segmentData.
-                             ## ```
-    segmentCapacity*: uint32 ## ```
-                             ##   ! Count of allocated segments in segmentData.
-                             ## ```
+
   BLBitSetSegment* {.bycopy.} = object
     startWord*: uint32
     data*: array[BL_BIT_SET_SEGMENT_WORD_COUNT.ord, uint32]
+
   BLBitSetBuilderCore* {.bycopy.} = object
     areaShift*: uint32
       ## Shift to get _areaIndex from bit index, equals to log2(kBitCount).
@@ -353,7 +358,6 @@ type
   #
   # BLString API
   #
-
   BLStringCore* {.bycopy.} = object
     d*: BLObjectDetail
   BLStringImpl* {.bycopy.} = object

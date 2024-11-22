@@ -74,6 +74,11 @@ proc fill*(ctx: Context, rgba: BLRgba): Context {.discardable.} =
   !blContextFillAllExt(ctx, rgba.addr)
   ctx
 
+proc fill*(ctx: Context, color: ColorHex): Context {.discardable.} =
+  ## Fills the entire Context using `color` ColorHex
+  ctx.fillStyle(color)
+  ctx
+
 proc fill*(ctx: Context, gradient: ptr BLGradientCore): Context {.discardable.} =
   ## Fills the entire Context with the `gradient` color
   !blContextFillAllExt(ctx, gradient)
@@ -182,6 +187,10 @@ proc add*(ctx: Context, c: Circle, color: BLRgba) =
 proc add*(ctx: Context, rr: RoundRect, color: ColorHex) =
   ## Add a colored `BLRoundRect` to current `Context`
   !blContextFillGeometryRgba32(ctx, BL_GEOMETRY_TYPE_ROUND_RECT, rr, color)
+
+proc add*(ctx: Context, rr: RoundRect, color: Gradient) =
+  ## Add a `BLRoundRect` to `ctx` with `color` Gradient
+  !blContextFillGeometryExt(ctx, BL_GEOMETRY_TYPE_ROUND_RECT, rr, color)
 
 #
 # Context - Blit Image with BLPointI
