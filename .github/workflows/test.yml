@@ -39,4 +39,4 @@ jobs:
       - run: |
           ls /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/
       - run: nimble install -Y
-      - run: 'nimble test --dynlibOverride:blend2d --passL:"-L/usr/local/lib -lblend2d" --passC:"-I/home/runner/work/blend2d-nim/blend2d-nim/src/bindings/blend2d_source/src"'
+      - run: 'nimble test --dynlibOverride:blend2d --passL:"-L/home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/ -lblend2d" --passC:"-I/home/runner/work/blend2d-nim/blend2d-nim/src/bindings/blend2d_source/src"'
