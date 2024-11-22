@@ -38,5 +38,7 @@ jobs:
           cd ../../..
       - run: |
           ls /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/
+          sudo cp /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/libblend2d.so /usr/lib
+          sudo cp /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/libblend2d.so /usr/lib64/
       - run: nimble install -Y
-      - run: 'nimble test --dynlibOverride:blend2d --passL:"-L/home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/ -lblend2d" --passC:"-I/home/runner/work/blend2d-nim/blend2d-nim/src/bindings/blend2d_source/src"'
+      - run: nimble test
