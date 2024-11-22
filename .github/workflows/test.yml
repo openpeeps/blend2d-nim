@@ -38,7 +38,7 @@ jobs:
           cd ../../..
       - run: |
           LD_LIBRARY_PATH=/usr/local/lib
-          sudo ldconfig
+          sudo ldconfig /usr/local/lib
       - run: |
           ls /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/
           sudo mv /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/libblend2d.so /usr/local/lib
