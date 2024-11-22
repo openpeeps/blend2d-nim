@@ -29,11 +29,11 @@ jobs:
           nim-version: ${{ matrix.nim-version }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
-          ls
-          cd blend2d-nim/blend2-nim/blend2d/bindings/blend2d_source
+          cd src/blend2d/bindings/blend2d_source
           git clone https://github.com/asmjit/asmjit 3rdparty/asmjit
           mkdir build && cd build
           cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=14 -G Ninja
           cmake --build .
+          cd ../../..
       - run: nimble install -Y
       - run: nimble test
