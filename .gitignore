@@ -6,3 +6,7 @@ testresults/
 /tests/*
 !/tests/*.nim
 !/tests/*.nims
+/src/blend2d-core/
+/src/blend2d/bindings/*_impl
+!/tests/out
+/tests/out/*
