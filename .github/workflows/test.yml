@@ -36,7 +36,12 @@ jobs:
           cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=14 -G Ninja
           cmake --build .
           cd ../../..
-      - run: 'LD_LIBRARY_PATH=/usr/local/lib'
-      - run: 'sudo mv /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/libblend2d.so /usr/local/lib'
+      - run: |
+          LD_LIBRARY_PATH=/usr/local/lib
+          sudo apt install ldconfig
+          sudo ldconfig
+      - run: |
+          ls /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/
+          sudo mv /home/runner/work/blend2d-nim/blend2d-nim/src/blend2d/bindings/blend2d_source/build/libblend2d.so /usr/local/lib
       - run: nimble install -Y
       - run: nimble test
