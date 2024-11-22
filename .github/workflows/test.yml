@@ -22,16 +22,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: true # recursive
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: jiro4989/setup-nim-action@v1
         with:
           nim-version: ${{ matrix.nim-version }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
-          wget https://blend2d.com/download/blend2d-0.11.4.tar.gz
-          tar zxvf blend2d-0.11.4.tar.gz
-          cmake blend2d -B blend2d/build -DCMAKE_BUILD_TYPE=Release -DBLEND2D_EMBED=TRUE
-          cmake --build blend2d/build
+          cd blend2d-nim/blend2-nim/blend2d/bindings/blend2d_source
+          git clone https://github.com/asmjit/asmjit 3rdparty/asmjit
+          mkdir build && cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=14 -G Ninja
+          cmake --build .
       - run: nimble install -Y
       - run: nimble test
