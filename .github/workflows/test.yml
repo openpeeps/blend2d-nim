@@ -29,6 +29,7 @@ jobs:
           nim-version: ${{ matrix.nim-version }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
+          sudo apt install ninja-build
           cd src/blend2d/bindings/blend2d_source
           git clone https://github.com/asmjit/asmjit 3rdparty/asmjit
           mkdir build && cd build
