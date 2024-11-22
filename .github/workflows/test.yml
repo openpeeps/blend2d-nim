@@ -35,6 +35,7 @@ jobs:
           mkdir build && cd build
           cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=14 -G Ninja
           cmake --build .
+          sudo mv libblend2d.so /usr/local/lib
           cd ../../..
       - run: nimble install -Y
       - run: nimble test
