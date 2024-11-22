@@ -22,13 +22,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: true # recursive
+          submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: jiro4989/setup-nim-action@v1
         with:
           nim-version: ${{ matrix.nim-version }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
+          ls
           cd blend2d-nim/blend2-nim/blend2d/bindings/blend2d_source
           git clone https://github.com/asmjit/asmjit 3rdparty/asmjit
           mkdir build && cd build
