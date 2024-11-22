@@ -3,6 +3,8 @@ import std/os
 
 import blend2d
 
+discard existsOrCreateDir("tests/out")
+
 test "filled background":
   group main, 200, 200:
     this.fillStyle(colSalmon)
