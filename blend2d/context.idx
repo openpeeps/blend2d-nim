@@ -7,96 +7,98 @@ nim	opacity	blend2d/context.html#opacity,Context,range[]	proc opacity(ctx: Conte
 nim	opacity	blend2d/context.html#opacity.t,range[],untyped	template opacity(alpha: range[0.0 .. 1.0]; stmts: untyped)		58
 nim	fillStyle	blend2d/context.html#fillStyle,Context,ColorHex	proc fillStyle(ctx: Context; color: ColorHex = colWhite): Context		65
 nim	fill	blend2d/context.html#fill,Context,BLRgba	proc fill(ctx: Context; rgba: BLRgba): Context		72
-nim	fill	blend2d/context.html#fill,Context,ptr.BLGradientCore	proc fill(ctx: Context; gradient: ptr BLGradientCore): Context		77
-nim	translate	blend2d/context.html#translate,Context,float64,float64	proc translate(ctx: Context; x, y: float64)		85
-nim	rotate	blend2d/context.html#rotate,Context,range[]	proc rotate(ctx: Context; angle: range[-1.0 .. 1.0])		90
-nim	scale	blend2d/context.html#scale,Context,float64,float64	proc scale(ctx: Context; x, y: float64)		93
-nim	skew	blend2d/context.html#skew,Context,float64,float64	proc skew(ctx: Context; x, y: float64)		97
-nim	resetTransform	blend2d/context.html#resetTransform,Context	proc resetTransform(ctx: Context)		101
-nim	blend	blend2d/context.html#blend,Context,Image,ptr.BLPointI,ptr.BLRectI,BLCompOp	proc blend(ctx: Context; img: Image; p: ptr BLPointI; r: ptr BLRectI;\n      mode: BLCompOp = BLCompOpSrcOver): Context		108
-nim	blendClear	blend2d/context.html#blendClear,Context	proc blendClear(ctx`gensym38: Context): Context		122
-nim	applyBlendClear	blend2d/context.html#applyBlendClear.m,untyped	macro applyBlendClear(stmts`gensym39: untyped): untyped		131
-nim	blendSrcOver	blend2d/context.html#blendSrcOver,Context	proc blendSrcOver(ctx`gensym40: Context): Context		122
-nim	applyBlendSrcOver	blend2d/context.html#applyBlendSrcOver.m,untyped	macro applyBlendSrcOver(stmts`gensym41: untyped): untyped		131
-nim	blendSrcCopy	blend2d/context.html#blendSrcCopy,Context	proc blendSrcCopy(ctx`gensym42: Context): Context		122
-nim	applyBlendSrcCopy	blend2d/context.html#applyBlendSrcCopy.m,untyped	macro applyBlendSrcCopy(stmts`gensym43: untyped): untyped		131
-nim	blendSrcIn	blend2d/context.html#blendSrcIn,Context	proc blendSrcIn(ctx`gensym44: Context): Context		122
-nim	applyBlendSrcIn	blend2d/context.html#applyBlendSrcIn.m,untyped	macro applyBlendSrcIn(stmts`gensym45: untyped): untyped		131
-nim	blendSrcOut	blend2d/context.html#blendSrcOut,Context	proc blendSrcOut(ctx`gensym46: Context): Context		122
-nim	applyBlendSrcOut	blend2d/context.html#applyBlendSrcOut.m,untyped	macro applyBlendSrcOut(stmts`gensym47: untyped): untyped		131
-nim	blendSrcAtop	blend2d/context.html#blendSrcAtop,Context	proc blendSrcAtop(ctx`gensym48: Context): Context		122
-nim	applyBlendSrcAtop	blend2d/context.html#applyBlendSrcAtop.m,untyped	macro applyBlendSrcAtop(stmts`gensym49: untyped): untyped		131
-nim	blendDstOver	blend2d/context.html#blendDstOver,Context	proc blendDstOver(ctx`gensym50: Context): Context		122
-nim	applyBlendDstOver	blend2d/context.html#applyBlendDstOver.m,untyped	macro applyBlendDstOver(stmts`gensym51: untyped): untyped		131
-nim	blendDstCopy	blend2d/context.html#blendDstCopy,Context	proc blendDstCopy(ctx`gensym52: Context): Context		122
-nim	applyBlendDstCopy	blend2d/context.html#applyBlendDstCopy.m,untyped	macro applyBlendDstCopy(stmts`gensym53: untyped): untyped		131
-nim	blendDstIn	blend2d/context.html#blendDstIn,Context	proc blendDstIn(ctx`gensym54: Context): Context		122
-nim	applyBlendDstIn	blend2d/context.html#applyBlendDstIn.m,untyped	macro applyBlendDstIn(stmts`gensym55: untyped): untyped		131
-nim	blendDstOut	blend2d/context.html#blendDstOut,Context	proc blendDstOut(ctx`gensym56: Context): Context		122
-nim	applyBlendDstOut	blend2d/context.html#applyBlendDstOut.m,untyped	macro applyBlendDstOut(stmts`gensym57: untyped): untyped		131
-nim	blendDstAtop	blend2d/context.html#blendDstAtop,Context	proc blendDstAtop(ctx`gensym58: Context): Context		122
-nim	applyBlendDstAtop	blend2d/context.html#applyBlendDstAtop.m,untyped	macro applyBlendDstAtop(stmts`gensym59: untyped): untyped		131
-nim	blendXor	blend2d/context.html#blendXor,Context	proc blendXor(ctx`gensym60: Context): Context		122
-nim	applyBlendXor	blend2d/context.html#applyBlendXor.m,untyped	macro applyBlendXor(stmts`gensym61: untyped): untyped		131
-nim	blendPlus	blend2d/context.html#blendPlus,Context	proc blendPlus(ctx`gensym62: Context): Context		122
-nim	applyBlendPlus	blend2d/context.html#applyBlendPlus.m,untyped	macro applyBlendPlus(stmts`gensym63: untyped): untyped		131
-nim	blendMinus	blend2d/context.html#blendMinus,Context	proc blendMinus(ctx`gensym64: Context): Context		122
-nim	applyBlendMinus	blend2d/context.html#applyBlendMinus.m,untyped	macro applyBlendMinus(stmts`gensym65: untyped): untyped		131
-nim	blendModulate	blend2d/context.html#blendModulate,Context	proc blendModulate(ctx`gensym66: Context): Context		122
-nim	applyBlendModulate	blend2d/context.html#applyBlendModulate.m,untyped	macro applyBlendModulate(stmts`gensym67: untyped): untyped		131
-nim	blendMultiply	blend2d/context.html#blendMultiply,Context	proc blendMultiply(ctx`gensym68: Context): Context		122
-nim	applyBlendMultiply	blend2d/context.html#applyBlendMultiply.m,untyped	macro applyBlendMultiply(stmts`gensym69: untyped): untyped		131
-nim	blendScreen	blend2d/context.html#blendScreen,Context	proc blendScreen(ctx`gensym70: Context): Context		122
-nim	applyBlendScreen	blend2d/context.html#applyBlendScreen.m,untyped	macro applyBlendScreen(stmts`gensym71: untyped): untyped		131
-nim	blendOverlay	blend2d/context.html#blendOverlay,Context	proc blendOverlay(ctx`gensym72: Context): Context		122
-nim	applyBlendOverlay	blend2d/context.html#applyBlendOverlay.m,untyped	macro applyBlendOverlay(stmts`gensym73: untyped): untyped		131
-nim	blendDarken	blend2d/context.html#blendDarken,Context	proc blendDarken(ctx`gensym74: Context): Context		122
-nim	applyBlendDarken	blend2d/context.html#applyBlendDarken.m,untyped	macro applyBlendDarken(stmts`gensym75: untyped): untyped		131
-nim	blendLighten	blend2d/context.html#blendLighten,Context	proc blendLighten(ctx`gensym76: Context): Context		122
-nim	applyBlendLighten	blend2d/context.html#applyBlendLighten.m,untyped	macro applyBlendLighten(stmts`gensym77: untyped): untyped		131
-nim	blendDarken	blend2d/context.html#blendDarken,Context_2	proc blendDarken(ctx`gensym78: Context): Context		122
-nim	applyBlendDarken	blend2d/context.html#applyBlendDarken.m,untyped_2	macro applyBlendDarken(stmts`gensym79: untyped): untyped		131
-nim	blendLighten	blend2d/context.html#blendLighten,Context_2	proc blendLighten(ctx`gensym80: Context): Context		122
-nim	applyBlendLighten	blend2d/context.html#applyBlendLighten.m,untyped_2	macro applyBlendLighten(stmts`gensym81: untyped): untyped		131
-nim	blendColorDodge	blend2d/context.html#blendColorDodge,Context	proc blendColorDodge(ctx`gensym82: Context): Context		122
-nim	applyBlendColorDodge	blend2d/context.html#applyBlendColorDodge.m,untyped	macro applyBlendColorDodge(stmts`gensym83: untyped): untyped		131
-nim	blendColorBurn	blend2d/context.html#blendColorBurn,Context	proc blendColorBurn(ctx`gensym84: Context): Context		122
-nim	applyBlendColorBurn	blend2d/context.html#applyBlendColorBurn.m,untyped	macro applyBlendColorBurn(stmts`gensym85: untyped): untyped		131
-nim	blendLinearBurn	blend2d/context.html#blendLinearBurn,Context	proc blendLinearBurn(ctx`gensym86: Context): Context		122
-nim	applyBlendLinearBurn	blend2d/context.html#applyBlendLinearBurn.m,untyped	macro applyBlendLinearBurn(stmts`gensym87: untyped): untyped		131
-nim	blendLinearLight	blend2d/context.html#blendLinearLight,Context	proc blendLinearLight(ctx`gensym88: Context): Context		122
-nim	applyBlendLinearLight	blend2d/context.html#applyBlendLinearLight.m,untyped	macro applyBlendLinearLight(stmts`gensym89: untyped): untyped		131
-nim	blendPinLight	blend2d/context.html#blendPinLight,Context	proc blendPinLight(ctx`gensym90: Context): Context		122
-nim	applyBlendPinLight	blend2d/context.html#applyBlendPinLight.m,untyped	macro applyBlendPinLight(stmts`gensym91: untyped): untyped		131
-nim	blendHardLight	blend2d/context.html#blendHardLight,Context	proc blendHardLight(ctx`gensym92: Context): Context		122
-nim	applyBlendHardLight	blend2d/context.html#applyBlendHardLight.m,untyped	macro applyBlendHardLight(stmts`gensym93: untyped): untyped		131
-nim	blendSoftLight	blend2d/context.html#blendSoftLight,Context	proc blendSoftLight(ctx`gensym94: Context): Context		122
-nim	applyBlendSoftLight	blend2d/context.html#applyBlendSoftLight.m,untyped	macro applyBlendSoftLight(stmts`gensym95: untyped): untyped		131
-nim	blendDifference	blend2d/context.html#blendDifference,Context	proc blendDifference(ctx`gensym96: Context): Context		122
-nim	applyBlendDifference	blend2d/context.html#applyBlendDifference.m,untyped	macro applyBlendDifference(stmts`gensym97: untyped): untyped		131
-nim	blendExclusion	blend2d/context.html#blendExclusion,Context	proc blendExclusion(ctx`gensym98: Context): Context		122
-nim	applyBlendExclusion	blend2d/context.html#applyBlendExclusion.m,untyped	macro applyBlendExclusion(stmts`gensym99: untyped): untyped		143
-nim	add	blend2d/context.html#add,Context,Font,string,int32,int32,ColorHex	proc add(ctx: Context; font: Font; content: string; x, y: int32 = 0;\n    color: ColorHex = colWhite): Context		152
-nim	add	blend2d/context.html#add,Context,BLRectI	proc add(ctx: Context; r: BLRectI)		162
-nim	add	blend2d/context.html#add,Context,BLRectI,BLRgba	proc add(ctx: Context; r: BLRectI; color: BLRgba)		166
-nim	add	blend2d/context.html#add,Context,Circle	proc add(ctx: Context; circle: Circle)		170
-nim	add	blend2d/context.html#add,Context,Circle,ColorHex	proc add(ctx: Context; c: Circle; color: ColorHex)		174
-nim	add	blend2d/context.html#add,Context,Circle,BLRgba	proc add(ctx: Context; c: Circle; color: BLRgba)		178
-nim	add	blend2d/context.html#add,Context,RoundRect,ColorHex	proc add(ctx: Context; rr: RoundRect; color: ColorHex)		182
-nim	add	blend2d/context.html#add,Context,Image	proc add(ctx: Context; img: Image): Context		189
-nim	add	blend2d/context.html#add,Context,Image,sinkBLPointI,sinkBLRectI	proc add(ctx: Context; img: Image; p: sink BLPointI; r: sink BLRectI): Context		196
-nim	add	blend2d/context.html#add,Context,Image,sinkBLPointI	proc add(ctx: Context; img: Image; p: sink BLPointI): Context		203
-nim	add	blend2d/context.html#add,Context,Image,sinkBLPoint,sinkBLRectI	proc add(ctx: Context; img: Image; p: sink BLPoint; r: sink BLRectI): Context		213
-nim	add	blend2d/context.html#add,Context,Image,sinkBLPoint	proc add(ctx: Context; img: Image; p: sink BLPoint): Context		220
-nim	add	blend2d/context.html#add,Context,Image,sinkBLRectI	proc add(ctx: Context; img: Image; r: sink BLRectI): Context		227
-nim	mask	blend2d/context.html#mask,Context,PointI,Image,RectI	proc mask(ctx: Context; origin: PointI; mask: Image; maskArea: RectI): Context		236
-nim	endContext	blend2d/context.html#endContext,Context	proc endContext(ctx: Context)		241
-nim	stroke	blend2d/context.html#stroke,Context,BLCircle,float,BLRgba	proc stroke(ctx: Context; c: BLCircle; width: float; color: BLRgba = White): Context		249
-nim	stroke	blend2d/context.html#stroke.t,BLCircle,float,BLRgba	template stroke(c: BLCircle; width: float; color: BLRgba = White)		255
-nim	ctx	blend2d/context.html#ctx.m,typed,untyped	macro ctx(img: typed; contextStmt: untyped): untyped		262
-nimgrp	add	blend2d/context.html#add-procs-all	proc		152
+nim	fill	blend2d/context.html#fill,Context,ColorHex	proc fill(ctx: Context; color: ColorHex): Context		77
+nim	fill	blend2d/context.html#fill,Context,ptr.BLGradientCore	proc fill(ctx: Context; gradient: ptr BLGradientCore): Context		82
+nim	translate	blend2d/context.html#translate,Context,float64,float64	proc translate(ctx: Context; x, y: float64)		90
+nim	rotate	blend2d/context.html#rotate,Context,range[]	proc rotate(ctx: Context; angle: range[-1.0 .. 1.0])		95
+nim	scale	blend2d/context.html#scale,Context,float64,float64	proc scale(ctx: Context; x, y: float64)		98
+nim	skew	blend2d/context.html#skew,Context,float64,float64	proc skew(ctx: Context; x, y: float64)		102
+nim	resetTransform	blend2d/context.html#resetTransform,Context	proc resetTransform(ctx: Context)		106
+nim	blend	blend2d/context.html#blend,Context,Image,ptr.BLPointI,ptr.BLRectI,BLCompOp	proc blend(ctx: Context; img: Image; p: ptr BLPointI; r: ptr BLRectI;\n      mode: BLCompOp = BLCompOpSrcOver): Context		113
+nim	blendClear	blend2d/context.html#blendClear,Context	proc blendClear(ctx`gensym38: Context): Context		127
+nim	applyBlendClear	blend2d/context.html#applyBlendClear.m,untyped	macro applyBlendClear(stmts`gensym39: untyped): untyped		136
+nim	blendSrcOver	blend2d/context.html#blendSrcOver,Context	proc blendSrcOver(ctx`gensym40: Context): Context		127
+nim	applyBlendSrcOver	blend2d/context.html#applyBlendSrcOver.m,untyped	macro applyBlendSrcOver(stmts`gensym41: untyped): untyped		136
+nim	blendSrcCopy	blend2d/context.html#blendSrcCopy,Context	proc blendSrcCopy(ctx`gensym42: Context): Context		127
+nim	applyBlendSrcCopy	blend2d/context.html#applyBlendSrcCopy.m,untyped	macro applyBlendSrcCopy(stmts`gensym43: untyped): untyped		136
+nim	blendSrcIn	blend2d/context.html#blendSrcIn,Context	proc blendSrcIn(ctx`gensym44: Context): Context		127
+nim	applyBlendSrcIn	blend2d/context.html#applyBlendSrcIn.m,untyped	macro applyBlendSrcIn(stmts`gensym45: untyped): untyped		136
+nim	blendSrcOut	blend2d/context.html#blendSrcOut,Context	proc blendSrcOut(ctx`gensym46: Context): Context		127
+nim	applyBlendSrcOut	blend2d/context.html#applyBlendSrcOut.m,untyped	macro applyBlendSrcOut(stmts`gensym47: untyped): untyped		136
+nim	blendSrcAtop	blend2d/context.html#blendSrcAtop,Context	proc blendSrcAtop(ctx`gensym48: Context): Context		127
+nim	applyBlendSrcAtop	blend2d/context.html#applyBlendSrcAtop.m,untyped	macro applyBlendSrcAtop(stmts`gensym49: untyped): untyped		136
+nim	blendDstOver	blend2d/context.html#blendDstOver,Context	proc blendDstOver(ctx`gensym50: Context): Context		127
+nim	applyBlendDstOver	blend2d/context.html#applyBlendDstOver.m,untyped	macro applyBlendDstOver(stmts`gensym51: untyped): untyped		136
+nim	blendDstCopy	blend2d/context.html#blendDstCopy,Context	proc blendDstCopy(ctx`gensym52: Context): Context		127
+nim	applyBlendDstCopy	blend2d/context.html#applyBlendDstCopy.m,untyped	macro applyBlendDstCopy(stmts`gensym53: untyped): untyped		136
+nim	blendDstIn	blend2d/context.html#blendDstIn,Context	proc blendDstIn(ctx`gensym54: Context): Context		127
+nim	applyBlendDstIn	blend2d/context.html#applyBlendDstIn.m,untyped	macro applyBlendDstIn(stmts`gensym55: untyped): untyped		136
+nim	blendDstOut	blend2d/context.html#blendDstOut,Context	proc blendDstOut(ctx`gensym56: Context): Context		127
+nim	applyBlendDstOut	blend2d/context.html#applyBlendDstOut.m,untyped	macro applyBlendDstOut(stmts`gensym57: untyped): untyped		136
+nim	blendDstAtop	blend2d/context.html#blendDstAtop,Context	proc blendDstAtop(ctx`gensym58: Context): Context		127
+nim	applyBlendDstAtop	blend2d/context.html#applyBlendDstAtop.m,untyped	macro applyBlendDstAtop(stmts`gensym59: untyped): untyped		136
+nim	blendXor	blend2d/context.html#blendXor,Context	proc blendXor(ctx`gensym60: Context): Context		127
+nim	applyBlendXor	blend2d/context.html#applyBlendXor.m,untyped	macro applyBlendXor(stmts`gensym61: untyped): untyped		136
+nim	blendPlus	blend2d/context.html#blendPlus,Context	proc blendPlus(ctx`gensym62: Context): Context		127
+nim	applyBlendPlus	blend2d/context.html#applyBlendPlus.m,untyped	macro applyBlendPlus(stmts`gensym63: untyped): untyped		136
+nim	blendMinus	blend2d/context.html#blendMinus,Context	proc blendMinus(ctx`gensym64: Context): Context		127
+nim	applyBlendMinus	blend2d/context.html#applyBlendMinus.m,untyped	macro applyBlendMinus(stmts`gensym65: untyped): untyped		136
+nim	blendModulate	blend2d/context.html#blendModulate,Context	proc blendModulate(ctx`gensym66: Context): Context		127
+nim	applyBlendModulate	blend2d/context.html#applyBlendModulate.m,untyped	macro applyBlendModulate(stmts`gensym67: untyped): untyped		136
+nim	blendMultiply	blend2d/context.html#blendMultiply,Context	proc blendMultiply(ctx`gensym68: Context): Context		127
+nim	applyBlendMultiply	blend2d/context.html#applyBlendMultiply.m,untyped	macro applyBlendMultiply(stmts`gensym69: untyped): untyped		136
+nim	blendScreen	blend2d/context.html#blendScreen,Context	proc blendScreen(ctx`gensym70: Context): Context		127
+nim	applyBlendScreen	blend2d/context.html#applyBlendScreen.m,untyped	macro applyBlendScreen(stmts`gensym71: untyped): untyped		136
+nim	blendOverlay	blend2d/context.html#blendOverlay,Context	proc blendOverlay(ctx`gensym72: Context): Context		127
+nim	applyBlendOverlay	blend2d/context.html#applyBlendOverlay.m,untyped	macro applyBlendOverlay(stmts`gensym73: untyped): untyped		136
+nim	blendDarken	blend2d/context.html#blendDarken,Context	proc blendDarken(ctx`gensym74: Context): Context		127
+nim	applyBlendDarken	blend2d/context.html#applyBlendDarken.m,untyped	macro applyBlendDarken(stmts`gensym75: untyped): untyped		136
+nim	blendLighten	blend2d/context.html#blendLighten,Context	proc blendLighten(ctx`gensym76: Context): Context		127
+nim	applyBlendLighten	blend2d/context.html#applyBlendLighten.m,untyped	macro applyBlendLighten(stmts`gensym77: untyped): untyped		136
+nim	blendDarken	blend2d/context.html#blendDarken,Context_2	proc blendDarken(ctx`gensym78: Context): Context		127
+nim	applyBlendDarken	blend2d/context.html#applyBlendDarken.m,untyped_2	macro applyBlendDarken(stmts`gensym79: untyped): untyped		136
+nim	blendLighten	blend2d/context.html#blendLighten,Context_2	proc blendLighten(ctx`gensym80: Context): Context		127
+nim	applyBlendLighten	blend2d/context.html#applyBlendLighten.m,untyped_2	macro applyBlendLighten(stmts`gensym81: untyped): untyped		136
+nim	blendColorDodge	blend2d/context.html#blendColorDodge,Context	proc blendColorDodge(ctx`gensym82: Context): Context		127
+nim	applyBlendColorDodge	blend2d/context.html#applyBlendColorDodge.m,untyped	macro applyBlendColorDodge(stmts`gensym83: untyped): untyped		136
+nim	blendColorBurn	blend2d/context.html#blendColorBurn,Context	proc blendColorBurn(ctx`gensym84: Context): Context		127
+nim	applyBlendColorBurn	blend2d/context.html#applyBlendColorBurn.m,untyped	macro applyBlendColorBurn(stmts`gensym85: untyped): untyped		136
+nim	blendLinearBurn	blend2d/context.html#blendLinearBurn,Context	proc blendLinearBurn(ctx`gensym86: Context): Context		127
+nim	applyBlendLinearBurn	blend2d/context.html#applyBlendLinearBurn.m,untyped	macro applyBlendLinearBurn(stmts`gensym87: untyped): untyped		136
+nim	blendLinearLight	blend2d/context.html#blendLinearLight,Context	proc blendLinearLight(ctx`gensym88: Context): Context		127
+nim	applyBlendLinearLight	blend2d/context.html#applyBlendLinearLight.m,untyped	macro applyBlendLinearLight(stmts`gensym89: untyped): untyped		136
+nim	blendPinLight	blend2d/context.html#blendPinLight,Context	proc blendPinLight(ctx`gensym90: Context): Context		127
+nim	applyBlendPinLight	blend2d/context.html#applyBlendPinLight.m,untyped	macro applyBlendPinLight(stmts`gensym91: untyped): untyped		136
+nim	blendHardLight	blend2d/context.html#blendHardLight,Context	proc blendHardLight(ctx`gensym92: Context): Context		127
+nim	applyBlendHardLight	blend2d/context.html#applyBlendHardLight.m,untyped	macro applyBlendHardLight(stmts`gensym93: untyped): untyped		136
+nim	blendSoftLight	blend2d/context.html#blendSoftLight,Context	proc blendSoftLight(ctx`gensym94: Context): Context		127
+nim	applyBlendSoftLight	blend2d/context.html#applyBlendSoftLight.m,untyped	macro applyBlendSoftLight(stmts`gensym95: untyped): untyped		136
+nim	blendDifference	blend2d/context.html#blendDifference,Context	proc blendDifference(ctx`gensym96: Context): Context		127
+nim	applyBlendDifference	blend2d/context.html#applyBlendDifference.m,untyped	macro applyBlendDifference(stmts`gensym97: untyped): untyped		136
+nim	blendExclusion	blend2d/context.html#blendExclusion,Context	proc blendExclusion(ctx`gensym98: Context): Context		127
+nim	applyBlendExclusion	blend2d/context.html#applyBlendExclusion.m,untyped	macro applyBlendExclusion(stmts`gensym99: untyped): untyped		148
+nim	add	blend2d/context.html#add,Context,Font,string,int32,int32,ColorHex	proc add(ctx: Context; font: Font; content: string; x, y: int32 = 0;\n    color: ColorHex = colWhite): Context		157
+nim	add	blend2d/context.html#add,Context,BLRectI	proc add(ctx: Context; r: BLRectI)		167
+nim	add	blend2d/context.html#add,Context,BLRectI,BLRgba	proc add(ctx: Context; r: BLRectI; color: BLRgba)		171
+nim	add	blend2d/context.html#add,Context,Circle	proc add(ctx: Context; circle: Circle)		175
+nim	add	blend2d/context.html#add,Context,Circle,ColorHex	proc add(ctx: Context; c: Circle; color: ColorHex)		179
+nim	add	blend2d/context.html#add,Context,Circle,BLRgba	proc add(ctx: Context; c: Circle; color: BLRgba)		183
+nim	add	blend2d/context.html#add,Context,RoundRect,ColorHex	proc add(ctx: Context; rr: RoundRect; color: ColorHex)		187
+nim	add	blend2d/context.html#add,Context,RoundRect,Gradient	proc add(ctx: Context; rr: RoundRect; color: Gradient)		191
+nim	add	blend2d/context.html#add,Context,Image	proc add(ctx: Context; img: Image): Context		198
+nim	add	blend2d/context.html#add,Context,Image,sinkBLPointI,sinkBLRectI	proc add(ctx: Context; img: Image; p: sink BLPointI; r: sink BLRectI): Context		205
+nim	add	blend2d/context.html#add,Context,Image,sinkBLPointI	proc add(ctx: Context; img: Image; p: sink BLPointI): Context		212
+nim	add	blend2d/context.html#add,Context,Image,sinkBLPoint,sinkBLRectI	proc add(ctx: Context; img: Image; p: sink BLPoint; r: sink BLRectI): Context		222
+nim	add	blend2d/context.html#add,Context,Image,sinkBLPoint	proc add(ctx: Context; img: Image; p: sink BLPoint): Context		229
+nim	add	blend2d/context.html#add,Context,Image,sinkBLRectI	proc add(ctx: Context; img: Image; r: sink BLRectI): Context		236
+nim	mask	blend2d/context.html#mask,Context,PointI,Image,RectI	proc mask(ctx: Context; origin: PointI; mask: Image; maskArea: RectI): Context		245
+nim	endContext	blend2d/context.html#endContext,Context	proc endContext(ctx: Context)		250
+nim	stroke	blend2d/context.html#stroke,Context,BLCircle,float,BLRgba	proc stroke(ctx: Context; c: BLCircle; width: float; color: BLRgba = White): Context		258
+nim	stroke	blend2d/context.html#stroke.t,BLCircle,float,BLRgba	template stroke(c: BLCircle; width: float; color: BLRgba = White)		264
+nim	ctx	blend2d/context.html#ctx.m,typed,untyped	macro ctx(img: typed; contextStmt: untyped): untyped		271
+nimgrp	add	blend2d/context.html#add-procs-all	proc		157
 nimgrp	fill	blend2d/context.html#fill-procs-all	proc		72
-nimgrp	blendlighten	blend2d/context.html#blendLighten-procs-all	proc		122
-nimgrp	blenddarken	blend2d/context.html#blendDarken-procs-all	proc		122
-nimgrp	applyblenddarken	blend2d/context.html#applyBlendDarken-macros-all	macro		131
-nimgrp	applyblendlighten	blend2d/context.html#applyBlendLighten-macros-all	macro		131
+nimgrp	blendlighten	blend2d/context.html#blendLighten-procs-all	proc		127
+nimgrp	blenddarken	blend2d/context.html#blendDarken-procs-all	proc		127
+nimgrp	applyblenddarken	blend2d/context.html#applyBlendDarken-macros-all	macro		136
+nimgrp	applyblendlighten	blend2d/context.html#applyBlendLighten-macros-all	macro		136

@@ -63,6 +63,8 @@
           data-doc-search-tag="context: proc add(ctx: Context; img: Image; r: sink BLRectI): Context" href="blend2d/context.html#add%2CContext%2CImage%2CsinkBLRectI">context: proc add(ctx: Context; img: Image; r: sink BLRectI): Context</a></li>
           <li><a class="reference external"
           data-doc-search-tag="context: proc add(ctx: Context; rr: RoundRect; color: ColorHex)" href="blend2d/context.html#add%2CContext%2CRoundRect%2CColorHex">context: proc add(ctx: Context; rr: RoundRect; color: ColorHex)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="context: proc add(ctx: Context; rr: RoundRect; color: Gradient)" href="blend2d/context.html#add%2CContext%2CRoundRect%2CGradient">context: proc add(ctx: Context; rr: RoundRect; color: Gradient)</a></li>
           </ul></dd>
 <dt><a name="AliceBlue" href="#AliceBlue"><span>AliceBlue:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -767,10 +769,6 @@
 <dt><a name="blBitSetHasBitsInRange" href="#blBitSetHasBitsInRange"><span>blBitSetHasBitsInRange:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="bl_globals: proc blBitSetHasBitsInRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): bool" href="blend2d/bindings/bl_globals.html#blBitSetHasBitsInRange%2Cptr.BLBitSetCore%2Cuint32%2Cuint32">bl_globals: proc blBitSetHasBitsInRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): bool</a></li>
-          </ul></dd>
-<dt><a name="BLBitSetImpl" href="#BLBitSetImpl"><span>BLBitSetImpl:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="bl_globals: object BLBitSetImpl" href="blend2d/bindings/bl_globals.html#BLBitSetImpl">bl_globals: object BLBitSetImpl</a></li>
           </ul></dd>
 <dt><a name="blBitSetInit" href="#blBitSetInit"><span>blBitSetInit:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2018,9 +2016,13 @@
       mode: BLCompOp = BLCompOpSrcOver): Context" href="blend2d/context.html#blend%2CContext%2CImage%2Cptr.BLPointI%2Cptr.BLRectI%2CBLCompOp">context: proc blend(ctx: Context; img: Image; p: ptr BLPointI; r: ptr BLRectI;
       mode: BLCompOp = BLCompOpSrcOver): Context</a></li>
           </ul></dd>
-<dt><a name="blend2dHeader" href="#blend2dHeader"><span>blend2dHeader:</span></a></dt><dd><ul class="simple">
+<dt><a name="blend2Dheader" href="#blend2Dheader"><span>blend2Dheader:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bl_globals: const blend2dHeader" href="blend2d/bindings/bl_globals.html#blend2dHeader">bl_globals: const blend2dHeader</a></li>
+          data-doc-search-tag="bl_globals: const blend2Dheader" href="blend2d/bindings/bl_globals.html#blend2Dheader">bl_globals: const blend2Dheader</a></li>
+          </ul></dd>
+<dt><a name="blend2Dlib" href="#blend2Dlib"><span>blend2Dlib:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="bl_globals: const blend2Dlib" href="blend2d/bindings/bl_globals.html#blend2Dlib">bl_globals: const blend2Dlib</a></li>
           </ul></dd>
 <dt><a name="blendClear" href="#blendClear"><span>blendClear:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5616,6 +5618,8 @@
 <li><a class="reference external"
           data-doc-search-tag="context: proc fill(ctx: Context; rgba: BLRgba): Context" href="blend2d/context.html#fill%2CContext%2CBLRgba">context: proc fill(ctx: Context; rgba: BLRgba): Context</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="context: proc fill(ctx: Context; color: ColorHex): Context" href="blend2d/context.html#fill%2CContext%2CColorHex">context: proc fill(ctx: Context; color: ColorHex): Context</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="context: proc fill(ctx: Context; gradient: ptr BLGradientCore): Context" href="blend2d/context.html#fill%2CContext%2Cptr.BLGradientCore">context: proc fill(ctx: Context; gradient: ptr BLGradientCore): Context</a></li>
           </ul></dd>
 <dt><a name="fillStyle" href="#fillStyle"><span>fillStyle:</span></a></dt><dd><ul class="simple">
@@ -6258,7 +6262,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-11-20 10:58:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-11-22 16:19:21 UTC</small>
       </div>
     </div>
   </div>

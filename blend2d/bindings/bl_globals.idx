@@ -1,275 +1,275 @@
 nimTitle	bl_globals	blend2d/bindings/bl_globals.html	module blend2d/bindings/bl_globals		0
-nim	blend2dHeader	blend2d/bindings/bl_globals.html#blend2dHeader	const blend2dHeader		30
-nim	BLResultCode	blend2d/bindings/bl_globals.html#BLResultCode	enum BLResultCode		34
-nim	BLByteOrder	blend2d/bindings/bl_globals.html#BLByteOrder	enum BLByteOrder		120
-nim	BLDataAccessFlags	blend2d/bindings/bl_globals.html#BLDataAccessFlags	enum BLDataAccessFlags		126
-nim	BLDataSourceType	blend2d/bindings/bl_globals.html#BLDataSourceType	enum BLDataSourceType		132
-nim	BLModifyOP	blend2d/bindings/bl_globals.html#BLModifyOP	enum BLModifyOP		139
-nim	BLBooleanOp	blend2d/bindings/bl_globals.html#BLBooleanOp	enum BLBooleanOp		145
-nim	BLBitSetConstants	blend2d/bindings/bl_globals.html#BLBitSetConstants	enum BLBitSetConstants		154
-nim	BLRange	blend2d/bindings/bl_globals.html#BLRange	object BLRange		159
-nim	BLArrayView	blend2d/bindings/bl_globals.html#BLArrayView	object BLArrayView		163
-nim	BLRandom	blend2d/bindings/bl_globals.html#BLRandom	object BLRandom		167
-nim	BLResult	blend2d/bindings/bl_globals.html#BLResult	type BLResult		172
-nim	BLVarCore	blend2d/bindings/bl_globals.html#BLVarCore	object BLVarCore		174
-nim	BLTag	blend2d/bindings/bl_globals.html#BLTag	type BLTag		177
-nim	BLUniqueId	blend2d/bindings/bl_globals.html#BLUniqueId	type BLUniqueId		178
-nim	BLUnknown	blend2d/bindings/bl_globals.html#BLUnknown	type BLUnknown		179
-nim	BLRgba	blend2d/bindings/bl_globals.html#BLRgba	object BLRgba		181
-nim	BLRgba32	blend2d/bindings/bl_globals.html#BLRgba32	object BLRgba32		188
-nim	BLRgba64	blend2d/bindings/bl_globals.html#BLRgba64	object BLRgba64		192
-nim	BLObjectInfo	blend2d/bindings/bl_globals.html#BLObjectInfo	object BLObjectInfo		199
-nim	BLObjectImpl	blend2d/bindings/bl_globals.html#BLObjectImpl	object BLObjectImpl		202
-nim	BLObjectDetail	blend2d/bindings/bl_globals.html#BLObjectDetail	object BLObjectDetail		204
-nim	BLObjectCore	blend2d/bindings/bl_globals.html#BLObjectCore	object BLObjectCore		224
-nim	BLObjectVirt	blend2d/bindings/bl_globals.html#BLObjectVirt	object BLObjectVirt		227
-nim	BLObjectVirtBase	blend2d/bindings/bl_globals.html#BLObjectVirtBase	object BLObjectVirtBase		230
-nim	BLObjectType	blend2d/bindings/bl_globals.html#BLObjectType	enum BLObjectType		238
-nim	BLDestroyExternalDataFunc	blend2d/bindings/bl_globals.html#BLDestroyExternalDataFunc	type BLDestroyExternalDataFunc		295
-nim	BLArrayCore	blend2d/bindings/bl_globals.html#BLArrayCore	object BLArrayCore		301
-nim	BLArrayImpl	blend2d/bindings/bl_globals.html#BLArrayImpl	object BLArrayImpl		304
-nim	BLBitArrayCore	blend2d/bindings/bl_globals.html#BLBitArrayCore	object BLBitArrayCore		312
-nim	BLBitArrayImpl	blend2d/bindings/bl_globals.html#BLBitArrayImpl	object BLBitArrayImpl		314
-nim	BLBitSetCore	blend2d/bindings/bl_globals.html#BLBitSetCore	object BLBitSetCore		321
-nim	BLBitSetData	blend2d/bindings/bl_globals.html#BLBitSetData	object BLBitSetData		325
-nim	BLBitSetImpl	blend2d/bindings/bl_globals.html#BLBitSetImpl	object BLBitSetImpl		331
-nim	BLBitSetSegment	blend2d/bindings/bl_globals.html#BLBitSetSegment	object BLBitSetSegment		344
-nim	BLBitSetBuilderCore	blend2d/bindings/bl_globals.html#BLBitSetBuilderCore	object BLBitSetBuilderCore		347
-nim	BLStringCore	blend2d/bindings/bl_globals.html#BLStringCore	object BLStringCore		357
-nim	BLStringImpl	blend2d/bindings/bl_globals.html#BLStringImpl	object BLStringImpl		359
-nim	code	blend2d/bindings/bl_globals.html#code,BLResult	proc code(x: BLResult): BLResultCode		366
-nim	blArrayInit	blend2d/bindings/bl_globals.html#blArrayInit,ptr.BLArrayCore,BLObjectType	proc blArrayInit(self: ptr BLArrayCore; arrayType: BLObjectType): BLResult		373
-nim	blArrayInitMove	blend2d/bindings/bl_globals.html#blArrayInitMove,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayInitMove(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		374
-nim	blArrayInitWeak	blend2d/bindings/bl_globals.html#blArrayInitWeak,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayInitWeak(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		375
-nim	blArrayDestroy	blend2d/bindings/bl_globals.html#blArrayDestroy,ptr.BLArrayCore	proc blArrayDestroy(self: ptr BLArrayCore): BLResult		376
-nim	blArrayReset	blend2d/bindings/bl_globals.html#blArrayReset,ptr.BLArrayCore	proc blArrayReset(self: ptr BLArrayCore): BLResult		377
-nim	blArrayGetSize	blend2d/bindings/bl_globals.html#blArrayGetSize,ptr.BLArrayCore	proc blArrayGetSize(self: ptr BLArrayCore): uint		378
-nim	blArrayGetCapacity	blend2d/bindings/bl_globals.html#blArrayGetCapacity,ptr.BLArrayCore	proc blArrayGetCapacity(self: ptr BLArrayCore): uint		379
-nim	blArrayGetItemSize	blend2d/bindings/bl_globals.html#blArrayGetItemSize,ptr.BLArrayCore	proc blArrayGetItemSize(self: ptr BLArrayCore): uint		380
-nim	blArrayGetData	blend2d/bindings/bl_globals.html#blArrayGetData,ptr.BLArrayCore	proc blArrayGetData(self: ptr BLArrayCore): pointer		381
-nim	blArrayClear	blend2d/bindings/bl_globals.html#blArrayClear,ptr.BLArrayCore	proc blArrayClear(self: ptr BLArrayCore): BLResult		382
-nim	blArrayShrink	blend2d/bindings/bl_globals.html#blArrayShrink,ptr.BLArrayCore	proc blArrayShrink(self: ptr BLArrayCore): BLResult		383
-nim	blArrayReserve	blend2d/bindings/bl_globals.html#blArrayReserve,ptr.BLArrayCore,uint	proc blArrayReserve(self: ptr BLArrayCore; n: uint): BLResult		384
-nim	blArrayResize	blend2d/bindings/bl_globals.html#blArrayResize,ptr.BLArrayCore,uint,pointer	proc blArrayResize(self: ptr BLArrayCore; n: uint; fill: pointer): BLResult		385
-nim	blArrayMakeMutable	blend2d/bindings/bl_globals.html#blArrayMakeMutable,ptr.BLArrayCore,ptr.pointer	proc blArrayMakeMutable(self: ptr BLArrayCore; dataOut: ptr pointer): BLResult		386
-nim	blArrayModifyOp	blend2d/bindings/bl_globals.html#blArrayModifyOp,ptr.BLArrayCore,BLModifyOP,uint,ptr.pointer	proc blArrayModifyOp(self: ptr BLArrayCore; op: BLModifyOP; n: uint;\n                dataOut: ptr pointer): BLResult		387
-nim	blArrayInsertOp	blend2d/bindings/bl_globals.html#blArrayInsertOp,ptr.BLArrayCore,uint,uint,ptr.pointer	proc blArrayInsertOp(self: ptr BLArrayCore; index: uint; n: uint;\n                dataOut: ptr pointer): BLResult		389
-nim	blArrayAssignMove	blend2d/bindings/bl_globals.html#blArrayAssignMove,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayAssignMove(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		391
-nim	blArrayAssignWeak	blend2d/bindings/bl_globals.html#blArrayAssignWeak,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayAssignWeak(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		392
-nim	blArrayAssignDeep	blend2d/bindings/bl_globals.html#blArrayAssignDeep,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayAssignDeep(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		393
-nim	blArrayAssignData	blend2d/bindings/bl_globals.html#blArrayAssignData,ptr.BLArrayCore,pointer,uint	proc blArrayAssignData(self: ptr BLArrayCore; data: pointer; n: uint): BLResult		394
-nim	blArrayAssignExternalData	blend2d/bindings/bl_globals.html#blArrayAssignExternalData,ptr.BLArrayCore,pointer,uint,uint,BLDataAccessFlags,BLDestroyExternalDataFunc,pointer	proc blArrayAssignExternalData(self: ptr BLArrayCore; data: pointer; size: uint;\n                          capacity: uint; dataAccessFlags: BLDataAccessFlags;\n                          destroyFunc: BLDestroyExternalDataFunc;\n                          userData: pointer): BLResult		395
-nim	blArrayAppendU8	blend2d/bindings/bl_globals.html#blArrayAppendU8,ptr.BLArrayCore,uint8	proc blArrayAppendU8(self: ptr BLArrayCore; value: uint8): BLResult		400
-nim	blArrayAppendU16	blend2d/bindings/bl_globals.html#blArrayAppendU16,ptr.BLArrayCore,uint16	proc blArrayAppendU16(self: ptr BLArrayCore; value: uint16): BLResult		401
-nim	blArrayAppendU32	blend2d/bindings/bl_globals.html#blArrayAppendU32,ptr.BLArrayCore,uint32	proc blArrayAppendU32(self: ptr BLArrayCore; value: uint32): BLResult		402
-nim	blArrayAppendU64	blend2d/bindings/bl_globals.html#blArrayAppendU64,ptr.BLArrayCore,uint64	proc blArrayAppendU64(self: ptr BLArrayCore; value: uint64): BLResult		403
-nim	blArrayAppendF32	blend2d/bindings/bl_globals.html#blArrayAppendF32,ptr.BLArrayCore,cfloat	proc blArrayAppendF32(self: ptr BLArrayCore; value: cfloat): BLResult		404
-nim	blArrayAppendF64	blend2d/bindings/bl_globals.html#blArrayAppendF64,ptr.BLArrayCore,cdouble	proc blArrayAppendF64(self: ptr BLArrayCore; value: cdouble): BLResult		405
-nim	blArrayAppendItem	blend2d/bindings/bl_globals.html#blArrayAppendItem,ptr.BLArrayCore,pointer	proc blArrayAppendItem(self: ptr BLArrayCore; item: pointer): BLResult		406
-nim	blArrayAppendData	blend2d/bindings/bl_globals.html#blArrayAppendData,ptr.BLArrayCore,pointer,uint	proc blArrayAppendData(self: ptr BLArrayCore; data: pointer; n: uint): BLResult		407
-nim	blArrayInsertU8	blend2d/bindings/bl_globals.html#blArrayInsertU8,ptr.BLArrayCore,uint,uint8	proc blArrayInsertU8(self: ptr BLArrayCore; index: uint; value: uint8): BLResult		408
-nim	blArrayInsertU16	blend2d/bindings/bl_globals.html#blArrayInsertU16,ptr.BLArrayCore,uint,uint16	proc blArrayInsertU16(self: ptr BLArrayCore; index: uint; value: uint16): BLResult		409
-nim	blArrayInsertU32	blend2d/bindings/bl_globals.html#blArrayInsertU32,ptr.BLArrayCore,uint,uint32	proc blArrayInsertU32(self: ptr BLArrayCore; index: uint; value: uint32): BLResult		410
-nim	blArrayInsertU64	blend2d/bindings/bl_globals.html#blArrayInsertU64,ptr.BLArrayCore,uint,uint64	proc blArrayInsertU64(self: ptr BLArrayCore; index: uint; value: uint64): BLResult		411
-nim	blArrayInsertF32	blend2d/bindings/bl_globals.html#blArrayInsertF32,ptr.BLArrayCore,uint,cfloat	proc blArrayInsertF32(self: ptr BLArrayCore; index: uint; value: cfloat): BLResult		412
-nim	blArrayInsertF64	blend2d/bindings/bl_globals.html#blArrayInsertF64,ptr.BLArrayCore,uint,cdouble	proc blArrayInsertF64(self: ptr BLArrayCore; index: uint; value: cdouble): BLResult		413
-nim	blArrayInsertItem	blend2d/bindings/bl_globals.html#blArrayInsertItem,ptr.BLArrayCore,uint,pointer	proc blArrayInsertItem(self: ptr BLArrayCore; index: uint; item: pointer): BLResult		414
-nim	blArrayInsertData	blend2d/bindings/bl_globals.html#blArrayInsertData,ptr.BLArrayCore,uint,pointer,uint	proc blArrayInsertData(self: ptr BLArrayCore; index: uint; data: pointer; n: uint): BLResult		415
-nim	blArrayReplaceU8	blend2d/bindings/bl_globals.html#blArrayReplaceU8,ptr.BLArrayCore,uint,uint8	proc blArrayReplaceU8(self: ptr BLArrayCore; index: uint; value: uint8): BLResult		416
-nim	blArrayReplaceU16	blend2d/bindings/bl_globals.html#blArrayReplaceU16,ptr.BLArrayCore,uint,uint16	proc blArrayReplaceU16(self: ptr BLArrayCore; index: uint; value: uint16): BLResult		417
-nim	blArrayReplaceU32	blend2d/bindings/bl_globals.html#blArrayReplaceU32,ptr.BLArrayCore,uint,uint32	proc blArrayReplaceU32(self: ptr BLArrayCore; index: uint; value: uint32): BLResult		418
-nim	blArrayReplaceU64	blend2d/bindings/bl_globals.html#blArrayReplaceU64,ptr.BLArrayCore,uint,uint64	proc blArrayReplaceU64(self: ptr BLArrayCore; index: uint; value: uint64): BLResult		419
-nim	blArrayReplaceF32	blend2d/bindings/bl_globals.html#blArrayReplaceF32,ptr.BLArrayCore,uint,cfloat	proc blArrayReplaceF32(self: ptr BLArrayCore; index: uint; value: cfloat): BLResult		420
-nim	blArrayReplaceF64	blend2d/bindings/bl_globals.html#blArrayReplaceF64,ptr.BLArrayCore,uint,cdouble	proc blArrayReplaceF64(self: ptr BLArrayCore; index: uint; value: cdouble): BLResult		421
-nim	blArrayReplaceItem	blend2d/bindings/bl_globals.html#blArrayReplaceItem,ptr.BLArrayCore,uint,pointer	proc blArrayReplaceItem(self: ptr BLArrayCore; index: uint; item: pointer): BLResult		422
-nim	blArrayReplaceData	blend2d/bindings/bl_globals.html#blArrayReplaceData,ptr.BLArrayCore,uint,uint,pointer,uint	proc blArrayReplaceData(self: ptr BLArrayCore; rStart: uint; rEnd: uint;\n                   data: pointer; n: uint): BLResult		423
-nim	blArrayRemoveIndex	blend2d/bindings/bl_globals.html#blArrayRemoveIndex,ptr.BLArrayCore,uint	proc blArrayRemoveIndex(self: ptr BLArrayCore; index: uint): BLResult		425
-nim	blArrayRemoveRange	blend2d/bindings/bl_globals.html#blArrayRemoveRange,ptr.BLArrayCore,uint,uint	proc blArrayRemoveRange(self: ptr BLArrayCore; rStart: uint; rEnd: uint): BLResult		426
-nim	blArrayEquals	blend2d/bindings/bl_globals.html#blArrayEquals,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayEquals(a: ptr BLArrayCore; b: ptr BLArrayCore): bool		427
-nim	blBitArrayInit	blend2d/bindings/bl_globals.html#blBitArrayInit,ptr.BLBitArrayCore	proc blBitArrayInit(self: ptr BLBitArrayCore): BLResult		432
-nim	blBitArrayInitMove	blend2d/bindings/bl_globals.html#blBitArrayInitMove,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayInitMove(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		433
-nim	blBitArrayInitWeak	blend2d/bindings/bl_globals.html#blBitArrayInitWeak,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayInitWeak(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		434
-nim	blBitArrayDestroy	blend2d/bindings/bl_globals.html#blBitArrayDestroy,ptr.BLBitArrayCore	proc blBitArrayDestroy(self: ptr BLBitArrayCore): BLResult		435
-nim	blBitArrayReset	blend2d/bindings/bl_globals.html#blBitArrayReset,ptr.BLBitArrayCore	proc blBitArrayReset(self: ptr BLBitArrayCore): BLResult		436
-nim	blBitArrayAssignMove	blend2d/bindings/bl_globals.html#blBitArrayAssignMove,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayAssignMove(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		437
-nim	blBitArrayAssignWeak	blend2d/bindings/bl_globals.html#blBitArrayAssignWeak,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayAssignWeak(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		438
-nim	blBitArrayAssignWords	blend2d/bindings/bl_globals.html#blBitArrayAssignWords,ptr.BLBitArrayCore,ptr.uint32,uint32	proc blBitArrayAssignWords(self: ptr BLBitArrayCore; wordData: ptr uint32;\n                      wordCount: uint32): BLResult		439
-nim	blBitArrayIsEmpty	blend2d/bindings/bl_globals.html#blBitArrayIsEmpty,ptr.BLBitArrayCore	proc blBitArrayIsEmpty(self: ptr BLBitArrayCore): bool		441
-nim	blBitArrayGetSize	blend2d/bindings/bl_globals.html#blBitArrayGetSize,ptr.BLBitArrayCore	proc blBitArrayGetSize(self: ptr BLBitArrayCore): uint32		442
-nim	blBitArrayGetWordCount	blend2d/bindings/bl_globals.html#blBitArrayGetWordCount,ptr.BLBitArrayCore	proc blBitArrayGetWordCount(self: ptr BLBitArrayCore): uint32		443
-nim	blBitArrayGetCapacity	blend2d/bindings/bl_globals.html#blBitArrayGetCapacity,ptr.BLBitArrayCore	proc blBitArrayGetCapacity(self: ptr BLBitArrayCore): uint32		444
-nim	blBitArrayGetData	blend2d/bindings/bl_globals.html#blBitArrayGetData,ptr.BLBitArrayCore	proc blBitArrayGetData(self: ptr BLBitArrayCore): ptr uint32		445
-nim	blBitArrayGetCardinality	blend2d/bindings/bl_globals.html#blBitArrayGetCardinality,ptr.BLBitArrayCore	proc blBitArrayGetCardinality(self: ptr BLBitArrayCore): uint32		446
-nim	blBitArrayGetCardinalityInRange	blend2d/bindings/bl_globals.html#blBitArrayGetCardinalityInRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayGetCardinalityInRange(self: ptr BLBitArrayCore; startBit: uint32;\n                                endBit: uint32): uint32		447
-nim	blBitArrayHasBit	blend2d/bindings/bl_globals.html#blBitArrayHasBit,ptr.BLBitArrayCore,uint32	proc blBitArrayHasBit(self: ptr BLBitArrayCore; bitIndex: uint32): bool		449
-nim	blBitArrayHasBitsInRange	blend2d/bindings/bl_globals.html#blBitArrayHasBitsInRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayHasBitsInRange(self: ptr BLBitArrayCore; startBit: uint32;\n                         endBit: uint32): bool		450
-nim	blBitArraySubsumes	blend2d/bindings/bl_globals.html#blBitArraySubsumes,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArraySubsumes(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): bool		452
-nim	blBitArrayIntersects	blend2d/bindings/bl_globals.html#blBitArrayIntersects,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayIntersects(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): bool		453
-nim	blBitArrayGetRange	blend2d/bindings/bl_globals.html#blBitArrayGetRange,ptr.BLBitArrayCore,ptr.uint32,ptr.uint32	proc blBitArrayGetRange(self: ptr BLBitArrayCore; startOut: ptr uint32;\n                   endOut: ptr uint32): bool		454
-nim	blBitArrayEquals	blend2d/bindings/bl_globals.html#blBitArrayEquals,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayEquals(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): bool		456
-nim	blBitArrayCompare	blend2d/bindings/bl_globals.html#blBitArrayCompare,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayCompare(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): cint		457
-nim	blBitArrayClear	blend2d/bindings/bl_globals.html#blBitArrayClear,ptr.BLBitArrayCore	proc blBitArrayClear(self: ptr BLBitArrayCore): BLResult		458
-nim	blBitArrayResize	blend2d/bindings/bl_globals.html#blBitArrayResize,ptr.BLBitArrayCore,uint32	proc blBitArrayResize(self: ptr BLBitArrayCore; nBits: uint32): BLResult		459
-nim	blBitArrayReserve	blend2d/bindings/bl_globals.html#blBitArrayReserve,ptr.BLBitArrayCore,uint32	proc blBitArrayReserve(self: ptr BLBitArrayCore; nBits: uint32): BLResult		460
-nim	blBitArrayShrink	blend2d/bindings/bl_globals.html#blBitArrayShrink,ptr.BLBitArrayCore	proc blBitArrayShrink(self: ptr BLBitArrayCore): BLResult		461
-nim	blBitArraySetBit	blend2d/bindings/bl_globals.html#blBitArraySetBit,ptr.BLBitArrayCore,uint32	proc blBitArraySetBit(self: ptr BLBitArrayCore; bitIndex: uint32): BLResult		462
-nim	blBitArrayFillRange	blend2d/bindings/bl_globals.html#blBitArrayFillRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayFillRange(self: ptr BLBitArrayCore; startBit: uint32; endBit: uint32): BLResult		463
-nim	blBitArrayFillWords	blend2d/bindings/bl_globals.html#blBitArrayFillWords,ptr.BLBitArrayCore,uint32,ptr.uint32,uint32	proc blBitArrayFillWords(self: ptr BLBitArrayCore; bitIndex: uint32;\n                    wordData: ptr uint32; wordCount: uint32): BLResult		465
-nim	blBitArrayClearBit	blend2d/bindings/bl_globals.html#blBitArrayClearBit,ptr.BLBitArrayCore,uint32	proc blBitArrayClearBit(self: ptr BLBitArrayCore; bitIndex: uint32): BLResult		467
-nim	blBitArrayClearRange	blend2d/bindings/bl_globals.html#blBitArrayClearRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayClearRange(self: ptr BLBitArrayCore; startBit: uint32; endBit: uint32): BLResult		468
-nim	blBitArrayClearWord	blend2d/bindings/bl_globals.html#blBitArrayClearWord,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayClearWord(self: ptr BLBitArrayCore; bitIndex: uint32;\n                    wordValue: uint32): BLResult		470
-nim	blBitArrayClearWords	blend2d/bindings/bl_globals.html#blBitArrayClearWords,ptr.BLBitArrayCore,uint32,ptr.uint32,uint32	proc blBitArrayClearWords(self: ptr BLBitArrayCore; bitIndex: uint32;\n                     wordData: ptr uint32; wordCount: uint32): BLResult		472
-nim	blBitArrayReplaceOp	blend2d/bindings/bl_globals.html#blBitArrayReplaceOp,ptr.BLBitArrayCore,uint32,ptr.ptr.uint32	proc blBitArrayReplaceOp(self: ptr BLBitArrayCore; nBits: uint32;\n                    dataOut: ptr ptr uint32): BLResult		474
-nim	blBitArrayReplaceBit	blend2d/bindings/bl_globals.html#blBitArrayReplaceBit,ptr.BLBitArrayCore,uint32,bool	proc blBitArrayReplaceBit(self: ptr BLBitArrayCore; bitIndex: uint32; bitValue: bool): BLResult		476
-nim	blBitArrayReplaceWord	blend2d/bindings/bl_globals.html#blBitArrayReplaceWord,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayReplaceWord(self: ptr BLBitArrayCore; bitIndex: uint32;\n                      wordValue: uint32): BLResult		478
-nim	blBitArrayReplaceWords	blend2d/bindings/bl_globals.html#blBitArrayReplaceWords,ptr.BLBitArrayCore,uint32,ptr.uint32,uint32	proc blBitArrayReplaceWords(self: ptr BLBitArrayCore; bitIndex: uint32;\n                       wordData: ptr uint32; wordCount: uint32): BLResult		480
-nim	blBitArrayAppendBit	blend2d/bindings/bl_globals.html#blBitArrayAppendBit,ptr.BLBitArrayCore,bool	proc blBitArrayAppendBit(self: ptr BLBitArrayCore; bitValue: bool): BLResult		482
-nim	blBitArrayAppendWord	blend2d/bindings/bl_globals.html#blBitArrayAppendWord,ptr.BLBitArrayCore,uint32	proc blBitArrayAppendWord(self: ptr BLBitArrayCore; wordValue: uint32): BLResult		483
-nim	blBitArrayAppendWords	blend2d/bindings/bl_globals.html#blBitArrayAppendWords,ptr.BLBitArrayCore,ptr.uint32,uint32	proc blBitArrayAppendWords(self: ptr BLBitArrayCore; wordData: ptr uint32;\n                      wordCount: uint32): BLResult		484
-nim	blBitSetInit	blend2d/bindings/bl_globals.html#blBitSetInit,ptr.BLBitSetCore	proc blBitSetInit(self: ptr BLBitSetCore): BLResult		491
-nim	blBitSetInitMove	blend2d/bindings/bl_globals.html#blBitSetInitMove,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetInitMove(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		492
-nim	blBitSetInitWeak	blend2d/bindings/bl_globals.html#blBitSetInitWeak,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetInitWeak(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		493
-nim	blBitSetInitRange	blend2d/bindings/bl_globals.html#blBitSetInitRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetInitRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): BLResult		494
-nim	blBitSetDestroy	blend2d/bindings/bl_globals.html#blBitSetDestroy,ptr.BLBitSetCore	proc blBitSetDestroy(self: ptr BLBitSetCore): BLResult		495
-nim	blBitSetReset	blend2d/bindings/bl_globals.html#blBitSetReset,ptr.BLBitSetCore	proc blBitSetReset(self: ptr BLBitSetCore): BLResult		496
-nim	blBitSetAssignMove	blend2d/bindings/bl_globals.html#blBitSetAssignMove,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetAssignMove(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		497
-nim	blBitSetAssignWeak	blend2d/bindings/bl_globals.html#blBitSetAssignWeak,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetAssignWeak(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		498
-nim	blBitSetAssignDeep	blend2d/bindings/bl_globals.html#blBitSetAssignDeep,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetAssignDeep(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		499
-nim	blBitSetAssignRange	blend2d/bindings/bl_globals.html#blBitSetAssignRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetAssignRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): BLResult		500
-nim	blBitSetAssignWords	blend2d/bindings/bl_globals.html#blBitSetAssignWords,ptr.BLBitSetCore,uint32,ptr.uint32,uint32	proc blBitSetAssignWords(self: ptr BLBitSetCore; startWord: uint32;\n                    wordData: ptr uint32; wordCount: uint32): BLResult		502
-nim	blBitSetIsEmpty	blend2d/bindings/bl_globals.html#blBitSetIsEmpty,ptr.BLBitSetCore	proc blBitSetIsEmpty(self: ptr BLBitSetCore): bool		504
-nim	blBitSetGetData	blend2d/bindings/bl_globals.html#blBitSetGetData,ptr.BLBitSetCore,ptr.BLBitSetData	proc blBitSetGetData(self: ptr BLBitSetCore; out: ptr BLBitSetData): BLResult		505
-nim	blBitSetGetSegmentCount	blend2d/bindings/bl_globals.html#blBitSetGetSegmentCount,ptr.BLBitSetCore	proc blBitSetGetSegmentCount(self: ptr BLBitSetCore): uint32		506
-nim	blBitSetGetSegmentCapacity	blend2d/bindings/bl_globals.html#blBitSetGetSegmentCapacity,ptr.BLBitSetCore	proc blBitSetGetSegmentCapacity(self: ptr BLBitSetCore): uint32		507
-nim	blBitSetGetCardinality	blend2d/bindings/bl_globals.html#blBitSetGetCardinality,ptr.BLBitSetCore	proc blBitSetGetCardinality(self: ptr BLBitSetCore): uint32		508
-nim	blBitSetGetCardinalityInRange	blend2d/bindings/bl_globals.html#blBitSetGetCardinalityInRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetGetCardinalityInRange(self: ptr BLBitSetCore; startBit: uint32;\n                              endBit: uint32): uint32		509
-nim	blBitSetHasBit	blend2d/bindings/bl_globals.html#blBitSetHasBit,ptr.BLBitSetCore,uint32	proc blBitSetHasBit(self: ptr BLBitSetCore; bitIndex: uint32): bool		511
-nim	blBitSetHasBitsInRange	blend2d/bindings/bl_globals.html#blBitSetHasBitsInRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetHasBitsInRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): bool		512
-nim	blBitSetSubsumes	blend2d/bindings/bl_globals.html#blBitSetSubsumes,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetSubsumes(a: ptr BLBitSetCore; b: ptr BLBitSetCore): bool		514
-nim	blBitSetIntersects	blend2d/bindings/bl_globals.html#blBitSetIntersects,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetIntersects(a: ptr BLBitSetCore; b: ptr BLBitSetCore): bool		515
-nim	blBitSetGetRange	blend2d/bindings/bl_globals.html#blBitSetGetRange,ptr.BLBitSetCore,ptr.uint32,ptr.uint32	proc blBitSetGetRange(self: ptr BLBitSetCore; startOut: ptr uint32;\n                 endOut: ptr uint32): bool		516
-nim	blBitSetEquals	blend2d/bindings/bl_globals.html#blBitSetEquals,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetEquals(a: ptr BLBitSetCore; b: ptr BLBitSetCore): bool		518
-nim	blBitSetCompare	blend2d/bindings/bl_globals.html#blBitSetCompare,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetCompare(a: ptr BLBitSetCore; b: ptr BLBitSetCore): cint		519
-nim	blBitSetClear	blend2d/bindings/bl_globals.html#blBitSetClear,ptr.BLBitSetCore	proc blBitSetClear(self: ptr BLBitSetCore): BLResult		520
-nim	blBitSetShrink	blend2d/bindings/bl_globals.html#blBitSetShrink,ptr.BLBitSetCore	proc blBitSetShrink(self: ptr BLBitSetCore): BLResult		521
-nim	blBitSetOptimize	blend2d/bindings/bl_globals.html#blBitSetOptimize,ptr.BLBitSetCore	proc blBitSetOptimize(self: ptr BLBitSetCore): BLResult		522
-nim	blBitSetChop	blend2d/bindings/bl_globals.html#blBitSetChop,ptr.BLBitSetCore,uint32,uint32	proc blBitSetChop(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): BLResult		523
-nim	blBitSetAddBit	blend2d/bindings/bl_globals.html#blBitSetAddBit,ptr.BLBitSetCore,uint32	proc blBitSetAddBit(self: ptr BLBitSetCore; bitIndex: uint32): BLResult		524
-nim	blBitSetAddRange	blend2d/bindings/bl_globals.html#blBitSetAddRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetAddRange(self: ptr BLBitSetCore; rangeStartBit: uint32;\n                 rangeEndBit: uint32): BLResult		525
-nim	blBitSetAddWords	blend2d/bindings/bl_globals.html#blBitSetAddWords,ptr.BLBitSetCore,uint32,ptr.uint32,uint32	proc blBitSetAddWords(self: ptr BLBitSetCore; startWord: uint32;\n                 wordData: ptr uint32; wordCount: uint32): BLResult		527
-nim	blBitSetClearBit	blend2d/bindings/bl_globals.html#blBitSetClearBit,ptr.BLBitSetCore,uint32	proc blBitSetClearBit(self: ptr BLBitSetCore; bitIndex: uint32): BLResult		529
-nim	blBitSetClearRange	blend2d/bindings/bl_globals.html#blBitSetClearRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetClearRange(self: ptr BLBitSetCore; rangeStartBit: uint32;\n                   rangeEndBit: uint32): BLResult		530
-nim	blBitSetBuilderCommit	blend2d/bindings/bl_globals.html#blBitSetBuilderCommit,ptr.BLBitSetCore,ptr.BLBitSetBuilderCore,uint32	proc blBitSetBuilderCommit(self: ptr BLBitSetCore; builder: ptr BLBitSetBuilderCore;\n                      newAreaIndex: uint32): BLResult		532
-nim	blBitSetBuilderAddRange	blend2d/bindings/bl_globals.html#blBitSetBuilderAddRange,ptr.BLBitSetCore,ptr.BLBitSetBuilderCore,uint32,uint32	proc blBitSetBuilderAddRange(self: ptr BLBitSetCore;\n                        builder: ptr BLBitSetBuilderCore; startBit: uint32;\n                        endBit: uint32): BLResult		535
-nim	blObjectAllocImpl	blend2d/bindings/bl_globals.html#blObjectAllocImpl,ptr.BLObjectCore,uint32,uint	proc blObjectAllocImpl(self: ptr BLObjectCore; objectInfo: uint32; implSize: uint): BLResult		542
-nim	blObjectAllocImplAligned	blend2d/bindings/bl_globals.html#blObjectAllocImplAligned,ptr.BLObjectCore,uint32,uint,uint	proc blObjectAllocImplAligned(self: ptr BLObjectCore; objectInfo: uint32;\n                         implSize: uint; implAlignment: uint): BLResult		544
-nim	blObjectAllocImplExternal	blend2d/bindings/bl_globals.html#blObjectAllocImplExternal,ptr.BLObjectCore,uint32,uint,bool,BLDestroyExternalDataFunc,pointer	proc blObjectAllocImplExternal(self: ptr BLObjectCore; objectInfo: uint32;\n                          implSize: uint; immutable: bool;\n                          destroyFunc: BLDestroyExternalDataFunc;\n                          userData: pointer): BLResult		546
-nim	blObjectFreeImpl	blend2d/bindings/bl_globals.html#blObjectFreeImpl,ptr.BLObjectImpl	proc blObjectFreeImpl(impl: ptr BLObjectImpl): BLResult		550
-nim	blObjectInitMove	blend2d/bindings/bl_globals.html#blObjectInitMove,ptr.BLUnknown,ptr.BLUnknown	proc blObjectInitMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		551
-nim	blObjectInitWeak	blend2d/bindings/bl_globals.html#blObjectInitWeak,ptr.BLUnknown,ptr.BLUnknown	proc blObjectInitWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		552
-nim	blObjectReset	blend2d/bindings/bl_globals.html#blObjectReset,ptr.BLUnknown	proc blObjectReset(self: ptr BLUnknown): BLResult		553
-nim	blObjectAssignMove	blend2d/bindings/bl_globals.html#blObjectAssignMove,ptr.BLUnknown,ptr.BLUnknown	proc blObjectAssignMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		554
-nim	blObjectAssignWeak	blend2d/bindings/bl_globals.html#blObjectAssignWeak,ptr.BLUnknown,ptr.BLUnknown	proc blObjectAssignWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		555
-nim	blObjectGetProperty	blend2d/bindings/bl_globals.html#blObjectGetProperty,ptr.BLUnknown,cstring,uint,ptr.BLVarCore	proc blObjectGetProperty(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                    valueOut: ptr BLVarCore): BLResult		556
-nim	blObjectGetPropertyBool	blend2d/bindings/bl_globals.html#blObjectGetPropertyBool,ptr.BLUnknown,cstring,uint,ptr.bool	proc blObjectGetPropertyBool(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                        valueOut: ptr bool): BLResult		558
-nim	blObjectGetPropertyInt32	blend2d/bindings/bl_globals.html#blObjectGetPropertyInt32,ptr.BLUnknown,cstring,uint,ptr.int32	proc blObjectGetPropertyInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         valueOut: ptr int32): BLResult		560
-nim	blObjectGetPropertyInt64	blend2d/bindings/bl_globals.html#blObjectGetPropertyInt64,ptr.BLUnknown,cstring,uint,ptr.int64	proc blObjectGetPropertyInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         valueOut: ptr int64): BLResult		562
-nim	blObjectGetPropertyUInt32	blend2d/bindings/bl_globals.html#blObjectGetPropertyUInt32,ptr.BLUnknown,cstring,uint,ptr.uint32	proc blObjectGetPropertyUInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          valueOut: ptr uint32): BLResult		564
-nim	blObjectGetPropertyUInt64	blend2d/bindings/bl_globals.html#blObjectGetPropertyUInt64,ptr.BLUnknown,cstring,uint,ptr.uint64	proc blObjectGetPropertyUInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          valueOut: ptr uint64): BLResult		566
-nim	blObjectGetPropertyDouble	blend2d/bindings/bl_globals.html#blObjectGetPropertyDouble,ptr.BLUnknown,cstring,uint,ptr.cdouble	proc blObjectGetPropertyDouble(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          valueOut: ptr cdouble): BLResult		568
-nim	blObjectSetProperty	blend2d/bindings/bl_globals.html#blObjectSetProperty,ptr.BLUnknown,cstring,uint,ptr.BLUnknown	proc blObjectSetProperty(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                    value: ptr BLUnknown): BLResult		570
-nim	blObjectSetPropertyBool	blend2d/bindings/bl_globals.html#blObjectSetPropertyBool,ptr.BLUnknown,cstring,uint,bool	proc blObjectSetPropertyBool(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                        value: bool): BLResult		572
-nim	blObjectSetPropertyInt32	blend2d/bindings/bl_globals.html#blObjectSetPropertyInt32,ptr.BLUnknown,cstring,uint,int32	proc blObjectSetPropertyInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         value: int32): BLResult		574
-nim	blObjectSetPropertyInt64	blend2d/bindings/bl_globals.html#blObjectSetPropertyInt64,ptr.BLUnknown,cstring,uint,int64	proc blObjectSetPropertyInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         value: int64): BLResult		576
-nim	blObjectSetPropertyUInt32	blend2d/bindings/bl_globals.html#blObjectSetPropertyUInt32,ptr.BLUnknown,cstring,uint,uint32	proc blObjectSetPropertyUInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          value: uint32): BLResult		578
-nim	blObjectSetPropertyUInt64	blend2d/bindings/bl_globals.html#blObjectSetPropertyUInt64,ptr.BLUnknown,cstring,uint,uint64	proc blObjectSetPropertyUInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          value: uint64): BLResult		580
-nim	blObjectSetPropertyDouble	blend2d/bindings/bl_globals.html#blObjectSetPropertyDouble,ptr.BLUnknown,cstring,uint,cdouble	proc blObjectSetPropertyDouble(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          value: cdouble): BLResult		582
-nim	va_list	blend2d/bindings/bl_globals.html#va_list	object va_list		590
-nim	blStringInit	blend2d/bindings/bl_globals.html#blStringInit,ptr.BLStringCore	proc blStringInit(self: ptr BLStringCore): BLResult		592
-nim	blStringInitMove	blend2d/bindings/bl_globals.html#blStringInitMove,ptr.BLStringCore,ptr.BLStringCore	proc blStringInitMove(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		593
-nim	blStringInitWeak	blend2d/bindings/bl_globals.html#blStringInitWeak,ptr.BLStringCore,ptr.BLStringCore	proc blStringInitWeak(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		594
-nim	blStringInitWithData	blend2d/bindings/bl_globals.html#blStringInitWithData,ptr.BLStringCore,cstring,uint	proc blStringInitWithData(self: ptr BLStringCore; str: cstring; size: uint): BLResult		595
-nim	blStringDestroy	blend2d/bindings/bl_globals.html#blStringDestroy,ptr.BLStringCore	proc blStringDestroy(self: ptr BLStringCore): BLResult		596
-nim	blStringReset	blend2d/bindings/bl_globals.html#blStringReset,ptr.BLStringCore	proc blStringReset(self: ptr BLStringCore): BLResult		597
-nim	blStringGetData	blend2d/bindings/bl_globals.html#blStringGetData,ptr.BLStringCore	proc blStringGetData(self: ptr BLStringCore): cstring		598
-nim	blStringGetSize	blend2d/bindings/bl_globals.html#blStringGetSize,ptr.BLStringCore	proc blStringGetSize(self: ptr BLStringCore): uint		599
-nim	blStringGetCapacity	blend2d/bindings/bl_globals.html#blStringGetCapacity,ptr.BLStringCore	proc blStringGetCapacity(self: ptr BLStringCore): uint		600
-nim	blStringClear	blend2d/bindings/bl_globals.html#blStringClear,ptr.BLStringCore	proc blStringClear(self: ptr BLStringCore): BLResult		601
-nim	blStringShrink	blend2d/bindings/bl_globals.html#blStringShrink,ptr.BLStringCore	proc blStringShrink(self: ptr BLStringCore): BLResult		602
-nim	blStringReserve	blend2d/bindings/bl_globals.html#blStringReserve,ptr.BLStringCore,uint	proc blStringReserve(self: ptr BLStringCore; n: uint): BLResult		603
-nim	blStringResize	blend2d/bindings/bl_globals.html#blStringResize,ptr.BLStringCore,uint,cchar	proc blStringResize(self: ptr BLStringCore; n: uint; fill: cchar): BLResult		604
-nim	blStringMakeMutable	blend2d/bindings/bl_globals.html#blStringMakeMutable,ptr.BLStringCore,ptr.cstring	proc blStringMakeMutable(self: ptr BLStringCore; dataOut: ptr cstring): BLResult		605
-nim	blStringModifyOp	blend2d/bindings/bl_globals.html#blStringModifyOp,ptr.BLStringCore,BLModifyOP,uint,ptr.cstring	proc blStringModifyOp(self: ptr BLStringCore; op: BLModifyOP; n: uint;\n                 dataOut: ptr cstring): BLResult		606
-nim	blStringInsertOp	blend2d/bindings/bl_globals.html#blStringInsertOp,ptr.BLStringCore,uint,uint,ptr.cstring	proc blStringInsertOp(self: ptr BLStringCore; index: uint; n: uint;\n                 dataOut: ptr cstring): BLResult		608
-nim	blStringAssignMove	blend2d/bindings/bl_globals.html#blStringAssignMove,ptr.BLStringCore,ptr.BLStringCore	proc blStringAssignMove(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		610
-nim	blStringAssignWeak	blend2d/bindings/bl_globals.html#blStringAssignWeak,ptr.BLStringCore,ptr.BLStringCore	proc blStringAssignWeak(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		611
-nim	blStringAssignDeep	blend2d/bindings/bl_globals.html#blStringAssignDeep,ptr.BLStringCore,ptr.BLStringCore	proc blStringAssignDeep(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		612
-nim	blStringAssignData	blend2d/bindings/bl_globals.html#blStringAssignData,ptr.BLStringCore,cstring,uint	proc blStringAssignData(self: ptr BLStringCore; str: cstring; n: uint): BLResult		613
-nim	blStringApplyOpChar	blend2d/bindings/bl_globals.html#blStringApplyOpChar,ptr.BLStringCore,BLModifyOP,cchar,uint	proc blStringApplyOpChar(self: ptr BLStringCore; op: BLModifyOP; c: cchar; n: uint): BLResult		614
-nim	blStringApplyOpData	blend2d/bindings/bl_globals.html#blStringApplyOpData,ptr.BLStringCore,BLModifyOP,cstring,uint	proc blStringApplyOpData(self: ptr BLStringCore; op: BLModifyOP; str: cstring;\n                    n: uint): BLResult		616
-nim	blStringApplyOpString	blend2d/bindings/bl_globals.html#blStringApplyOpString,ptr.BLStringCore,BLModifyOP,ptr.BLStringCore	proc blStringApplyOpString(self: ptr BLStringCore; op: BLModifyOP;\n                      other: ptr BLStringCore): BLResult		618
-nim	blStringApplyOpFormat	blend2d/bindings/bl_globals.html#blStringApplyOpFormat,ptr.BLStringCore,BLModifyOP,varargs[cstring]	proc blStringApplyOpFormat(self: ptr BLStringCore; op: BLModifyOP;\n                      fmt: varargs[cstring]): BLResult		620
-nim	blStringApplyOpFormatV	blend2d/bindings/bl_globals.html#blStringApplyOpFormatV,ptr.BLStringCore,BLModifyOP,cstring,va_list	proc blStringApplyOpFormatV(self: ptr BLStringCore; op: BLModifyOP; fmt: cstring;\n                       ap: va_list): BLResult		621
-nim	blStringInsertChar	blend2d/bindings/bl_globals.html#blStringInsertChar,ptr.BLStringCore,uint,cchar,uint	proc blStringInsertChar(self: ptr BLStringCore; index: uint; c: cchar; n: uint): BLResult		623
-nim	blStringInsertData	blend2d/bindings/bl_globals.html#blStringInsertData,ptr.BLStringCore,uint,cstring,uint	proc blStringInsertData(self: ptr BLStringCore; index: uint; str: cstring; n: uint): BLResult		624
-nim	blStringInsertString	blend2d/bindings/bl_globals.html#blStringInsertString,ptr.BLStringCore,uint,ptr.BLStringCore	proc blStringInsertString(self: ptr BLStringCore; index: uint;\n                     other: ptr BLStringCore): BLResult		626
-nim	blStringRemoveIndex	blend2d/bindings/bl_globals.html#blStringRemoveIndex,ptr.BLStringCore,uint	proc blStringRemoveIndex(self: ptr BLStringCore; index: uint): BLResult		628
-nim	blStringRemoveRange	blend2d/bindings/bl_globals.html#blStringRemoveRange,ptr.BLStringCore,uint,uint	proc blStringRemoveRange(self: ptr BLStringCore; rStart: uint; rEnd: uint): BLResult		629
-nim	blStringEquals	blend2d/bindings/bl_globals.html#blStringEquals,ptr.BLStringCore,ptr.BLStringCore	proc blStringEquals(a: ptr BLStringCore; b: ptr BLStringCore): bool		630
-nim	blStringEqualsData	blend2d/bindings/bl_globals.html#blStringEqualsData,ptr.BLStringCore,cstring,uint	proc blStringEqualsData(self: ptr BLStringCore; str: cstring; n: uint): bool		631
-nim	blStringCompare	blend2d/bindings/bl_globals.html#blStringCompare,ptr.BLStringCore,ptr.BLStringCore	proc blStringCompare(a: ptr BLStringCore; b: ptr BLStringCore): cint		632
-nim	blStringCompareData	blend2d/bindings/bl_globals.html#blStringCompareData,ptr.BLStringCore,cstring,uint	proc blStringCompareData(self: ptr BLStringCore; str: cstring; n: uint): cint		633
-nim	blVarInitType	blend2d/bindings/bl_globals.html#blVarInitType,ptr.BLUnknown,BLObjectType	proc blVarInitType(self: ptr BLUnknown; type: BLObjectType): BLResult		635
-nim	blVarInitNull	blend2d/bindings/bl_globals.html#blVarInitNull,ptr.BLUnknown	proc blVarInitNull(self: ptr BLUnknown): BLResult		636
-nim	blVarInitBool	blend2d/bindings/bl_globals.html#blVarInitBool,ptr.BLUnknown,bool	proc blVarInitBool(self: ptr BLUnknown; value: bool): BLResult		637
-nim	blVarInitInt32	blend2d/bindings/bl_globals.html#blVarInitInt32,ptr.BLUnknown,int32	proc blVarInitInt32(self: ptr BLUnknown; value: int32): BLResult		638
-nim	blVarInitInt64	blend2d/bindings/bl_globals.html#blVarInitInt64,ptr.BLUnknown,int64	proc blVarInitInt64(self: ptr BLUnknown; value: int64): BLResult		639
-nim	blVarInitUInt32	blend2d/bindings/bl_globals.html#blVarInitUInt32,ptr.BLUnknown,uint32	proc blVarInitUInt32(self: ptr BLUnknown; value: uint32): BLResult		640
-nim	blVarInitUInt64	blend2d/bindings/bl_globals.html#blVarInitUInt64,ptr.BLUnknown,uint64	proc blVarInitUInt64(self: ptr BLUnknown; value: uint64): BLResult		641
-nim	blVarInitDouble	blend2d/bindings/bl_globals.html#blVarInitDouble,ptr.BLUnknown,cdouble	proc blVarInitDouble(self: ptr BLUnknown; value: cdouble): BLResult		642
-nim	blVarInitRgba	blend2d/bindings/bl_globals.html#blVarInitRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarInitRgba(self: ptr BLUnknown; rgba: ptr BLRgba): BLResult		643
-nim	blVarInitRgba32	blend2d/bindings/bl_globals.html#blVarInitRgba32,ptr.BLUnknown,uint32	proc blVarInitRgba32(self: ptr BLUnknown; rgba32: uint32): BLResult		644
-nim	blVarInitRgba64	blend2d/bindings/bl_globals.html#blVarInitRgba64,ptr.BLUnknown,uint64	proc blVarInitRgba64(self: ptr BLUnknown; rgba64: uint64): BLResult		645
-nim	blVarInitMove	blend2d/bindings/bl_globals.html#blVarInitMove,ptr.BLUnknown,ptr.BLUnknown	proc blVarInitMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		646
-nim	blVarInitWeak	blend2d/bindings/bl_globals.html#blVarInitWeak,ptr.BLUnknown,ptr.BLUnknown	proc blVarInitWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		647
-nim	blVarDestroy	blend2d/bindings/bl_globals.html#blVarDestroy,ptr.BLUnknown	proc blVarDestroy(self: ptr BLUnknown): BLResult		648
-nim	blVarReset	blend2d/bindings/bl_globals.html#blVarReset,ptr.BLUnknown	proc blVarReset(self: ptr BLUnknown): BLResult		649
-nim	blVarAssignNull	blend2d/bindings/bl_globals.html#blVarAssignNull,ptr.BLUnknown	proc blVarAssignNull(self: ptr BLUnknown): BLResult		650
-nim	blVarAssignBool	blend2d/bindings/bl_globals.html#blVarAssignBool,ptr.BLUnknown,bool	proc blVarAssignBool(self: ptr BLUnknown; value: bool): BLResult		651
-nim	blVarAssignInt32	blend2d/bindings/bl_globals.html#blVarAssignInt32,ptr.BLUnknown,int32	proc blVarAssignInt32(self: ptr BLUnknown; value: int32): BLResult		652
-nim	blVarAssignInt64	blend2d/bindings/bl_globals.html#blVarAssignInt64,ptr.BLUnknown,int64	proc blVarAssignInt64(self: ptr BLUnknown; value: int64): BLResult		653
-nim	blVarAssignUInt32	blend2d/bindings/bl_globals.html#blVarAssignUInt32,ptr.BLUnknown,uint32	proc blVarAssignUInt32(self: ptr BLUnknown; value: uint32): BLResult		654
-nim	blVarAssignUInt64	blend2d/bindings/bl_globals.html#blVarAssignUInt64,ptr.BLUnknown,uint64	proc blVarAssignUInt64(self: ptr BLUnknown; value: uint64): BLResult		655
-nim	blVarAssignDouble	blend2d/bindings/bl_globals.html#blVarAssignDouble,ptr.BLUnknown,cdouble	proc blVarAssignDouble(self: ptr BLUnknown; value: cdouble): BLResult		656
-nim	blVarAssignRgba	blend2d/bindings/bl_globals.html#blVarAssignRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarAssignRgba(self: ptr BLUnknown; rgba: ptr BLRgba): BLResult		657
-nim	blVarAssignRgba32	blend2d/bindings/bl_globals.html#blVarAssignRgba32,ptr.BLUnknown,uint32	proc blVarAssignRgba32(self: ptr BLUnknown; rgba32: uint32): BLResult		658
-nim	blVarAssignRgba64	blend2d/bindings/bl_globals.html#blVarAssignRgba64,ptr.BLUnknown,uint64	proc blVarAssignRgba64(self: ptr BLUnknown; rgba64: uint64): BLResult		659
-nim	blVarAssignMove	blend2d/bindings/bl_globals.html#blVarAssignMove,ptr.BLUnknown,ptr.BLUnknown	proc blVarAssignMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		660
-nim	blVarAssignWeak	blend2d/bindings/bl_globals.html#blVarAssignWeak,ptr.BLUnknown,ptr.BLUnknown	proc blVarAssignWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		661
-nim	blVarGetType	blend2d/bindings/bl_globals.html#blVarGetType,ptr.BLUnknown	proc blVarGetType(self: ptr BLUnknown): BLObjectType		662
-nim	blVarToBool	blend2d/bindings/bl_globals.html#blVarToBool,ptr.BLUnknown,ptr.bool	proc blVarToBool(self: ptr BLUnknown; out: ptr bool): BLResult		663
-nim	blVarToInt32	blend2d/bindings/bl_globals.html#blVarToInt32,ptr.BLUnknown,ptr.int32	proc blVarToInt32(self: ptr BLUnknown; out: ptr int32): BLResult		664
-nim	blVarToInt64	blend2d/bindings/bl_globals.html#blVarToInt64,ptr.BLUnknown,ptr.int64	proc blVarToInt64(self: ptr BLUnknown; out: ptr int64): BLResult		665
-nim	blVarToUInt32	blend2d/bindings/bl_globals.html#blVarToUInt32,ptr.BLUnknown,ptr.uint32	proc blVarToUInt32(self: ptr BLUnknown; out: ptr uint32): BLResult		666
-nim	blVarToUInt64	blend2d/bindings/bl_globals.html#blVarToUInt64,ptr.BLUnknown,ptr.uint64	proc blVarToUInt64(self: ptr BLUnknown; out: ptr uint64): BLResult		667
-nim	blVarToDouble	blend2d/bindings/bl_globals.html#blVarToDouble,ptr.BLUnknown,ptr.cdouble	proc blVarToDouble(self: ptr BLUnknown; out: ptr cdouble): BLResult		668
-nim	blVarToRgba	blend2d/bindings/bl_globals.html#blVarToRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarToRgba(self: ptr BLUnknown; out: ptr BLRgba): BLResult		669
-nim	blVarToRgba32	blend2d/bindings/bl_globals.html#blVarToRgba32,ptr.BLUnknown,ptr.uint32	proc blVarToRgba32(self: ptr BLUnknown; out: ptr uint32): BLResult		670
-nim	blVarToRgba64	blend2d/bindings/bl_globals.html#blVarToRgba64,ptr.BLUnknown,ptr.uint64	proc blVarToRgba64(self: ptr BLUnknown; out: ptr uint64): BLResult		671
-nim	blVarEquals	blend2d/bindings/bl_globals.html#blVarEquals,ptr.BLUnknown,ptr.BLUnknown	proc blVarEquals(a: ptr BLUnknown; b: ptr BLUnknown): bool		672
-nim	blVarEqualsNull	blend2d/bindings/bl_globals.html#blVarEqualsNull,ptr.BLUnknown	proc blVarEqualsNull(self: ptr BLUnknown): bool		673
-nim	blVarEqualsBool	blend2d/bindings/bl_globals.html#blVarEqualsBool,ptr.BLUnknown,bool	proc blVarEqualsBool(self: ptr BLUnknown; value: bool): bool		674
-nim	blVarEqualsInt64	blend2d/bindings/bl_globals.html#blVarEqualsInt64,ptr.BLUnknown,int64	proc blVarEqualsInt64(self: ptr BLUnknown; value: int64): bool		675
-nim	blVarEqualsUInt64	blend2d/bindings/bl_globals.html#blVarEqualsUInt64,ptr.BLUnknown,uint64	proc blVarEqualsUInt64(self: ptr BLUnknown; value: uint64): bool		676
-nim	blVarEqualsDouble	blend2d/bindings/bl_globals.html#blVarEqualsDouble,ptr.BLUnknown,cdouble	proc blVarEqualsDouble(self: ptr BLUnknown; value: cdouble): bool		677
-nim	blVarEqualsRgba	blend2d/bindings/bl_globals.html#blVarEqualsRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarEqualsRgba(self: ptr BLUnknown; rgba: ptr BLRgba): bool		678
-nim	blVarEqualsRgba32	blend2d/bindings/bl_globals.html#blVarEqualsRgba32,ptr.BLUnknown,uint32	proc blVarEqualsRgba32(self: ptr BLUnknown; rgba32: uint32): bool		679
-nim	blVarEqualsRgba64	blend2d/bindings/bl_globals.html#blVarEqualsRgba64,ptr.BLUnknown,uint64	proc blVarEqualsRgba64(self: ptr BLUnknown; rgba64: uint64): bool		680
-nim	blVarStrictEquals	blend2d/bindings/bl_globals.html#blVarStrictEquals,ptr.BLUnknown,ptr.BLUnknown	proc blVarStrictEquals(a: ptr BLUnknown; b: ptr BLUnknown): bool		681
-nim	blRandomReset	blend2d/bindings/bl_globals.html#blRandomReset,ptr.BLRandom,uint64	proc blRandomReset(self: ptr BLRandom; seed: uint64): BLResult		683
-nim	blRandomNextUInt32	blend2d/bindings/bl_globals.html#blRandomNextUInt32,ptr.BLRandom	proc blRandomNextUInt32(self: ptr BLRandom): uint32		684
-nim	blRandomNextUInt64	blend2d/bindings/bl_globals.html#blRandomNextUInt64,ptr.BLRandom	proc blRandomNextUInt64(self: ptr BLRandom): uint64		685
-nim	blRandomNextDouble	blend2d/bindings/bl_globals.html#blRandomNextDouble,ptr.BLRandom	proc blRandomNextDouble(self: ptr BLRandom): cdouble		686
-nim	blTraceError	blend2d/bindings/bl_globals.html#blTraceError,BLResult	proc blTraceError(result: BLResult): BLResult		691
-nim	blRuntimeAssertionFailure	blend2d/bindings/bl_globals.html#blRuntimeAssertionFailure,cstring,cint,cstring	proc blRuntimeAssertionFailure(file: cstring; line: cint; msg: cstring)		692
-nim	BLDebugMessageSinkFunc	blend2d/bindings/bl_globals.html#BLDebugMessageSinkFunc	type BLDebugMessageSinkFunc		694
+nim	blend2Dheader	blend2d/bindings/bl_globals.html#blend2Dheader	const blend2Dheader		33
+nim	blend2Dlib	blend2d/bindings/bl_globals.html#blend2Dlib	const blend2Dlib		34
+nim	BLResultCode	blend2d/bindings/bl_globals.html#BLResultCode	enum BLResultCode		39
+nim	BLByteOrder	blend2d/bindings/bl_globals.html#BLByteOrder	enum BLByteOrder		126
+nim	BLDataAccessFlags	blend2d/bindings/bl_globals.html#BLDataAccessFlags	enum BLDataAccessFlags		132
+nim	BLDataSourceType	blend2d/bindings/bl_globals.html#BLDataSourceType	enum BLDataSourceType		138
+nim	BLModifyOP	blend2d/bindings/bl_globals.html#BLModifyOP	enum BLModifyOP		145
+nim	BLBooleanOp	blend2d/bindings/bl_globals.html#BLBooleanOp	enum BLBooleanOp		151
+nim	BLBitSetConstants	blend2d/bindings/bl_globals.html#BLBitSetConstants	enum BLBitSetConstants		160
+nim	BLRange	blend2d/bindings/bl_globals.html#BLRange	object BLRange		165
+nim	BLArrayView	blend2d/bindings/bl_globals.html#BLArrayView	object BLArrayView		169
+nim	BLRandom	blend2d/bindings/bl_globals.html#BLRandom	object BLRandom		173
+nim	BLResult	blend2d/bindings/bl_globals.html#BLResult	type BLResult		178
+nim	BLVarCore	blend2d/bindings/bl_globals.html#BLVarCore	object BLVarCore		180
+nim	BLTag	blend2d/bindings/bl_globals.html#BLTag	type BLTag		183
+nim	BLUniqueId	blend2d/bindings/bl_globals.html#BLUniqueId	type BLUniqueId		184
+nim	BLUnknown	blend2d/bindings/bl_globals.html#BLUnknown	type BLUnknown		185
+nim	BLRgba	blend2d/bindings/bl_globals.html#BLRgba	object BLRgba		187
+nim	BLRgba32	blend2d/bindings/bl_globals.html#BLRgba32	object BLRgba32		194
+nim	BLRgba64	blend2d/bindings/bl_globals.html#BLRgba64	object BLRgba64		198
+nim	BLObjectInfo	blend2d/bindings/bl_globals.html#BLObjectInfo	object BLObjectInfo		205
+nim	BLObjectImpl	blend2d/bindings/bl_globals.html#BLObjectImpl	object BLObjectImpl		208
+nim	BLObjectDetail	blend2d/bindings/bl_globals.html#BLObjectDetail	object BLObjectDetail		210
+nim	BLObjectCore	blend2d/bindings/bl_globals.html#BLObjectCore	object BLObjectCore		230
+nim	BLObjectVirt	blend2d/bindings/bl_globals.html#BLObjectVirt	object BLObjectVirt		233
+nim	BLObjectVirtBase	blend2d/bindings/bl_globals.html#BLObjectVirtBase	object BLObjectVirtBase		236
+nim	BLObjectType	blend2d/bindings/bl_globals.html#BLObjectType	enum BLObjectType		243
+nim	BLDestroyExternalDataFunc	blend2d/bindings/bl_globals.html#BLDestroyExternalDataFunc	type BLDestroyExternalDataFunc		311
+nim	BLArrayCore	blend2d/bindings/bl_globals.html#BLArrayCore	object BLArrayCore		317
+nim	BLArrayImpl	blend2d/bindings/bl_globals.html#BLArrayImpl	object BLArrayImpl		320
+nim	BLBitArrayCore	blend2d/bindings/bl_globals.html#BLBitArrayCore	object BLBitArrayCore		328
+nim	BLBitArrayImpl	blend2d/bindings/bl_globals.html#BLBitArrayImpl	object BLBitArrayImpl		331
+nim	BLBitSetCore	blend2d/bindings/bl_globals.html#BLBitSetCore	object BLBitSetCore		340
+nim	BLBitSetData	blend2d/bindings/bl_globals.html#BLBitSetData	object BLBitSetData		343
+nim	BLBitSetSegment	blend2d/bindings/bl_globals.html#BLBitSetSegment	object BLBitSetSegment		348
+nim	BLBitSetBuilderCore	blend2d/bindings/bl_globals.html#BLBitSetBuilderCore	object BLBitSetBuilderCore		352
+nim	BLStringCore	blend2d/bindings/bl_globals.html#BLStringCore	object BLStringCore		361
+nim	BLStringImpl	blend2d/bindings/bl_globals.html#BLStringImpl	object BLStringImpl		363
+nim	code	blend2d/bindings/bl_globals.html#code,BLResult	proc code(x: BLResult): BLResultCode		370
+nim	blArrayInit	blend2d/bindings/bl_globals.html#blArrayInit,ptr.BLArrayCore,BLObjectType	proc blArrayInit(self: ptr BLArrayCore; arrayType: BLObjectType): BLResult		377
+nim	blArrayInitMove	blend2d/bindings/bl_globals.html#blArrayInitMove,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayInitMove(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		378
+nim	blArrayInitWeak	blend2d/bindings/bl_globals.html#blArrayInitWeak,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayInitWeak(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		379
+nim	blArrayDestroy	blend2d/bindings/bl_globals.html#blArrayDestroy,ptr.BLArrayCore	proc blArrayDestroy(self: ptr BLArrayCore): BLResult		380
+nim	blArrayReset	blend2d/bindings/bl_globals.html#blArrayReset,ptr.BLArrayCore	proc blArrayReset(self: ptr BLArrayCore): BLResult		381
+nim	blArrayGetSize	blend2d/bindings/bl_globals.html#blArrayGetSize,ptr.BLArrayCore	proc blArrayGetSize(self: ptr BLArrayCore): uint		382
+nim	blArrayGetCapacity	blend2d/bindings/bl_globals.html#blArrayGetCapacity,ptr.BLArrayCore	proc blArrayGetCapacity(self: ptr BLArrayCore): uint		383
+nim	blArrayGetItemSize	blend2d/bindings/bl_globals.html#blArrayGetItemSize,ptr.BLArrayCore	proc blArrayGetItemSize(self: ptr BLArrayCore): uint		384
+nim	blArrayGetData	blend2d/bindings/bl_globals.html#blArrayGetData,ptr.BLArrayCore	proc blArrayGetData(self: ptr BLArrayCore): pointer		385
+nim	blArrayClear	blend2d/bindings/bl_globals.html#blArrayClear,ptr.BLArrayCore	proc blArrayClear(self: ptr BLArrayCore): BLResult		386
+nim	blArrayShrink	blend2d/bindings/bl_globals.html#blArrayShrink,ptr.BLArrayCore	proc blArrayShrink(self: ptr BLArrayCore): BLResult		387
+nim	blArrayReserve	blend2d/bindings/bl_globals.html#blArrayReserve,ptr.BLArrayCore,uint	proc blArrayReserve(self: ptr BLArrayCore; n: uint): BLResult		388
+nim	blArrayResize	blend2d/bindings/bl_globals.html#blArrayResize,ptr.BLArrayCore,uint,pointer	proc blArrayResize(self: ptr BLArrayCore; n: uint; fill: pointer): BLResult		389
+nim	blArrayMakeMutable	blend2d/bindings/bl_globals.html#blArrayMakeMutable,ptr.BLArrayCore,ptr.pointer	proc blArrayMakeMutable(self: ptr BLArrayCore; dataOut: ptr pointer): BLResult		390
+nim	blArrayModifyOp	blend2d/bindings/bl_globals.html#blArrayModifyOp,ptr.BLArrayCore,BLModifyOP,uint,ptr.pointer	proc blArrayModifyOp(self: ptr BLArrayCore; op: BLModifyOP; n: uint;\n                dataOut: ptr pointer): BLResult		391
+nim	blArrayInsertOp	blend2d/bindings/bl_globals.html#blArrayInsertOp,ptr.BLArrayCore,uint,uint,ptr.pointer	proc blArrayInsertOp(self: ptr BLArrayCore; index: uint; n: uint;\n                dataOut: ptr pointer): BLResult		393
+nim	blArrayAssignMove	blend2d/bindings/bl_globals.html#blArrayAssignMove,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayAssignMove(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		395
+nim	blArrayAssignWeak	blend2d/bindings/bl_globals.html#blArrayAssignWeak,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayAssignWeak(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		396
+nim	blArrayAssignDeep	blend2d/bindings/bl_globals.html#blArrayAssignDeep,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayAssignDeep(self: ptr BLArrayCore; other: ptr BLArrayCore): BLResult		397
+nim	blArrayAssignData	blend2d/bindings/bl_globals.html#blArrayAssignData,ptr.BLArrayCore,pointer,uint	proc blArrayAssignData(self: ptr BLArrayCore; data: pointer; n: uint): BLResult		398
+nim	blArrayAssignExternalData	blend2d/bindings/bl_globals.html#blArrayAssignExternalData,ptr.BLArrayCore,pointer,uint,uint,BLDataAccessFlags,BLDestroyExternalDataFunc,pointer	proc blArrayAssignExternalData(self: ptr BLArrayCore; data: pointer; size: uint;\n                          capacity: uint; dataAccessFlags: BLDataAccessFlags;\n                          destroyFunc: BLDestroyExternalDataFunc;\n                          userData: pointer): BLResult		399
+nim	blArrayAppendU8	blend2d/bindings/bl_globals.html#blArrayAppendU8,ptr.BLArrayCore,uint8	proc blArrayAppendU8(self: ptr BLArrayCore; value: uint8): BLResult		404
+nim	blArrayAppendU16	blend2d/bindings/bl_globals.html#blArrayAppendU16,ptr.BLArrayCore,uint16	proc blArrayAppendU16(self: ptr BLArrayCore; value: uint16): BLResult		405
+nim	blArrayAppendU32	blend2d/bindings/bl_globals.html#blArrayAppendU32,ptr.BLArrayCore,uint32	proc blArrayAppendU32(self: ptr BLArrayCore; value: uint32): BLResult		406
+nim	blArrayAppendU64	blend2d/bindings/bl_globals.html#blArrayAppendU64,ptr.BLArrayCore,uint64	proc blArrayAppendU64(self: ptr BLArrayCore; value: uint64): BLResult		407
+nim	blArrayAppendF32	blend2d/bindings/bl_globals.html#blArrayAppendF32,ptr.BLArrayCore,cfloat	proc blArrayAppendF32(self: ptr BLArrayCore; value: cfloat): BLResult		408
+nim	blArrayAppendF64	blend2d/bindings/bl_globals.html#blArrayAppendF64,ptr.BLArrayCore,cdouble	proc blArrayAppendF64(self: ptr BLArrayCore; value: cdouble): BLResult		409
+nim	blArrayAppendItem	blend2d/bindings/bl_globals.html#blArrayAppendItem,ptr.BLArrayCore,pointer	proc blArrayAppendItem(self: ptr BLArrayCore; item: pointer): BLResult		410
+nim	blArrayAppendData	blend2d/bindings/bl_globals.html#blArrayAppendData,ptr.BLArrayCore,pointer,uint	proc blArrayAppendData(self: ptr BLArrayCore; data: pointer; n: uint): BLResult		411
+nim	blArrayInsertU8	blend2d/bindings/bl_globals.html#blArrayInsertU8,ptr.BLArrayCore,uint,uint8	proc blArrayInsertU8(self: ptr BLArrayCore; index: uint; value: uint8): BLResult		412
+nim	blArrayInsertU16	blend2d/bindings/bl_globals.html#blArrayInsertU16,ptr.BLArrayCore,uint,uint16	proc blArrayInsertU16(self: ptr BLArrayCore; index: uint; value: uint16): BLResult		413
+nim	blArrayInsertU32	blend2d/bindings/bl_globals.html#blArrayInsertU32,ptr.BLArrayCore,uint,uint32	proc blArrayInsertU32(self: ptr BLArrayCore; index: uint; value: uint32): BLResult		414
+nim	blArrayInsertU64	blend2d/bindings/bl_globals.html#blArrayInsertU64,ptr.BLArrayCore,uint,uint64	proc blArrayInsertU64(self: ptr BLArrayCore; index: uint; value: uint64): BLResult		415
+nim	blArrayInsertF32	blend2d/bindings/bl_globals.html#blArrayInsertF32,ptr.BLArrayCore,uint,cfloat	proc blArrayInsertF32(self: ptr BLArrayCore; index: uint; value: cfloat): BLResult		416
+nim	blArrayInsertF64	blend2d/bindings/bl_globals.html#blArrayInsertF64,ptr.BLArrayCore,uint,cdouble	proc blArrayInsertF64(self: ptr BLArrayCore; index: uint; value: cdouble): BLResult		417
+nim	blArrayInsertItem	blend2d/bindings/bl_globals.html#blArrayInsertItem,ptr.BLArrayCore,uint,pointer	proc blArrayInsertItem(self: ptr BLArrayCore; index: uint; item: pointer): BLResult		418
+nim	blArrayInsertData	blend2d/bindings/bl_globals.html#blArrayInsertData,ptr.BLArrayCore,uint,pointer,uint	proc blArrayInsertData(self: ptr BLArrayCore; index: uint; data: pointer; n: uint): BLResult		419
+nim	blArrayReplaceU8	blend2d/bindings/bl_globals.html#blArrayReplaceU8,ptr.BLArrayCore,uint,uint8	proc blArrayReplaceU8(self: ptr BLArrayCore; index: uint; value: uint8): BLResult		420
+nim	blArrayReplaceU16	blend2d/bindings/bl_globals.html#blArrayReplaceU16,ptr.BLArrayCore,uint,uint16	proc blArrayReplaceU16(self: ptr BLArrayCore; index: uint; value: uint16): BLResult		421
+nim	blArrayReplaceU32	blend2d/bindings/bl_globals.html#blArrayReplaceU32,ptr.BLArrayCore,uint,uint32	proc blArrayReplaceU32(self: ptr BLArrayCore; index: uint; value: uint32): BLResult		422
+nim	blArrayReplaceU64	blend2d/bindings/bl_globals.html#blArrayReplaceU64,ptr.BLArrayCore,uint,uint64	proc blArrayReplaceU64(self: ptr BLArrayCore; index: uint; value: uint64): BLResult		423
+nim	blArrayReplaceF32	blend2d/bindings/bl_globals.html#blArrayReplaceF32,ptr.BLArrayCore,uint,cfloat	proc blArrayReplaceF32(self: ptr BLArrayCore; index: uint; value: cfloat): BLResult		424
+nim	blArrayReplaceF64	blend2d/bindings/bl_globals.html#blArrayReplaceF64,ptr.BLArrayCore,uint,cdouble	proc blArrayReplaceF64(self: ptr BLArrayCore; index: uint; value: cdouble): BLResult		425
+nim	blArrayReplaceItem	blend2d/bindings/bl_globals.html#blArrayReplaceItem,ptr.BLArrayCore,uint,pointer	proc blArrayReplaceItem(self: ptr BLArrayCore; index: uint; item: pointer): BLResult		426
+nim	blArrayReplaceData	blend2d/bindings/bl_globals.html#blArrayReplaceData,ptr.BLArrayCore,uint,uint,pointer,uint	proc blArrayReplaceData(self: ptr BLArrayCore; rStart: uint; rEnd: uint;\n                   data: pointer; n: uint): BLResult		427
+nim	blArrayRemoveIndex	blend2d/bindings/bl_globals.html#blArrayRemoveIndex,ptr.BLArrayCore,uint	proc blArrayRemoveIndex(self: ptr BLArrayCore; index: uint): BLResult		429
+nim	blArrayRemoveRange	blend2d/bindings/bl_globals.html#blArrayRemoveRange,ptr.BLArrayCore,uint,uint	proc blArrayRemoveRange(self: ptr BLArrayCore; rStart: uint; rEnd: uint): BLResult		430
+nim	blArrayEquals	blend2d/bindings/bl_globals.html#blArrayEquals,ptr.BLArrayCore,ptr.BLArrayCore	proc blArrayEquals(a: ptr BLArrayCore; b: ptr BLArrayCore): bool		431
+nim	blBitArrayInit	blend2d/bindings/bl_globals.html#blBitArrayInit,ptr.BLBitArrayCore	proc blBitArrayInit(self: ptr BLBitArrayCore): BLResult		436
+nim	blBitArrayInitMove	blend2d/bindings/bl_globals.html#blBitArrayInitMove,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayInitMove(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		437
+nim	blBitArrayInitWeak	blend2d/bindings/bl_globals.html#blBitArrayInitWeak,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayInitWeak(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		438
+nim	blBitArrayDestroy	blend2d/bindings/bl_globals.html#blBitArrayDestroy,ptr.BLBitArrayCore	proc blBitArrayDestroy(self: ptr BLBitArrayCore): BLResult		439
+nim	blBitArrayReset	blend2d/bindings/bl_globals.html#blBitArrayReset,ptr.BLBitArrayCore	proc blBitArrayReset(self: ptr BLBitArrayCore): BLResult		440
+nim	blBitArrayAssignMove	blend2d/bindings/bl_globals.html#blBitArrayAssignMove,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayAssignMove(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		441
+nim	blBitArrayAssignWeak	blend2d/bindings/bl_globals.html#blBitArrayAssignWeak,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayAssignWeak(self: ptr BLBitArrayCore; other: ptr BLBitArrayCore): BLResult		442
+nim	blBitArrayAssignWords	blend2d/bindings/bl_globals.html#blBitArrayAssignWords,ptr.BLBitArrayCore,ptr.uint32,uint32	proc blBitArrayAssignWords(self: ptr BLBitArrayCore; wordData: ptr uint32;\n                      wordCount: uint32): BLResult		443
+nim	blBitArrayIsEmpty	blend2d/bindings/bl_globals.html#blBitArrayIsEmpty,ptr.BLBitArrayCore	proc blBitArrayIsEmpty(self: ptr BLBitArrayCore): bool		445
+nim	blBitArrayGetSize	blend2d/bindings/bl_globals.html#blBitArrayGetSize,ptr.BLBitArrayCore	proc blBitArrayGetSize(self: ptr BLBitArrayCore): uint32		446
+nim	blBitArrayGetWordCount	blend2d/bindings/bl_globals.html#blBitArrayGetWordCount,ptr.BLBitArrayCore	proc blBitArrayGetWordCount(self: ptr BLBitArrayCore): uint32		447
+nim	blBitArrayGetCapacity	blend2d/bindings/bl_globals.html#blBitArrayGetCapacity,ptr.BLBitArrayCore	proc blBitArrayGetCapacity(self: ptr BLBitArrayCore): uint32		448
+nim	blBitArrayGetData	blend2d/bindings/bl_globals.html#blBitArrayGetData,ptr.BLBitArrayCore	proc blBitArrayGetData(self: ptr BLBitArrayCore): ptr uint32		449
+nim	blBitArrayGetCardinality	blend2d/bindings/bl_globals.html#blBitArrayGetCardinality,ptr.BLBitArrayCore	proc blBitArrayGetCardinality(self: ptr BLBitArrayCore): uint32		450
+nim	blBitArrayGetCardinalityInRange	blend2d/bindings/bl_globals.html#blBitArrayGetCardinalityInRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayGetCardinalityInRange(self: ptr BLBitArrayCore; startBit: uint32;\n                                endBit: uint32): uint32		451
+nim	blBitArrayHasBit	blend2d/bindings/bl_globals.html#blBitArrayHasBit,ptr.BLBitArrayCore,uint32	proc blBitArrayHasBit(self: ptr BLBitArrayCore; bitIndex: uint32): bool		453
+nim	blBitArrayHasBitsInRange	blend2d/bindings/bl_globals.html#blBitArrayHasBitsInRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayHasBitsInRange(self: ptr BLBitArrayCore; startBit: uint32;\n                         endBit: uint32): bool		454
+nim	blBitArraySubsumes	blend2d/bindings/bl_globals.html#blBitArraySubsumes,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArraySubsumes(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): bool		456
+nim	blBitArrayIntersects	blend2d/bindings/bl_globals.html#blBitArrayIntersects,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayIntersects(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): bool		457
+nim	blBitArrayGetRange	blend2d/bindings/bl_globals.html#blBitArrayGetRange,ptr.BLBitArrayCore,ptr.uint32,ptr.uint32	proc blBitArrayGetRange(self: ptr BLBitArrayCore; startOut: ptr uint32;\n                   endOut: ptr uint32): bool		458
+nim	blBitArrayEquals	blend2d/bindings/bl_globals.html#blBitArrayEquals,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayEquals(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): bool		460
+nim	blBitArrayCompare	blend2d/bindings/bl_globals.html#blBitArrayCompare,ptr.BLBitArrayCore,ptr.BLBitArrayCore	proc blBitArrayCompare(a: ptr BLBitArrayCore; b: ptr BLBitArrayCore): cint		461
+nim	blBitArrayClear	blend2d/bindings/bl_globals.html#blBitArrayClear,ptr.BLBitArrayCore	proc blBitArrayClear(self: ptr BLBitArrayCore): BLResult		462
+nim	blBitArrayResize	blend2d/bindings/bl_globals.html#blBitArrayResize,ptr.BLBitArrayCore,uint32	proc blBitArrayResize(self: ptr BLBitArrayCore; nBits: uint32): BLResult		463
+nim	blBitArrayReserve	blend2d/bindings/bl_globals.html#blBitArrayReserve,ptr.BLBitArrayCore,uint32	proc blBitArrayReserve(self: ptr BLBitArrayCore; nBits: uint32): BLResult		464
+nim	blBitArrayShrink	blend2d/bindings/bl_globals.html#blBitArrayShrink,ptr.BLBitArrayCore	proc blBitArrayShrink(self: ptr BLBitArrayCore): BLResult		465
+nim	blBitArraySetBit	blend2d/bindings/bl_globals.html#blBitArraySetBit,ptr.BLBitArrayCore,uint32	proc blBitArraySetBit(self: ptr BLBitArrayCore; bitIndex: uint32): BLResult		466
+nim	blBitArrayFillRange	blend2d/bindings/bl_globals.html#blBitArrayFillRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayFillRange(self: ptr BLBitArrayCore; startBit: uint32; endBit: uint32): BLResult		467
+nim	blBitArrayFillWords	blend2d/bindings/bl_globals.html#blBitArrayFillWords,ptr.BLBitArrayCore,uint32,ptr.uint32,uint32	proc blBitArrayFillWords(self: ptr BLBitArrayCore; bitIndex: uint32;\n                    wordData: ptr uint32; wordCount: uint32): BLResult		469
+nim	blBitArrayClearBit	blend2d/bindings/bl_globals.html#blBitArrayClearBit,ptr.BLBitArrayCore,uint32	proc blBitArrayClearBit(self: ptr BLBitArrayCore; bitIndex: uint32): BLResult		471
+nim	blBitArrayClearRange	blend2d/bindings/bl_globals.html#blBitArrayClearRange,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayClearRange(self: ptr BLBitArrayCore; startBit: uint32; endBit: uint32): BLResult		472
+nim	blBitArrayClearWord	blend2d/bindings/bl_globals.html#blBitArrayClearWord,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayClearWord(self: ptr BLBitArrayCore; bitIndex: uint32;\n                    wordValue: uint32): BLResult		474
+nim	blBitArrayClearWords	blend2d/bindings/bl_globals.html#blBitArrayClearWords,ptr.BLBitArrayCore,uint32,ptr.uint32,uint32	proc blBitArrayClearWords(self: ptr BLBitArrayCore; bitIndex: uint32;\n                     wordData: ptr uint32; wordCount: uint32): BLResult		476
+nim	blBitArrayReplaceOp	blend2d/bindings/bl_globals.html#blBitArrayReplaceOp,ptr.BLBitArrayCore,uint32,ptr.ptr.uint32	proc blBitArrayReplaceOp(self: ptr BLBitArrayCore; nBits: uint32;\n                    dataOut: ptr ptr uint32): BLResult		478
+nim	blBitArrayReplaceBit	blend2d/bindings/bl_globals.html#blBitArrayReplaceBit,ptr.BLBitArrayCore,uint32,bool	proc blBitArrayReplaceBit(self: ptr BLBitArrayCore; bitIndex: uint32; bitValue: bool): BLResult		480
+nim	blBitArrayReplaceWord	blend2d/bindings/bl_globals.html#blBitArrayReplaceWord,ptr.BLBitArrayCore,uint32,uint32	proc blBitArrayReplaceWord(self: ptr BLBitArrayCore; bitIndex: uint32;\n                      wordValue: uint32): BLResult		482
+nim	blBitArrayReplaceWords	blend2d/bindings/bl_globals.html#blBitArrayReplaceWords,ptr.BLBitArrayCore,uint32,ptr.uint32,uint32	proc blBitArrayReplaceWords(self: ptr BLBitArrayCore; bitIndex: uint32;\n                       wordData: ptr uint32; wordCount: uint32): BLResult		484
+nim	blBitArrayAppendBit	blend2d/bindings/bl_globals.html#blBitArrayAppendBit,ptr.BLBitArrayCore,bool	proc blBitArrayAppendBit(self: ptr BLBitArrayCore; bitValue: bool): BLResult		486
+nim	blBitArrayAppendWord	blend2d/bindings/bl_globals.html#blBitArrayAppendWord,ptr.BLBitArrayCore,uint32	proc blBitArrayAppendWord(self: ptr BLBitArrayCore; wordValue: uint32): BLResult		487
+nim	blBitArrayAppendWords	blend2d/bindings/bl_globals.html#blBitArrayAppendWords,ptr.BLBitArrayCore,ptr.uint32,uint32	proc blBitArrayAppendWords(self: ptr BLBitArrayCore; wordData: ptr uint32;\n                      wordCount: uint32): BLResult		488
+nim	blBitSetInit	blend2d/bindings/bl_globals.html#blBitSetInit,ptr.BLBitSetCore	proc blBitSetInit(self: ptr BLBitSetCore): BLResult		495
+nim	blBitSetInitMove	blend2d/bindings/bl_globals.html#blBitSetInitMove,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetInitMove(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		496
+nim	blBitSetInitWeak	blend2d/bindings/bl_globals.html#blBitSetInitWeak,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetInitWeak(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		497
+nim	blBitSetInitRange	blend2d/bindings/bl_globals.html#blBitSetInitRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetInitRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): BLResult		498
+nim	blBitSetDestroy	blend2d/bindings/bl_globals.html#blBitSetDestroy,ptr.BLBitSetCore	proc blBitSetDestroy(self: ptr BLBitSetCore): BLResult		499
+nim	blBitSetReset	blend2d/bindings/bl_globals.html#blBitSetReset,ptr.BLBitSetCore	proc blBitSetReset(self: ptr BLBitSetCore): BLResult		500
+nim	blBitSetAssignMove	blend2d/bindings/bl_globals.html#blBitSetAssignMove,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetAssignMove(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		501
+nim	blBitSetAssignWeak	blend2d/bindings/bl_globals.html#blBitSetAssignWeak,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetAssignWeak(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		502
+nim	blBitSetAssignDeep	blend2d/bindings/bl_globals.html#blBitSetAssignDeep,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetAssignDeep(self: ptr BLBitSetCore; other: ptr BLBitSetCore): BLResult		503
+nim	blBitSetAssignRange	blend2d/bindings/bl_globals.html#blBitSetAssignRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetAssignRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): BLResult		504
+nim	blBitSetAssignWords	blend2d/bindings/bl_globals.html#blBitSetAssignWords,ptr.BLBitSetCore,uint32,ptr.uint32,uint32	proc blBitSetAssignWords(self: ptr BLBitSetCore; startWord: uint32;\n                    wordData: ptr uint32; wordCount: uint32): BLResult		506
+nim	blBitSetIsEmpty	blend2d/bindings/bl_globals.html#blBitSetIsEmpty,ptr.BLBitSetCore	proc blBitSetIsEmpty(self: ptr BLBitSetCore): bool		508
+nim	blBitSetGetData	blend2d/bindings/bl_globals.html#blBitSetGetData,ptr.BLBitSetCore,ptr.BLBitSetData	proc blBitSetGetData(self: ptr BLBitSetCore; out: ptr BLBitSetData): BLResult		509
+nim	blBitSetGetSegmentCount	blend2d/bindings/bl_globals.html#blBitSetGetSegmentCount,ptr.BLBitSetCore	proc blBitSetGetSegmentCount(self: ptr BLBitSetCore): uint32		510
+nim	blBitSetGetSegmentCapacity	blend2d/bindings/bl_globals.html#blBitSetGetSegmentCapacity,ptr.BLBitSetCore	proc blBitSetGetSegmentCapacity(self: ptr BLBitSetCore): uint32		511
+nim	blBitSetGetCardinality	blend2d/bindings/bl_globals.html#blBitSetGetCardinality,ptr.BLBitSetCore	proc blBitSetGetCardinality(self: ptr BLBitSetCore): uint32		512
+nim	blBitSetGetCardinalityInRange	blend2d/bindings/bl_globals.html#blBitSetGetCardinalityInRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetGetCardinalityInRange(self: ptr BLBitSetCore; startBit: uint32;\n                              endBit: uint32): uint32		513
+nim	blBitSetHasBit	blend2d/bindings/bl_globals.html#blBitSetHasBit,ptr.BLBitSetCore,uint32	proc blBitSetHasBit(self: ptr BLBitSetCore; bitIndex: uint32): bool		515
+nim	blBitSetHasBitsInRange	blend2d/bindings/bl_globals.html#blBitSetHasBitsInRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetHasBitsInRange(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): bool		516
+nim	blBitSetSubsumes	blend2d/bindings/bl_globals.html#blBitSetSubsumes,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetSubsumes(a: ptr BLBitSetCore; b: ptr BLBitSetCore): bool		518
+nim	blBitSetIntersects	blend2d/bindings/bl_globals.html#blBitSetIntersects,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetIntersects(a: ptr BLBitSetCore; b: ptr BLBitSetCore): bool		519
+nim	blBitSetGetRange	blend2d/bindings/bl_globals.html#blBitSetGetRange,ptr.BLBitSetCore,ptr.uint32,ptr.uint32	proc blBitSetGetRange(self: ptr BLBitSetCore; startOut: ptr uint32;\n                 endOut: ptr uint32): bool		520
+nim	blBitSetEquals	blend2d/bindings/bl_globals.html#blBitSetEquals,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetEquals(a: ptr BLBitSetCore; b: ptr BLBitSetCore): bool		522
+nim	blBitSetCompare	blend2d/bindings/bl_globals.html#blBitSetCompare,ptr.BLBitSetCore,ptr.BLBitSetCore	proc blBitSetCompare(a: ptr BLBitSetCore; b: ptr BLBitSetCore): cint		523
+nim	blBitSetClear	blend2d/bindings/bl_globals.html#blBitSetClear,ptr.BLBitSetCore	proc blBitSetClear(self: ptr BLBitSetCore): BLResult		524
+nim	blBitSetShrink	blend2d/bindings/bl_globals.html#blBitSetShrink,ptr.BLBitSetCore	proc blBitSetShrink(self: ptr BLBitSetCore): BLResult		525
+nim	blBitSetOptimize	blend2d/bindings/bl_globals.html#blBitSetOptimize,ptr.BLBitSetCore	proc blBitSetOptimize(self: ptr BLBitSetCore): BLResult		526
+nim	blBitSetChop	blend2d/bindings/bl_globals.html#blBitSetChop,ptr.BLBitSetCore,uint32,uint32	proc blBitSetChop(self: ptr BLBitSetCore; startBit: uint32; endBit: uint32): BLResult		527
+nim	blBitSetAddBit	blend2d/bindings/bl_globals.html#blBitSetAddBit,ptr.BLBitSetCore,uint32	proc blBitSetAddBit(self: ptr BLBitSetCore; bitIndex: uint32): BLResult		528
+nim	blBitSetAddRange	blend2d/bindings/bl_globals.html#blBitSetAddRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetAddRange(self: ptr BLBitSetCore; rangeStartBit: uint32;\n                 rangeEndBit: uint32): BLResult		529
+nim	blBitSetAddWords	blend2d/bindings/bl_globals.html#blBitSetAddWords,ptr.BLBitSetCore,uint32,ptr.uint32,uint32	proc blBitSetAddWords(self: ptr BLBitSetCore; startWord: uint32;\n                 wordData: ptr uint32; wordCount: uint32): BLResult		531
+nim	blBitSetClearBit	blend2d/bindings/bl_globals.html#blBitSetClearBit,ptr.BLBitSetCore,uint32	proc blBitSetClearBit(self: ptr BLBitSetCore; bitIndex: uint32): BLResult		533
+nim	blBitSetClearRange	blend2d/bindings/bl_globals.html#blBitSetClearRange,ptr.BLBitSetCore,uint32,uint32	proc blBitSetClearRange(self: ptr BLBitSetCore; rangeStartBit: uint32;\n                   rangeEndBit: uint32): BLResult		534
+nim	blBitSetBuilderCommit	blend2d/bindings/bl_globals.html#blBitSetBuilderCommit,ptr.BLBitSetCore,ptr.BLBitSetBuilderCore,uint32	proc blBitSetBuilderCommit(self: ptr BLBitSetCore; builder: ptr BLBitSetBuilderCore;\n                      newAreaIndex: uint32): BLResult		536
+nim	blBitSetBuilderAddRange	blend2d/bindings/bl_globals.html#blBitSetBuilderAddRange,ptr.BLBitSetCore,ptr.BLBitSetBuilderCore,uint32,uint32	proc blBitSetBuilderAddRange(self: ptr BLBitSetCore;\n                        builder: ptr BLBitSetBuilderCore; startBit: uint32;\n                        endBit: uint32): BLResult		539
+nim	blObjectAllocImpl	blend2d/bindings/bl_globals.html#blObjectAllocImpl,ptr.BLObjectCore,uint32,uint	proc blObjectAllocImpl(self: ptr BLObjectCore; objectInfo: uint32; implSize: uint): BLResult		546
+nim	blObjectAllocImplAligned	blend2d/bindings/bl_globals.html#blObjectAllocImplAligned,ptr.BLObjectCore,uint32,uint,uint	proc blObjectAllocImplAligned(self: ptr BLObjectCore; objectInfo: uint32;\n                         implSize: uint; implAlignment: uint): BLResult		548
+nim	blObjectAllocImplExternal	blend2d/bindings/bl_globals.html#blObjectAllocImplExternal,ptr.BLObjectCore,uint32,uint,bool,BLDestroyExternalDataFunc,pointer	proc blObjectAllocImplExternal(self: ptr BLObjectCore; objectInfo: uint32;\n                          implSize: uint; immutable: bool;\n                          destroyFunc: BLDestroyExternalDataFunc;\n                          userData: pointer): BLResult		550
+nim	blObjectFreeImpl	blend2d/bindings/bl_globals.html#blObjectFreeImpl,ptr.BLObjectImpl	proc blObjectFreeImpl(impl: ptr BLObjectImpl): BLResult		554
+nim	blObjectInitMove	blend2d/bindings/bl_globals.html#blObjectInitMove,ptr.BLUnknown,ptr.BLUnknown	proc blObjectInitMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		555
+nim	blObjectInitWeak	blend2d/bindings/bl_globals.html#blObjectInitWeak,ptr.BLUnknown,ptr.BLUnknown	proc blObjectInitWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		556
+nim	blObjectReset	blend2d/bindings/bl_globals.html#blObjectReset,ptr.BLUnknown	proc blObjectReset(self: ptr BLUnknown): BLResult		557
+nim	blObjectAssignMove	blend2d/bindings/bl_globals.html#blObjectAssignMove,ptr.BLUnknown,ptr.BLUnknown	proc blObjectAssignMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		558
+nim	blObjectAssignWeak	blend2d/bindings/bl_globals.html#blObjectAssignWeak,ptr.BLUnknown,ptr.BLUnknown	proc blObjectAssignWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		559
+nim	blObjectGetProperty	blend2d/bindings/bl_globals.html#blObjectGetProperty,ptr.BLUnknown,cstring,uint,ptr.BLVarCore	proc blObjectGetProperty(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                    valueOut: ptr BLVarCore): BLResult		560
+nim	blObjectGetPropertyBool	blend2d/bindings/bl_globals.html#blObjectGetPropertyBool,ptr.BLUnknown,cstring,uint,ptr.bool	proc blObjectGetPropertyBool(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                        valueOut: ptr bool): BLResult		562
+nim	blObjectGetPropertyInt32	blend2d/bindings/bl_globals.html#blObjectGetPropertyInt32,ptr.BLUnknown,cstring,uint,ptr.int32	proc blObjectGetPropertyInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         valueOut: ptr int32): BLResult		564
+nim	blObjectGetPropertyInt64	blend2d/bindings/bl_globals.html#blObjectGetPropertyInt64,ptr.BLUnknown,cstring,uint,ptr.int64	proc blObjectGetPropertyInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         valueOut: ptr int64): BLResult		566
+nim	blObjectGetPropertyUInt32	blend2d/bindings/bl_globals.html#blObjectGetPropertyUInt32,ptr.BLUnknown,cstring,uint,ptr.uint32	proc blObjectGetPropertyUInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          valueOut: ptr uint32): BLResult		568
+nim	blObjectGetPropertyUInt64	blend2d/bindings/bl_globals.html#blObjectGetPropertyUInt64,ptr.BLUnknown,cstring,uint,ptr.uint64	proc blObjectGetPropertyUInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          valueOut: ptr uint64): BLResult		570
+nim	blObjectGetPropertyDouble	blend2d/bindings/bl_globals.html#blObjectGetPropertyDouble,ptr.BLUnknown,cstring,uint,ptr.cdouble	proc blObjectGetPropertyDouble(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          valueOut: ptr cdouble): BLResult		572
+nim	blObjectSetProperty	blend2d/bindings/bl_globals.html#blObjectSetProperty,ptr.BLUnknown,cstring,uint,ptr.BLUnknown	proc blObjectSetProperty(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                    value: ptr BLUnknown): BLResult		574
+nim	blObjectSetPropertyBool	blend2d/bindings/bl_globals.html#blObjectSetPropertyBool,ptr.BLUnknown,cstring,uint,bool	proc blObjectSetPropertyBool(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                        value: bool): BLResult		576
+nim	blObjectSetPropertyInt32	blend2d/bindings/bl_globals.html#blObjectSetPropertyInt32,ptr.BLUnknown,cstring,uint,int32	proc blObjectSetPropertyInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         value: int32): BLResult		578
+nim	blObjectSetPropertyInt64	blend2d/bindings/bl_globals.html#blObjectSetPropertyInt64,ptr.BLUnknown,cstring,uint,int64	proc blObjectSetPropertyInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                         value: int64): BLResult		580
+nim	blObjectSetPropertyUInt32	blend2d/bindings/bl_globals.html#blObjectSetPropertyUInt32,ptr.BLUnknown,cstring,uint,uint32	proc blObjectSetPropertyUInt32(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          value: uint32): BLResult		582
+nim	blObjectSetPropertyUInt64	blend2d/bindings/bl_globals.html#blObjectSetPropertyUInt64,ptr.BLUnknown,cstring,uint,uint64	proc blObjectSetPropertyUInt64(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          value: uint64): BLResult		584
+nim	blObjectSetPropertyDouble	blend2d/bindings/bl_globals.html#blObjectSetPropertyDouble,ptr.BLUnknown,cstring,uint,cdouble	proc blObjectSetPropertyDouble(self: ptr BLUnknown; name: cstring; nameSize: uint;\n                          value: cdouble): BLResult		586
+nim	va_list	blend2d/bindings/bl_globals.html#va_list	object va_list		594
+nim	blStringInit	blend2d/bindings/bl_globals.html#blStringInit,ptr.BLStringCore	proc blStringInit(self: ptr BLStringCore): BLResult		596
+nim	blStringInitMove	blend2d/bindings/bl_globals.html#blStringInitMove,ptr.BLStringCore,ptr.BLStringCore	proc blStringInitMove(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		597
+nim	blStringInitWeak	blend2d/bindings/bl_globals.html#blStringInitWeak,ptr.BLStringCore,ptr.BLStringCore	proc blStringInitWeak(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		598
+nim	blStringInitWithData	blend2d/bindings/bl_globals.html#blStringInitWithData,ptr.BLStringCore,cstring,uint	proc blStringInitWithData(self: ptr BLStringCore; str: cstring; size: uint): BLResult		599
+nim	blStringDestroy	blend2d/bindings/bl_globals.html#blStringDestroy,ptr.BLStringCore	proc blStringDestroy(self: ptr BLStringCore): BLResult		600
+nim	blStringReset	blend2d/bindings/bl_globals.html#blStringReset,ptr.BLStringCore	proc blStringReset(self: ptr BLStringCore): BLResult		601
+nim	blStringGetData	blend2d/bindings/bl_globals.html#blStringGetData,ptr.BLStringCore	proc blStringGetData(self: ptr BLStringCore): cstring		602
+nim	blStringGetSize	blend2d/bindings/bl_globals.html#blStringGetSize,ptr.BLStringCore	proc blStringGetSize(self: ptr BLStringCore): uint		603
+nim	blStringGetCapacity	blend2d/bindings/bl_globals.html#blStringGetCapacity,ptr.BLStringCore	proc blStringGetCapacity(self: ptr BLStringCore): uint		604
+nim	blStringClear	blend2d/bindings/bl_globals.html#blStringClear,ptr.BLStringCore	proc blStringClear(self: ptr BLStringCore): BLResult		605
+nim	blStringShrink	blend2d/bindings/bl_globals.html#blStringShrink,ptr.BLStringCore	proc blStringShrink(self: ptr BLStringCore): BLResult		606
+nim	blStringReserve	blend2d/bindings/bl_globals.html#blStringReserve,ptr.BLStringCore,uint	proc blStringReserve(self: ptr BLStringCore; n: uint): BLResult		607
+nim	blStringResize	blend2d/bindings/bl_globals.html#blStringResize,ptr.BLStringCore,uint,cchar	proc blStringResize(self: ptr BLStringCore; n: uint; fill: cchar): BLResult		608
+nim	blStringMakeMutable	blend2d/bindings/bl_globals.html#blStringMakeMutable,ptr.BLStringCore,ptr.cstring	proc blStringMakeMutable(self: ptr BLStringCore; dataOut: ptr cstring): BLResult		609
+nim	blStringModifyOp	blend2d/bindings/bl_globals.html#blStringModifyOp,ptr.BLStringCore,BLModifyOP,uint,ptr.cstring	proc blStringModifyOp(self: ptr BLStringCore; op: BLModifyOP; n: uint;\n                 dataOut: ptr cstring): BLResult		610
+nim	blStringInsertOp	blend2d/bindings/bl_globals.html#blStringInsertOp,ptr.BLStringCore,uint,uint,ptr.cstring	proc blStringInsertOp(self: ptr BLStringCore; index: uint; n: uint;\n                 dataOut: ptr cstring): BLResult		612
+nim	blStringAssignMove	blend2d/bindings/bl_globals.html#blStringAssignMove,ptr.BLStringCore,ptr.BLStringCore	proc blStringAssignMove(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		614
+nim	blStringAssignWeak	blend2d/bindings/bl_globals.html#blStringAssignWeak,ptr.BLStringCore,ptr.BLStringCore	proc blStringAssignWeak(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		615
+nim	blStringAssignDeep	blend2d/bindings/bl_globals.html#blStringAssignDeep,ptr.BLStringCore,ptr.BLStringCore	proc blStringAssignDeep(self: ptr BLStringCore; other: ptr BLStringCore): BLResult		616
+nim	blStringAssignData	blend2d/bindings/bl_globals.html#blStringAssignData,ptr.BLStringCore,cstring,uint	proc blStringAssignData(self: ptr BLStringCore; str: cstring; n: uint): BLResult		617
+nim	blStringApplyOpChar	blend2d/bindings/bl_globals.html#blStringApplyOpChar,ptr.BLStringCore,BLModifyOP,cchar,uint	proc blStringApplyOpChar(self: ptr BLStringCore; op: BLModifyOP; c: cchar; n: uint): BLResult		618
+nim	blStringApplyOpData	blend2d/bindings/bl_globals.html#blStringApplyOpData,ptr.BLStringCore,BLModifyOP,cstring,uint	proc blStringApplyOpData(self: ptr BLStringCore; op: BLModifyOP; str: cstring;\n                    n: uint): BLResult		620
+nim	blStringApplyOpString	blend2d/bindings/bl_globals.html#blStringApplyOpString,ptr.BLStringCore,BLModifyOP,ptr.BLStringCore	proc blStringApplyOpString(self: ptr BLStringCore; op: BLModifyOP;\n                      other: ptr BLStringCore): BLResult		622
+nim	blStringApplyOpFormat	blend2d/bindings/bl_globals.html#blStringApplyOpFormat,ptr.BLStringCore,BLModifyOP,varargs[cstring]	proc blStringApplyOpFormat(self: ptr BLStringCore; op: BLModifyOP;\n                      fmt: varargs[cstring]): BLResult		624
+nim	blStringApplyOpFormatV	blend2d/bindings/bl_globals.html#blStringApplyOpFormatV,ptr.BLStringCore,BLModifyOP,cstring,va_list	proc blStringApplyOpFormatV(self: ptr BLStringCore; op: BLModifyOP; fmt: cstring;\n                       ap: va_list): BLResult		625
+nim	blStringInsertChar	blend2d/bindings/bl_globals.html#blStringInsertChar,ptr.BLStringCore,uint,cchar,uint	proc blStringInsertChar(self: ptr BLStringCore; index: uint; c: cchar; n: uint): BLResult		627
+nim	blStringInsertData	blend2d/bindings/bl_globals.html#blStringInsertData,ptr.BLStringCore,uint,cstring,uint	proc blStringInsertData(self: ptr BLStringCore; index: uint; str: cstring; n: uint): BLResult		628
+nim	blStringInsertString	blend2d/bindings/bl_globals.html#blStringInsertString,ptr.BLStringCore,uint,ptr.BLStringCore	proc blStringInsertString(self: ptr BLStringCore; index: uint;\n                     other: ptr BLStringCore): BLResult		630
+nim	blStringRemoveIndex	blend2d/bindings/bl_globals.html#blStringRemoveIndex,ptr.BLStringCore,uint	proc blStringRemoveIndex(self: ptr BLStringCore; index: uint): BLResult		632
+nim	blStringRemoveRange	blend2d/bindings/bl_globals.html#blStringRemoveRange,ptr.BLStringCore,uint,uint	proc blStringRemoveRange(self: ptr BLStringCore; rStart: uint; rEnd: uint): BLResult		633
+nim	blStringEquals	blend2d/bindings/bl_globals.html#blStringEquals,ptr.BLStringCore,ptr.BLStringCore	proc blStringEquals(a: ptr BLStringCore; b: ptr BLStringCore): bool		634
+nim	blStringEqualsData	blend2d/bindings/bl_globals.html#blStringEqualsData,ptr.BLStringCore,cstring,uint	proc blStringEqualsData(self: ptr BLStringCore; str: cstring; n: uint): bool		635
+nim	blStringCompare	blend2d/bindings/bl_globals.html#blStringCompare,ptr.BLStringCore,ptr.BLStringCore	proc blStringCompare(a: ptr BLStringCore; b: ptr BLStringCore): cint		636
+nim	blStringCompareData	blend2d/bindings/bl_globals.html#blStringCompareData,ptr.BLStringCore,cstring,uint	proc blStringCompareData(self: ptr BLStringCore; str: cstring; n: uint): cint		637
+nim	blVarInitType	blend2d/bindings/bl_globals.html#blVarInitType,ptr.BLUnknown,BLObjectType	proc blVarInitType(self: ptr BLUnknown; type: BLObjectType): BLResult		639
+nim	blVarInitNull	blend2d/bindings/bl_globals.html#blVarInitNull,ptr.BLUnknown	proc blVarInitNull(self: ptr BLUnknown): BLResult		640
+nim	blVarInitBool	blend2d/bindings/bl_globals.html#blVarInitBool,ptr.BLUnknown,bool	proc blVarInitBool(self: ptr BLUnknown; value: bool): BLResult		641
+nim	blVarInitInt32	blend2d/bindings/bl_globals.html#blVarInitInt32,ptr.BLUnknown,int32	proc blVarInitInt32(self: ptr BLUnknown; value: int32): BLResult		642
+nim	blVarInitInt64	blend2d/bindings/bl_globals.html#blVarInitInt64,ptr.BLUnknown,int64	proc blVarInitInt64(self: ptr BLUnknown; value: int64): BLResult		643
+nim	blVarInitUInt32	blend2d/bindings/bl_globals.html#blVarInitUInt32,ptr.BLUnknown,uint32	proc blVarInitUInt32(self: ptr BLUnknown; value: uint32): BLResult		644
+nim	blVarInitUInt64	blend2d/bindings/bl_globals.html#blVarInitUInt64,ptr.BLUnknown,uint64	proc blVarInitUInt64(self: ptr BLUnknown; value: uint64): BLResult		645
+nim	blVarInitDouble	blend2d/bindings/bl_globals.html#blVarInitDouble,ptr.BLUnknown,cdouble	proc blVarInitDouble(self: ptr BLUnknown; value: cdouble): BLResult		646
+nim	blVarInitRgba	blend2d/bindings/bl_globals.html#blVarInitRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarInitRgba(self: ptr BLUnknown; rgba: ptr BLRgba): BLResult		647
+nim	blVarInitRgba32	blend2d/bindings/bl_globals.html#blVarInitRgba32,ptr.BLUnknown,uint32	proc blVarInitRgba32(self: ptr BLUnknown; rgba32: uint32): BLResult		648
+nim	blVarInitRgba64	blend2d/bindings/bl_globals.html#blVarInitRgba64,ptr.BLUnknown,uint64	proc blVarInitRgba64(self: ptr BLUnknown; rgba64: uint64): BLResult		649
+nim	blVarInitMove	blend2d/bindings/bl_globals.html#blVarInitMove,ptr.BLUnknown,ptr.BLUnknown	proc blVarInitMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		650
+nim	blVarInitWeak	blend2d/bindings/bl_globals.html#blVarInitWeak,ptr.BLUnknown,ptr.BLUnknown	proc blVarInitWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		651
+nim	blVarDestroy	blend2d/bindings/bl_globals.html#blVarDestroy,ptr.BLUnknown	proc blVarDestroy(self: ptr BLUnknown): BLResult		652
+nim	blVarReset	blend2d/bindings/bl_globals.html#blVarReset,ptr.BLUnknown	proc blVarReset(self: ptr BLUnknown): BLResult		653
+nim	blVarAssignNull	blend2d/bindings/bl_globals.html#blVarAssignNull,ptr.BLUnknown	proc blVarAssignNull(self: ptr BLUnknown): BLResult		654
+nim	blVarAssignBool	blend2d/bindings/bl_globals.html#blVarAssignBool,ptr.BLUnknown,bool	proc blVarAssignBool(self: ptr BLUnknown; value: bool): BLResult		655
+nim	blVarAssignInt32	blend2d/bindings/bl_globals.html#blVarAssignInt32,ptr.BLUnknown,int32	proc blVarAssignInt32(self: ptr BLUnknown; value: int32): BLResult		656
+nim	blVarAssignInt64	blend2d/bindings/bl_globals.html#blVarAssignInt64,ptr.BLUnknown,int64	proc blVarAssignInt64(self: ptr BLUnknown; value: int64): BLResult		657
+nim	blVarAssignUInt32	blend2d/bindings/bl_globals.html#blVarAssignUInt32,ptr.BLUnknown,uint32	proc blVarAssignUInt32(self: ptr BLUnknown; value: uint32): BLResult		658
+nim	blVarAssignUInt64	blend2d/bindings/bl_globals.html#blVarAssignUInt64,ptr.BLUnknown,uint64	proc blVarAssignUInt64(self: ptr BLUnknown; value: uint64): BLResult		659
+nim	blVarAssignDouble	blend2d/bindings/bl_globals.html#blVarAssignDouble,ptr.BLUnknown,cdouble	proc blVarAssignDouble(self: ptr BLUnknown; value: cdouble): BLResult		660
+nim	blVarAssignRgba	blend2d/bindings/bl_globals.html#blVarAssignRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarAssignRgba(self: ptr BLUnknown; rgba: ptr BLRgba): BLResult		661
+nim	blVarAssignRgba32	blend2d/bindings/bl_globals.html#blVarAssignRgba32,ptr.BLUnknown,uint32	proc blVarAssignRgba32(self: ptr BLUnknown; rgba32: uint32): BLResult		662
+nim	blVarAssignRgba64	blend2d/bindings/bl_globals.html#blVarAssignRgba64,ptr.BLUnknown,uint64	proc blVarAssignRgba64(self: ptr BLUnknown; rgba64: uint64): BLResult		663
+nim	blVarAssignMove	blend2d/bindings/bl_globals.html#blVarAssignMove,ptr.BLUnknown,ptr.BLUnknown	proc blVarAssignMove(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		664
+nim	blVarAssignWeak	blend2d/bindings/bl_globals.html#blVarAssignWeak,ptr.BLUnknown,ptr.BLUnknown	proc blVarAssignWeak(self: ptr BLUnknown; other: ptr BLUnknown): BLResult		665
+nim	blVarGetType	blend2d/bindings/bl_globals.html#blVarGetType,ptr.BLUnknown	proc blVarGetType(self: ptr BLUnknown): BLObjectType		666
+nim	blVarToBool	blend2d/bindings/bl_globals.html#blVarToBool,ptr.BLUnknown,ptr.bool	proc blVarToBool(self: ptr BLUnknown; out: ptr bool): BLResult		667
+nim	blVarToInt32	blend2d/bindings/bl_globals.html#blVarToInt32,ptr.BLUnknown,ptr.int32	proc blVarToInt32(self: ptr BLUnknown; out: ptr int32): BLResult		668
+nim	blVarToInt64	blend2d/bindings/bl_globals.html#blVarToInt64,ptr.BLUnknown,ptr.int64	proc blVarToInt64(self: ptr BLUnknown; out: ptr int64): BLResult		669
+nim	blVarToUInt32	blend2d/bindings/bl_globals.html#blVarToUInt32,ptr.BLUnknown,ptr.uint32	proc blVarToUInt32(self: ptr BLUnknown; out: ptr uint32): BLResult		670
+nim	blVarToUInt64	blend2d/bindings/bl_globals.html#blVarToUInt64,ptr.BLUnknown,ptr.uint64	proc blVarToUInt64(self: ptr BLUnknown; out: ptr uint64): BLResult		671
+nim	blVarToDouble	blend2d/bindings/bl_globals.html#blVarToDouble,ptr.BLUnknown,ptr.cdouble	proc blVarToDouble(self: ptr BLUnknown; out: ptr cdouble): BLResult		672
+nim	blVarToRgba	blend2d/bindings/bl_globals.html#blVarToRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarToRgba(self: ptr BLUnknown; out: ptr BLRgba): BLResult		673
+nim	blVarToRgba32	blend2d/bindings/bl_globals.html#blVarToRgba32,ptr.BLUnknown,ptr.uint32	proc blVarToRgba32(self: ptr BLUnknown; out: ptr uint32): BLResult		674
+nim	blVarToRgba64	blend2d/bindings/bl_globals.html#blVarToRgba64,ptr.BLUnknown,ptr.uint64	proc blVarToRgba64(self: ptr BLUnknown; out: ptr uint64): BLResult		675
+nim	blVarEquals	blend2d/bindings/bl_globals.html#blVarEquals,ptr.BLUnknown,ptr.BLUnknown	proc blVarEquals(a: ptr BLUnknown; b: ptr BLUnknown): bool		676
+nim	blVarEqualsNull	blend2d/bindings/bl_globals.html#blVarEqualsNull,ptr.BLUnknown	proc blVarEqualsNull(self: ptr BLUnknown): bool		677
+nim	blVarEqualsBool	blend2d/bindings/bl_globals.html#blVarEqualsBool,ptr.BLUnknown,bool	proc blVarEqualsBool(self: ptr BLUnknown; value: bool): bool		678
+nim	blVarEqualsInt64	blend2d/bindings/bl_globals.html#blVarEqualsInt64,ptr.BLUnknown,int64	proc blVarEqualsInt64(self: ptr BLUnknown; value: int64): bool		679
+nim	blVarEqualsUInt64	blend2d/bindings/bl_globals.html#blVarEqualsUInt64,ptr.BLUnknown,uint64	proc blVarEqualsUInt64(self: ptr BLUnknown; value: uint64): bool		680
+nim	blVarEqualsDouble	blend2d/bindings/bl_globals.html#blVarEqualsDouble,ptr.BLUnknown,cdouble	proc blVarEqualsDouble(self: ptr BLUnknown; value: cdouble): bool		681
+nim	blVarEqualsRgba	blend2d/bindings/bl_globals.html#blVarEqualsRgba,ptr.BLUnknown,ptr.BLRgba	proc blVarEqualsRgba(self: ptr BLUnknown; rgba: ptr BLRgba): bool		682
+nim	blVarEqualsRgba32	blend2d/bindings/bl_globals.html#blVarEqualsRgba32,ptr.BLUnknown,uint32	proc blVarEqualsRgba32(self: ptr BLUnknown; rgba32: uint32): bool		683
+nim	blVarEqualsRgba64	blend2d/bindings/bl_globals.html#blVarEqualsRgba64,ptr.BLUnknown,uint64	proc blVarEqualsRgba64(self: ptr BLUnknown; rgba64: uint64): bool		684
+nim	blVarStrictEquals	blend2d/bindings/bl_globals.html#blVarStrictEquals,ptr.BLUnknown,ptr.BLUnknown	proc blVarStrictEquals(a: ptr BLUnknown; b: ptr BLUnknown): bool		685
+nim	blRandomReset	blend2d/bindings/bl_globals.html#blRandomReset,ptr.BLRandom,uint64	proc blRandomReset(self: ptr BLRandom; seed: uint64): BLResult		687
+nim	blRandomNextUInt32	blend2d/bindings/bl_globals.html#blRandomNextUInt32,ptr.BLRandom	proc blRandomNextUInt32(self: ptr BLRandom): uint32		688
+nim	blRandomNextUInt64	blend2d/bindings/bl_globals.html#blRandomNextUInt64,ptr.BLRandom	proc blRandomNextUInt64(self: ptr BLRandom): uint64		689
+nim	blRandomNextDouble	blend2d/bindings/bl_globals.html#blRandomNextDouble,ptr.BLRandom	proc blRandomNextDouble(self: ptr BLRandom): cdouble		690
+nim	blTraceError	blend2d/bindings/bl_globals.html#blTraceError,BLResult	proc blTraceError(result: BLResult): BLResult		695
+nim	blRuntimeAssertionFailure	blend2d/bindings/bl_globals.html#blRuntimeAssertionFailure,cstring,cint,cstring	proc blRuntimeAssertionFailure(file: cstring; line: cint; msg: cstring)		696
+nim	BLDebugMessageSinkFunc	blend2d/bindings/bl_globals.html#BLDebugMessageSinkFunc	type BLDebugMessageSinkFunc		698

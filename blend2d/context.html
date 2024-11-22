@@ -83,6 +83,7 @@
 <li><a class="reference" href="#add%2CContext%2CBLRectI" title="add(ctx: Context; r: BLRectI)">add(ctx: Context; r: BLRectI)</a></li>
 <li><a class="reference" href="#add%2CContext%2CBLRectI%2CBLRgba" title="add(ctx: Context; r: BLRectI; color: BLRgba)">add(ctx: Context; r: BLRectI; color: BLRgba)</a></li>
 <li><a class="reference" href="#add%2CContext%2CRoundRect%2CColorHex" title="add(ctx: Context; rr: RoundRect; color: ColorHex)">add(ctx: Context; rr: RoundRect; color: ColorHex)</a></li>
+<li><a class="reference" href="#add%2CContext%2CRoundRect%2CGradient" title="add(ctx: Context; rr: RoundRect; color: Gradient)">add(ctx: Context; rr: RoundRect; color: Gradient)</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">blend
@@ -218,7 +219,8 @@
 
 </ul>
 <ul class="simple nested-toc-section">fill
-  <li><a class="reference" href="#fill%2CContext%2Cptr.BLGradientCore" title="fill(ctx: Context; gradient: ptr BLGradientCore): Context">fill(ctx: Context; gradient: ptr BLGradientCore): Context</a></li>
+  <li><a class="reference" href="#fill%2CContext%2CColorHex" title="fill(ctx: Context; color: ColorHex): Context">fill(ctx: Context; color: ColorHex): Context</a></li>
+<li><a class="reference" href="#fill%2CContext%2Cptr.BLGradientCore" title="fill(ctx: Context; gradient: ptr BLGradientCore): Context">fill(ctx: Context; gradient: ptr BLGradientCore): Context</a></li>
 <li><a class="reference" href="#fill%2CContext%2CBLRgba" title="fill(ctx: Context; rgba: BLRgba): Context">fill(ctx: Context; rgba: BLRgba): Context</a></li>
 
 </ul>
@@ -562,6 +564,15 @@
   <dd>
     
     Add a colored <tt class="docutils literal"><span class="pre"><span class="Identifier">BLRoundRect</span></span></tt> to current <tt class="docutils literal"><span class="pre"><span class="Identifier">Context</span></span></tt>
+    
+  </dd>
+</div>
+<div id="add,Context,RoundRect,Gradient">
+  <dt><pre><span class="Keyword">proc</span> <a href="#add%2CContext%2CRoundRect%2CGradient"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">ctx</span><span class="Other">:</span> <a href="context.html#Context"><span class="Identifier">Context</span></a><span class="Other">;</span> <span class="Identifier">rr</span><span class="Other">:</span> <a href="geometry.html#RoundRect"><span class="Identifier">RoundRect</span></a><span class="Other">;</span> <span class="Identifier">color</span><span class="Other">:</span> <a href="color.html#Gradient"><span class="Identifier">Gradient</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Add a <tt class="docutils literal"><span class="pre"><span class="Identifier">BLRoundRect</span></span></tt> to <tt class="docutils literal"><span class="pre"><span class="Identifier">ctx</span></span></tt> with <tt class="docutils literal"><span class="pre"><span class="Identifier">color</span></span></tt> Gradient
     
   </dd>
 </div>
@@ -969,7 +980,16 @@
 
 </div>
 <div id="fill-procs-all">
-  <div id="fill,Context,ptr.BLGradientCore">
+  <div id="fill,Context,ColorHex">
+  <dt><pre><span class="Keyword">proc</span> <a href="#fill%2CContext%2CColorHex"><span class="Identifier">fill</span></a><span class="Other">(</span><span class="Identifier">ctx</span><span class="Other">:</span> <a href="context.html#Context"><span class="Identifier">Context</span></a><span class="Other">;</span> <span class="Identifier">color</span><span class="Other">:</span> <a href="color.html#ColorHex"><span class="Identifier">ColorHex</span></a><span class="Other">)</span><span class="Other">:</span> <a href="context.html#Context"><span class="Identifier">Context</span></a> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Fills the entire Context using <tt class="docutils literal"><span class="pre"><span class="Identifier">color</span></span></tt> ColorHex
+    
+  </dd>
+</div>
+<div id="fill,Context,ptr.BLGradientCore">
   <dt><pre><span class="Keyword">proc</span> <a href="#fill%2CContext%2Cptr.BLGradientCore"><span class="Identifier">fill</span></a><span class="Other">(</span><span class="Identifier">ctx</span><span class="Other">:</span> <a href="context.html#Context"><span class="Identifier">Context</span></a><span class="Other">;</span> <span class="Identifier">gradient</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/bl_style.html#BLGradientCore"><span class="Identifier">BLGradientCore</span></a><span class="Other">)</span><span class="Other">:</span> <a href="context.html#Context"><span class="Identifier">Context</span></a> {.<span class="Identifier">discardable</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1509,7 +1529,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-11-20 10:58:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-11-22 16:19:21 UTC</small>
       </div>
     </div>
   </div>
