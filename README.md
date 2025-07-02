@@ -20,7 +20,6 @@ todo
 - 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/blend2d-nim/issues)
 - 👋 Wanna help? [Fork it!](https://github.com/openpeeps/blend2d-nim/fork)
 - 😎 [Get €20 in cloud credits from Hetzner](https://hetzner.cloud/?ref=Hm0mYGM9NxZ4)
-- 🥰 [Donate via PayPal address](https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C)
 
 ### 🎩 License
 Blend2D | Zlib license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
