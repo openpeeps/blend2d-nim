@@ -1,5 +1,4 @@
 <p align="center">
-  <img src="https://github.com/openpeeps/PKG/blob/main/.github/logo.png" width="90px"><br>
   Blend2D binding for 👑 Nim language<br>
   <a href="https://github.com/blend2d/blend2d">Blend2D</a> is a high performance 2D vector graphics engine.
 </p>
